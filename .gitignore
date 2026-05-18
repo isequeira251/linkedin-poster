@@ -1,5 +1,7 @@
 .env
 token.json
+preview_card.png
+card.png
 __pycache__/
 *.pyc
 .venv/

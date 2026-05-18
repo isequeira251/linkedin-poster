@@ -16,6 +16,7 @@ import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
 
+from generate_card import generate_card
 from linkedin_post import load_credentials, post_to_linkedin
 
 POSTS_FILE = Path(__file__).parent / "posts.json"
@@ -61,8 +62,10 @@ def main() -> int:
     warn_if_token_expiring()
     access_token, person_urn = load_credentials()
 
-    print(f"Posting for {today}...")
-    post_id = post_to_linkedin(target["text"], access_token, person_urn)
+    print(f"Generating card for {today}...")
+    card_bytes = generate_card(target["text"])
+    print(f"Posting for {today} (with image, {len(card_bytes)} bytes)...")
+    post_id = post_to_linkedin(target["text"], access_token, person_urn, image_bytes=card_bytes)
     print(f"Posted: {post_id}")
 
     target["posted"] = True
