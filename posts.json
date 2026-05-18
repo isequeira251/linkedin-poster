@@ -1,0 +1,102 @@
+[
+  {
+    "date": "2026-05-25",
+    "posted": false,
+    "text": "Most \"CRM problems\" aren't CRM problems.\n\nThey're definition problems. Nobody agreed on what a qualified lead is. Or what \"active customer\" means. Or which date counts as the close date when a deal slips a quarter.\n\nThe tool just makes the disagreement visible.\n\nBefore you migrate, re-platform, or hire a consultant — sit your sales and marketing leads in a room and ask them to define five terms. You'll learn more in 30 minutes than in a month of dashboards."
+  },
+  {
+    "date": "2026-05-26",
+    "posted": false,
+    "text": "A CRM with 400 custom properties is not a more powerful CRM.\n\nIt's a slower one. Reps stop filling in fields they don't understand. Reports break because three properties mean the same thing. New hires need a week to learn the data model.\n\nI've never audited a HubSpot or Salesforce instance where the answer was \"you need more fields.\" It's always the opposite."
+  },
+  {
+    "date": "2026-05-27",
+    "posted": false,
+    "text": "Sat down with a sales team last month that was convinced their pipeline reports were broken.\n\nThey weren't. The reports were fine. The problem was that two reps were moving deals to \"Closed Won\" the moment a verbal yes came in, and three others were waiting for the signed contract. Same stage. Two completely different meanings.\n\nTook us 20 minutes to find it. Took them six months of arguing about forecast accuracy to admit something was off.\n\nIf your team doesn't trust the numbers, the first place to look isn't the dashboard. It's the stage definitions."
+  },
+  {
+    "date": "2026-05-28",
+    "posted": false,
+    "text": "A simple CRM health check I run before touching anything:\n\n1. Pull the last 90 days of closed deals. How many are missing a close reason?\n2. Pull all open deals over 90 days old. Why are they still open?\n3. Pull all contacts created in the last 30 days. What % have a lifecycle stage that makes sense?\n4. Look at your top 3 workflows. When were they last edited? By whom?\n5. Count your active properties. Now count the ones used in a report or workflow in the last year.\n\nThe gap between those last two numbers is usually where the real work is.\n\nHappy to walk through this on a real instance if anyone wants a second set of eyes — DM me."
+  },
+  {
+    "date": "2026-05-29",
+    "posted": false,
+    "text": "The most underrated CRM skill is saying no to a stakeholder who wants \"just one more field.\"\n\nEvery field has a maintenance cost. Every field is a place where data can go stale, get mistyped, or contradict another field. The default answer should be \"what existing property can we use\" — not \"let's add one.\""
+  },
+  {
+    "date": "2026-06-01",
+    "posted": false,
+    "text": "Bad CRM data isn't a data problem. It's an incentive problem.\n\nIf reps don't see value in updating a field, they won't. Threats won't fix it. Mandatory fields just produce garbage data faster. The fix is making the data useful to the person entering it — sales sequences that pull from notes, deal views that surface the next action, dashboards that reward thoroughness.\n\nThe reps who keep the cleanest data are the ones whose own workflow depends on it."
+  },
+  {
+    "date": "2026-06-02",
+    "posted": false,
+    "text": "Unpopular opinion: most companies don't need a deduplication tool. They need a deduplication process.\n\nTools find duplicates. They don't tell you which record to keep, which fields to merge, what to do with associated deals and tickets, or how to prevent the next one. Without a process, you just create duplicates faster than the tool can clean them.\n\nStart with prevention rules — required fields, validation on entry, controlled import paths. The cleanup tool is the last 10%, not the first 90%."
+  },
+  {
+    "date": "2026-06-03",
+    "posted": false,
+    "text": "A client had ~30k contacts with no first or last name — just \"info@\" addresses that got created from a years-old web form.\n\nThey couldn't run personalized sequences. They couldn't segment for events. Their email deliverability was suffering because half the list was junk.\n\nThe fix wasn't fancy: a one-time enrichment pass, a workflow to flag any new contact with no name within 7 days, and a re-engagement campaign that quietly suppressed anyone who didn't respond.\n\nOpen rate on their next campaign jumped 18%. Most of it was just removing the dead weight.\n\nThis kind of cleanup is straightforward but tedious — if you're staring at a list like this and not sure where to start, I'm happy to share the playbook. Just message me."
+  },
+  {
+    "date": "2026-06-04",
+    "posted": false,
+    "text": "Three properties every B2B CRM should have, and most don't:\n\n- Source of truth for company size (not \"we have three different ones from three integrations\")\n- A single canonical owner field that drives routing, reporting, and notifications\n- A reliable \"last meaningful activity\" timestamp that isn't fooled by automated emails\n\nIf you don't have these, every report downstream is approximate at best."
+  },
+  {
+    "date": "2026-06-05",
+    "posted": false,
+    "text": "The fastest way to improve CRM data quality isn't a tool. It's a Friday afternoon report that emails the sales manager a list of every deal closed that week with missing key fields.\n\nSuddenly the fields get filled in. Funny how that works."
+  },
+  {
+    "date": "2026-06-08",
+    "posted": false,
+    "text": "Watched a sales ops lead spend two hours every Monday morning building the same pipeline report by hand. Pulling CSVs, pivoting, pasting into Slack.\n\nWhen I asked why, the answer was: \"the automated one doesn't have the columns leadership wants.\"\n\nTook 40 minutes to rebuild the automated one with the right columns. That's 100 hours a year back.\n\nMost \"we need new software\" conversations end this way. The tool already does it. Someone just never had the time to set it up properly."
+  },
+  {
+    "date": "2026-06-09",
+    "posted": false,
+    "text": "Before you build a workflow, write the sentence:\n\n\"When [trigger], do [action], unless [exception], and notify [person] if [condition].\"\n\nIf you can't write that sentence cleanly, the workflow isn't ready to be built. You'll discover the edge cases six weeks later when leads are being routed to the wrong rep and nobody can figure out why.\n\nWorkflows fail in the design, not the build."
+  },
+  {
+    "date": "2026-06-10",
+    "posted": false,
+    "text": "The CRM workflows that quietly cause the most damage are the ones nobody remembers building.\n\nTwo years ago someone set up a lifecycle stage automation for a campaign that's long over. It's still firing. It's still overriding manual updates from reps. Nobody knows it exists because the person who built it left the company.\n\nOnce a quarter, open the automation panel and sort by \"last modified\" ascending. Read the bottom of that list. You will find at least one thing that shouldn't be running.\n\nIf you'd like a hand auditing your automations, I do this kind of cleanup for HubSpot teams — message me and I'll send over how I usually structure it."
+  },
+  {
+    "date": "2026-06-11",
+    "posted": false,
+    "text": "A good CRM automation does one thing.\n\nA bad CRM automation does seven things, has four branches, depends on a property that was renamed last year, and only runs on the third Tuesday of the month if the contact's owner is in EMEA.\n\nWhen in doubt, build two workflows instead of one. Future-you will thank present-you."
+  },
+  {
+    "date": "2026-06-12",
+    "posted": false,
+    "text": "The phrase \"we'll just handle that in the CRM\" has caused more downstream pain than almost any other sentence in modern B2B operations.\n\nUsually said in a meeting where nobody from ops is present."
+  },
+  {
+    "date": "2026-06-15",
+    "posted": false,
+    "text": "The dashboard nobody uses is the one that takes 10 seconds to load and shows 14 charts.\n\nThe dashboard everyone uses shows three numbers. Pipeline created this week. Deals stuck more than 30 days in their current stage. Activities logged per rep.\n\nLess is more, and it's not even close."
+  },
+  {
+    "date": "2026-06-16",
+    "posted": false,
+    "text": "A sales leader told me her team \"wouldn't adopt the CRM.\"\n\nSat with three reps for an hour each. Two of them had open tabs to spreadsheets where they were tracking their own pipeline because the CRM views were unusable. The third was logging activities in a personal notebook because she'd been burned by a sync issue years ago.\n\nThese were not adoption problems. These were UX problems and trust problems. Once we rebuilt their views around how they actually worked, adoption took care of itself.\n\nIf your team is \"resisting the CRM,\" the most useful thing you can do is shadow three of them for a day. The reason is always in there."
+  },
+  {
+    "date": "2026-06-17",
+    "posted": false,
+    "text": "The methodical way to improve CRM performance, in one paragraph:\n\nAudit your data model and kill what you don't use. Define your terms and make sure sales and marketing agree. Fix data entry incentives before you buy enrichment tools. Document every automation and retire the dead ones quarterly. Build reports that answer one question each. Then — and only then — start adding new capabilities.\n\nIt's not glamorous. It's not a re-platform. But it's the work that compounds.\n\nThis is most of what I do for teams on the side. If your HubSpot (or whatever you're on) feels heavier than it should, send me a message — happy to take a look."
+  },
+  {
+    "date": "2026-06-18",
+    "posted": false,
+    "text": "Reporting tip that has saved me more meetings than I can count:\n\nFor every recurring report you publish, add a \"what changed since last time\" line at the top. Not \"pipeline is $4.2M.\" Instead: \"Pipeline is $4.2M, up $300k from last week, driven by three new enterprise deals from the partnerships channel.\"\n\nPeople don't want numbers. They want the story the numbers tell."
+  },
+  {
+    "date": "2026-06-19",
+    "posted": false,
+    "text": "A month of posts on improving CRM performance, and the takeaway I keep coming back to:\n\nThe teams that get the most out of their CRM aren't the ones with the biggest tech stack or the fanciest setup. They're the ones who treat it as a living system — pruned regularly, well-understood by the people who use it, and tied to decisions that actually get made.\n\nTools don't fix culture. But a thoughtful, well-maintained CRM removes the friction that makes good culture hard to sustain.\n\nIf any of these posts hit a nerve and you're staring at a CRM that's grown more than it's been gardened, I help teams (mostly on HubSpot) work through exactly this. Send me a DM — even if it's just to compare notes."
+  }
+]
