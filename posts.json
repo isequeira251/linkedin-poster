@@ -100,5 +100,55 @@
     "date": "2026-06-12",
     "posted": false,
     "text": "A month of posts on improving CRM performance, and the takeaway I keep coming back to:\n\nThe teams that get the most out of their CRM aren't the ones with the biggest tech stack or the fanciest setup. They're the ones who treat it as a living system \u2014 pruned regularly, well-understood by the people who use it, and tied to decisions that actually get made.\n\nTools don't fix culture. But a thoughtful, well-maintained CRM removes the friction that makes good culture hard to sustain.\n\nIf any of these posts hit a nerve and you're staring at a CRM that's grown more than it's been gardened, I help teams (mostly on HubSpot) work through exactly this. Send me a DM \u2014 even if it's just to compare notes."
+  },
+  {
+    "date": "2026-06-15",
+    "posted": false,
+    "text": "Your CRM says the customer is on the Pro plan. Your billing system says Starter. Your CS platform says Enterprise.\n\nWhich one's right? Usually nobody knows, because there's no agreed-on source of truth \u2014 there's just whichever system the person asking the question logged into first.\n\nPick one. Make every other system point at it. Until you do, every report is a coin flip."
+  },
+  {
+    "date": "2026-06-16",
+    "posted": false,
+    "text": "A sales manager once told me he didn't trust his CRM dashboard \"because it doesn't match what my reps tell me on Friday calls.\"\n\nI asked which one he trusted more. He said his reps.\n\nThen why have the dashboard.\n\nTook a month to figure out the dashboard was actually right and the reps were doing optimistic math out loud. Once everyone trusted the data, the Friday calls got shorter and the forecasts got more accurate.\n\nThe CRM is only useful if leadership treats it as the source of truth. The day leadership starts second-guessing it, the reps stop maintaining it."
+  },
+  {
+    "date": "2026-06-17",
+    "posted": false,
+    "text": "Lead scoring rules that actually work:\n\n1. Score on behavior, not demographics. A VP who downloaded one whitepaper is less qualified than a Manager who opened three emails and visited the pricing page twice.\n\n2. Decay scores. If someone hit 80 six months ago and hasn't done anything since, they aren't an 80 anymore. Most scoring models forget this.\n\n3. Have a \"why\" next to every rule. If the rule is \"+10 for opening 3 emails,\" write down why three is the threshold. If you can't, lower it.\n\n4. Get sales to sign off. If sales doesn't trust the score, the score is useless.\n\nLead scoring fails in half the companies I see, almost always for one of these four reasons. Happy to look at yours if you want a sanity check \u2014 DM me."
+  },
+  {
+    "date": "2026-06-18",
+    "posted": false,
+    "text": "The hardest thing about CRM admin isn't building anything new.\n\nIt's deciding what to retire."
+  },
+  {
+    "date": "2026-06-19",
+    "posted": false,
+    "text": "Custom objects are usually a mistake.\n\nYes, your business has \"projects\" or \"subscriptions\" or \"units\" that don't fit neatly into Contacts/Companies/Deals. And yes, your CRM lets you model them.\n\nBut every custom object adds: a new permission matrix, a new reporting surface, new sync logic with downstream systems, new training for reps, new edge cases your automations don't handle.\n\nNine times out of ten you can solve the same problem with a well-structured property on the parent object plus a tag. The tenth time genuinely needs a custom object \u2014 and you'll know because the \"just use a property\" workaround keeps breaking."
+  },
+  {
+    "date": "2026-06-22",
+    "posted": false,
+    "text": "Watched a team spend three months building a \"unified customer view\" dashboard.\n\nIt pulled from CRM, billing, support, product, marketing automation. Sixteen widgets. Color-coded health bars. Beautiful.\n\nNobody used it.\n\nWhy? Because the people who needed customer information already had a Slack channel where they'd ping each other with \"hey, what's going on with Acme?\" That workflow had 100% adoption, near-zero latency, and the conversation history was searchable.\n\nThe dashboard solved a problem nobody had. The Slack channel was working.\n\nBefore you build anything, ask: how are people solving this without my tool? Sometimes the answer is \"not very well.\" Sometimes it's \"actually, fine.\" The second one is more common than you'd think."
+  },
+  {
+    "date": "2026-06-23",
+    "posted": false,
+    "text": "The four-question gut check before any CRM project:\n\n1. Who specifically asked for this? (Not \"leadership\" \u2014 a name.)\n2. What decision will they make with the output? (If they can't answer, it's vanity work.)\n3. What happens if I build the simplest version first and stop there?\n4. Who owns it after I'm done? (If nobody, it'll rot.)\n\nI've killed more half-finished projects with question 4 than the other three combined."
+  },
+  {
+    "date": "2026-06-24",
+    "posted": false,
+    "text": "Your CRM is a tool, not a strategy. Your reporting is a tool, not a strategy. Your AI agent is a tool, not a strategy.\n\nYou still need to decide who you're going after, what you're selling them, and how. No software makes that decision for you. Most software pretends it can, and then you spend a year debugging why it didn't."
+  },
+  {
+    "date": "2026-06-25",
+    "posted": false,
+    "text": "A founder asked me last quarter what's the one CRM change that would 10x his sales team's productivity.\n\nI said: \"There isn't one.\"\n\nHe looked frustrated. So I added: there are about 15 small changes \u2014 each worth maybe 5\u201310% \u2014 that add up to a significant improvement over six months. None of them are sexy. None of them look impressive in a board deck. But together they're the difference between a CRM that works and a CRM that gets abandoned for spreadsheets.\n\nThe companies that get this right treat CRM optimization as a continuous practice, not a project. The ones that don't keep replatforming every two years and wondering why nothing changes."
+  },
+  {
+    "date": "2026-06-26",
+    "posted": false,
+    "text": "Six weeks of posts on CRM performance, and the thing I keep coming back to:\n\nThe teams that get this right treat their CRM like a garden \u2014 not a one-time install. Continuous pruning. Continuous re-planting. Definitions that drift get redefined. Workflows that age get retired. Reports that nobody reads get killed.\n\nThe teams that get it wrong treat it like a renovation project. Big push every 18 months. Replatform. Migrate. Retrain. Then it slowly rots until the next replatform.\n\nIf you're staring at a CRM that feels like it's drifting toward the second pattern, send me a DM. The fix isn't a tool \u2014 it's a cadence."
   }
 ]
