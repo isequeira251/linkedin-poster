@@ -1,6 +1,8 @@
 """Daily runner: posts whatever's scheduled for today.
 
-- Reads posts.json (an array of {date, posted, text})
+- Reads posts.json (an array of {date, posted, text, bubble?})
+  - `bubble` is optional: true forces the thought bubble, false suppresses it.
+    Omit to let generate_card decide from hook length.
 - Finds the first entry where date == today and posted == false
 - Posts it, then flips posted=true and saves
 - Exits 0 if there's nothing to do today or the post succeeded
@@ -63,7 +65,7 @@ def main() -> int:
     access_token, person_urn = load_credentials()
 
     print(f"Generating card for {today}...")
-    card_bytes = generate_card(target["text"])
+    card_bytes = generate_card(target["text"], bubble=target.get("bubble"))
     print(f"Posting for {today} (with image, {len(card_bytes)} bytes)...")
     post_id = post_to_linkedin(target["text"], access_token, person_urn, image_bytes=card_bytes)
     print(f"Posted: {post_id}")
