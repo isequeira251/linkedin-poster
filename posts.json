@@ -8,8 +8,10 @@
   },
   {
     "date": "2026-05-19",
-    "posted": false,
-    "text": "A CRM with 400 custom properties is not a more powerful CRM.\n\nIt's a slower one. Reps stop filling in fields they don't understand. Reports break because three properties mean the same thing. New hires need a week to learn the data model.\n\nI've never audited a HubSpot or Salesforce instance where the answer was \"you need more fields.\" It's always the opposite."
+    "posted": true,
+    "text": "A CRM with 400 custom properties is not a more powerful CRM.\n\nIt's a slower one. Reps stop filling in fields they don't understand. Reports break because three properties mean the same thing. New hires need a week to learn the data model.\n\nI've never audited a HubSpot or Salesforce instance where the answer was \"you need more fields.\" It's always the opposite.",
+    "posted_at": "2026-05-19T10:01:53.439125+00:00",
+    "post_id": "urn:li:share:7462442398120591360"
   },
   {
     "date": "2026-05-20",
