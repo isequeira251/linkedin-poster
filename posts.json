@@ -21,6 +21,11 @@
     "post_id": "urn:li:share:7462490358334074880"
   },
   {
+    "date": "2026-05-20",
+    "posted": false,
+    "text": "If you can't explain in one sentence why a custom property exists, delete it.\n\n\"We might need it someday\" is not an explanation. Neither is \"Joe in finance asked for it in 2022.\"\n\nEvery dead property makes the live ones harder to trust. Reps stop reading field labels. Reports quietly pull from the wrong one. New hires waste their first week learning which fields are real.\n\nAdding fields is easy. Deleting is political. The fix is a recurring 30-minute \"kill list\" meeting — the team picks one property to remove, every two weeks, no exceptions. After a quarter you'll wonder how the instance ever got that bloated."
+  },
+  {
     "date": "2026-05-21",
     "posted": false,
     "text": "A simple CRM health check I run before touching anything:\n\n1. Pull the last 90 days of closed deals. How many are missing a close reason?\n2. Pull all open deals over 90 days old. Why are they still open?\n3. Pull all contacts created in the last 30 days. What % have a lifecycle stage that makes sense?\n4. Look at your top 3 workflows. When were they last edited? By whom?\n5. Count your active properties. Now count the ones used in a report or workflow in the last year.\n\nThe gap between those last two numbers is usually where the real work is.\n\nHappy to walk through this on a real instance if anyone wants a second set of eyes \u2014 DM me."
