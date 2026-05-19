@@ -1,4 +1,10 @@
-"""Render a LinkedIn post card with a thought-bubble quote over a stock photo of people working.
+"""Render a LinkedIn post card: stock photo of people working, byline strip, and
+optionally a thought bubble with the post's hook text.
+
+Bubble decision:
+- If `bubble=True/False` is passed, that wins.
+- Otherwise, the bubble appears only when the extracted hook is shorter than
+  BUBBLE_HOOK_MAX_CHARS — short, punchy lines work in a bubble; longer ones don't.
 
 Usage as a library:
     from generate_card import generate_card
@@ -51,6 +57,9 @@ BUBBLE_X = CARD_SIZE - BUBBLE_W - 50  # far right, 50px margin from right edge
 BUBBLE_Y = 90
 BUBBLE_RADIUS = 24
 BUBBLE_PAD = 26
+# Auto-bubble heuristic: only short, punchy hooks get a bubble — longer hooks
+# read fine on their own and the bubble clutters the card.
+BUBBLE_HOOK_MAX_CHARS = 120
 
 # Trail drifts down-left from bubble's bottom-left toward the woman in white
 THOUGHT_TRAIL = [
@@ -214,23 +223,35 @@ def _draw_thought_bubble(canvas: Image.Image) -> None:
         draw.ellipse([cx - d // 2, cy - d // 2, cx + d // 2, cy + d // 2], fill=BUBBLE_COLOR)
 
 
-def generate_card(post_text: str, output_path: str | Path | None = None) -> bytes:
+def generate_card(
+    post_text: str,
+    output_path: str | Path | None = None,
+    *,
+    bubble: bool | None = None,
+) -> bytes:
     canvas = _prepare_background()
 
-    _draw_thought_bubble(canvas)
-
-    draw = ImageDraw.Draw(canvas)
     hook = extract_hook(post_text)
-    text_max_width = BUBBLE_W - 2 * BUBBLE_PAD
-    text_max_height = BUBBLE_H - 2 * BUBBLE_PAD
-    font, lines, line_height = _fit_font_size(hook, text_max_width, text_max_height, draw)
-    total_text_height = line_height * len(lines)
-    y = BUBBLE_Y + BUBBLE_PAD + (text_max_height - total_text_height) // 2
-    for line in lines:
-        line_w = draw.textlength(line, font=font)
-        x = BUBBLE_X + (BUBBLE_W - line_w) // 2
-        draw.text((x, y), line, font=font, fill=BUBBLE_TEXT_COLOR)
-        y += line_height
+    show_bubble = bubble if bubble is not None else len(hook) < BUBBLE_HOOK_MAX_CHARS
+    print(
+        f"Card: hook_chars={len(hook)} bubble={show_bubble} "
+        f"(override={bubble!r})",
+        file=sys.stderr,
+    )
+
+    if show_bubble:
+        _draw_thought_bubble(canvas)
+        draw = ImageDraw.Draw(canvas)
+        text_max_width = BUBBLE_W - 2 * BUBBLE_PAD
+        text_max_height = BUBBLE_H - 2 * BUBBLE_PAD
+        font, lines, line_height = _fit_font_size(hook, text_max_width, text_max_height, draw)
+        total_text_height = line_height * len(lines)
+        y = BUBBLE_Y + BUBBLE_PAD + (text_max_height - total_text_height) // 2
+        for line in lines:
+            line_w = draw.textlength(line, font=font)
+            x = BUBBLE_X + (BUBBLE_W - line_w) // 2
+            draw.text((x, y), line, font=font, fill=BUBBLE_TEXT_COLOR)
+            y += line_height
 
     byline_strip = Image.new("RGBA", (CARD_SIZE, 140), (10, 37, 64, 220))
     canvas.alpha_composite(byline_strip, (0, CARD_SIZE - 140))
