@@ -15,8 +15,10 @@
   },
   {
     "date": "2026-05-20",
-    "posted": false,
-    "text": "Sat down with a sales team last month that was convinced their pipeline reports were broken.\n\nThey weren't. The reports were fine. The problem was that two reps were moving deals to \"Closed Won\" the moment a verbal yes came in, and three others were waiting for the signed contract. Same stage. Two completely different meanings.\n\nTook us 20 minutes to find it. Took them six months of arguing about forecast accuracy to admit something was off.\n\nIf your team doesn't trust the numbers, the first place to look isn't the dashboard. It's the stage definitions."
+    "posted": true,
+    "text": "Sat down with a sales team last month that was convinced their pipeline reports were broken.\n\nThey weren't. The reports were fine. The problem was that two reps were moving deals to \"Closed Won\" the moment a verbal yes came in, and three others were waiting for the signed contract. Same stage. Two completely different meanings.\n\nTook us 20 minutes to find it. Took them six months of arguing about forecast accuracy to admit something was off.\n\nIf your team doesn't trust the numbers, the first place to look isn't the dashboard. It's the stage definitions.",
+    "posted_at": "2026-05-19T13:12:28.121424+00:00",
+    "post_id": "urn:li:share:7462490358334074880"
   },
   {
     "date": "2026-05-21",
