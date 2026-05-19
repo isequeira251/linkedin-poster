@@ -6,17 +6,38 @@ Usage as a library:
 
 CLI:
     python generate_card.py "Your hook here." out.png
+
+Background photo selection (in order):
+1. If PEXELS_API_KEY is set, fetch a fresh photo from Pexels using a randomized
+   "people working" search query, avoiding the most recently used ID.
+2. Otherwise, pick a random image (.jpg/.jpeg/.png) from the assets/ folder.
+3. If nothing usable, fall back to a solid navy canvas.
 """
 
 import io
+import json
+import os
+import random
 import sys
 from pathlib import Path
 
+import requests
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 CARD_SIZE = 1200
 ASSETS = Path(__file__).parent / "assets"
-STOCK_PHOTO = ASSETS / "office.jpg"
+LAST_PHOTO_FILE = Path(__file__).parent / ".last_photo.json"
+
+PEXELS_QUERIES = [
+    "people working in office",
+    "team collaborating",
+    "office meeting",
+    "coworkers laptop",
+    "professionals working together",
+    "business team brainstorming",
+    "open office workspace",
+    "colleagues discussing project",
+]
 
 BUBBLE_COLOR = (255, 255, 255)
 BUBBLE_TEXT_COLOR = (10, 37, 64)         # deep navy
@@ -91,10 +112,74 @@ def _fit_font_size(text: str, max_width: int, max_height: int, draw: ImageDraw.I
     return font, _wrap_to_fit(text, font, max_width, draw), int(32 * 1.28)
 
 
+def _read_last_photo_id() -> str | None:
+    try:
+        return json.loads(LAST_PHOTO_FILE.read_text()).get("pexels_id")
+    except (FileNotFoundError, json.JSONDecodeError):
+        return None
+
+
+def _write_last_photo_id(photo_id: str) -> None:
+    try:
+        LAST_PHOTO_FILE.write_text(json.dumps({"pexels_id": photo_id}) + "\n")
+    except OSError:
+        pass
+
+
+def _fetch_pexels_photo() -> Image.Image | None:
+    """Try to fetch a fresh 'people working' photo from Pexels. Returns None on any failure."""
+    api_key = os.environ.get("PEXELS_API_KEY")
+    if not api_key:
+        return None
+    query = random.choice(PEXELS_QUERIES)
+    last_id = _read_last_photo_id()
+    try:
+        resp = requests.get(
+            "https://api.pexels.com/v1/search",
+            headers={"Authorization": api_key},
+            params={"query": query, "per_page": 40, "orientation": "square"},
+            timeout=15,
+        )
+        resp.raise_for_status()
+        photos = resp.json().get("photos", [])
+        candidates = [p for p in photos if str(p.get("id")) != str(last_id)] or photos
+        if not candidates:
+            print(f"WARN: Pexels returned 0 photos for query {query!r}", file=sys.stderr)
+            return None
+        chosen = random.choice(candidates)
+        img_url = chosen["src"].get("large2x") or chosen["src"].get("original")
+        img_resp = requests.get(img_url, timeout=30)
+        img_resp.raise_for_status()
+        _write_last_photo_id(str(chosen["id"]))
+        print(
+            f"Pexels: query={query!r} photo_id={chosen['id']} "
+            f"by={chosen.get('photographer', '?')}",
+            file=sys.stderr,
+        )
+        return Image.open(io.BytesIO(img_resp.content)).convert("RGB")
+    except (requests.RequestException, KeyError, ValueError) as e:
+        print(f"WARN: Pexels fetch failed ({e}); falling back to local assets.", file=sys.stderr)
+        return None
+
+
+def _pick_local_photo() -> Image.Image | None:
+    if not ASSETS.exists():
+        return None
+    candidates = [
+        p for p in ASSETS.iterdir()
+        if p.is_file() and p.suffix.lower() in {".jpg", ".jpeg", ".png"}
+    ]
+    if not candidates:
+        return None
+    chosen = random.choice(candidates)
+    print(f"Local background: {chosen.name}", file=sys.stderr)
+    return Image.open(chosen).convert("RGB")
+
+
 def _prepare_background() -> Image.Image:
-    if not STOCK_PHOTO.exists():
+    photo = _fetch_pexels_photo() or _pick_local_photo()
+    if photo is None:
         return Image.new("RGB", (CARD_SIZE, CARD_SIZE), (40, 50, 70))
-    photo = Image.open(STOCK_PHOTO).convert("RGB")
     w, h = photo.size
     scale = max(CARD_SIZE / w, CARD_SIZE / h)
     photo = photo.resize((int(w * scale), int(h * scale)), Image.LANCZOS)
