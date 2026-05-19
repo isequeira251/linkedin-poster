@@ -2,6 +2,7 @@
 token.json
 preview_card.png
 card.png
+.last_photo.json
 __pycache__/
 *.pyc
 .venv/

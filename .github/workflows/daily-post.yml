@@ -35,6 +35,7 @@ jobs:
         env:
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           OVERRIDE_DATE: ${{ inputs.override_date }}
         run: python daily_runner.py
 
