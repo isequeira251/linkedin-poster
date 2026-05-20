@@ -36,17 +36,19 @@ jobs:
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
           OVERRIDE_DATE: ${{ inputs.override_date }}
         run: python daily_runner.py
 
-      - name: Commit updated posts.json
+      - name: Commit updated posts.json / notes.json
         run: |
-          if git diff --quiet posts.json; then
-            echo "No changes to posts.json."
+          if git diff --quiet posts.json notes.json; then
+            echo "No changes to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add posts.json
-          git commit -m "Mark post as published for $(date -u +%Y-%m-%d)"
+          git add posts.json notes.json
+          git commit -m "Publish post for $(date -u +%Y-%m-%d)"
           git push
