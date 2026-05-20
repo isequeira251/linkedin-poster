@@ -219,15 +219,5 @@
     "date": "2026-07-15",
     "posted": false,
     "text": "Renewals are not a sales funnel. They're a customer success funnel that happens to involve revenue.\n\nMost teams cram renewals into the new-business pipeline anyway. They use the same stages. They use the same close-date logic. They get useless reporting because a renewal that lands on time is not the same event as a new deal that closes after a competitive process.\n\nA separate pipeline for renewals \u2014 even just for reporting \u2014 clarifies more than any other single CRM change I recommend to growth-stage companies.\n\nIf your renewals and new business are colliding in the same pipeline, DM me \u2014 splitting them is a one-week project with multi-year payoff."
-  },
-  {
-    "date": "2026-07-16",
-    "posted": false,
-    "text": "Open your CRM's permissions panel. How many roles do you have. How many of them are 'X but slightly different.'\n\nPermissions debt is the quietest tech debt. Nobody notices it until someone leaves the company and you spend a week figuring out which records they could see. Or until the audit comes and you can't explain why marketing has edit access to closed-won opportunities.\n\nA quarterly review of who-can-see-what is not glamorous. It's also the single biggest predictor of whether your CRM will pass a SOC 2 audit on the first try.\n\nIf your permissions structure has grown organically for years, send me a DM \u2014 happy to walk through how to clean it up without breaking workflows."
-  },
-  {
-    "date": "2026-07-17",
-    "posted": false,
-    "text": "The honest test of your CRM's health: pull a report from the same week six months ago. Can you tell what was happening at the company that week?\n\nWere there deals in motion? Who was working on what? What were the priorities? If the data tells you, your CRM is doing its job. If you can't reconstruct the week, you have a record-keeping system, not a CRM.\n\nSix months out is the right horizon. Closer than that, you remember. Farther than that, no one expects clarity. Six months is where institutional memory should live, and where most CRMs quietly fail.\n\nIf your historical reporting falls apart past 90 days, DM me \u2014 the fix is usually a handful of properties and one good workflow."
   }
 ]
