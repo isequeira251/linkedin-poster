@@ -21,6 +21,11 @@
     "post_id": "urn:li:share:7462490358334074880"
   },
   {
+    "date": "2026-05-20",
+    "posted": false,
+    "text": "If your CRM sends reps 40 notifications a day, it sends them zero. They've muted the tab.\n\nNotification fatigue is self-inflicted. Every 'a contact opened your email' alert trains people to ignore the 'a deal worth $200k just went cold' alert sitting right next to it.\n\nAudit your notifications like you'd audit properties. Keep the handful that demand action. Kill the rest, or route them to a digest nobody has to react to in real time.\n\nThe goal isn't more awareness. It's making the few alerts that matter impossible to miss.\n\nIf your team has muted CRM notifications entirely, DM me \u2014 pruning the noise is what gets the signal noticed again."
+  },
+  {
     "date": "2026-05-21",
     "posted": false,
     "text": "A simple CRM health check I run before touching anything:\n\n1. Pull the last 90 days of closed deals. How many are missing a close reason?\n2. Pull all open deals over 90 days old. Why are they still open?\n3. Pull all contacts created in the last 30 days. What % have a lifecycle stage that makes sense?\n4. Look at your top 3 workflows. When were they last edited? By whom?\n5. Count your active properties. Now count the ones used in a report or workflow in the last year.\n\nThe gap between those last two numbers is usually where the real work is.\n\nHappy to walk through this on a real instance if anyone wants a second set of eyes \u2014 DM me."
