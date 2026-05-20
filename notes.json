@@ -1,0 +1,22 @@
+[
+  {
+    "note": "Watched a team spend 20 minutes in a meeting arguing about why the pipeline report was wrong. Turned out two people had different ideas of what 'closed' meant. The report was fine. The definitions weren't.",
+    "used": false
+  },
+  {
+    "note": "Cleaned up a HubSpot portal today with 47 lifecycle stage values. Forty-seven. Half were typos or one-offs someone added for a single campaign in 2022 and never removed.",
+    "used": false
+  },
+  {
+    "note": "A client asked me to build a complicated lead-scoring model. I asked when they last looked at their current one. Nobody could remember. We turned it off for a month and the sales numbers didn't move.",
+    "used": false
+  },
+  {
+    "note": "Spent the morning untangling a workflow that fired three emails to the same person because someone had built three separate workflows all watching the same property. Nobody owned the overlap.",
+    "used": false
+  },
+  {
+    "note": "The most useful thing I did this week was delete things. 12 unused properties, 5 dead workflows, a dashboard nobody had opened in a year. CRM hygiene is mostly subtraction.",
+    "used": false
+  }
+]
