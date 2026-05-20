@@ -28,17 +28,17 @@
   {
     "date": "2026-05-22",
     "posted": false,
-    "text": "The most underrated CRM skill is saying no to a stakeholder who wants \"just one more field.\"\n\nEvery field has a maintenance cost. Every field is a place where data can go stale, get mistyped, or contradict another field. The default answer should be \"what existing property can we use\" \u2014 not \"let's add one.\""
+    "text": "The most underrated CRM skill is saying no to a stakeholder who wants \"just one more field.\"\n\nEvery field has a maintenance cost. Every field is a place where data can go stale, get mistyped, or contradict another field. The default answer should be \"what existing property can we use\" \u2014 not \"let's add one.\"\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-05-25",
     "posted": false,
-    "text": "Bad CRM data isn't a data problem. It's an incentive problem.\n\nIf reps don't see value in updating a field, they won't. Threats won't fix it. Mandatory fields just produce garbage data faster. The fix is making the data useful to the person entering it \u2014 sales sequences that pull from notes, deal views that surface the next action, dashboards that reward thoroughness.\n\nThe reps who keep the cleanest data are the ones whose own workflow depends on it."
+    "text": "Bad CRM data isn't a data problem. It's an incentive problem.\n\nIf reps don't see value in updating a field, they won't. Threats won't fix it. Mandatory fields just produce garbage data faster. The fix is making the data useful to the person entering it \u2014 sales sequences that pull from notes, deal views that surface the next action, dashboards that reward thoroughness.\n\nThe reps who keep the cleanest data are the ones whose own workflow depends on it.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-05-26",
     "posted": false,
-    "text": "Unpopular opinion: most companies don't need a deduplication tool. They need a deduplication process.\n\nTools find duplicates. They don't tell you which record to keep, which fields to merge, what to do with associated deals and tickets, or how to prevent the next one. Without a process, you just create duplicates faster than the tool can clean them.\n\nStart with prevention rules \u2014 required fields, validation on entry, controlled import paths. The cleanup tool is the last 10%, not the first 90%."
+    "text": "Unpopular opinion: most companies don't need a deduplication tool. They need a deduplication process.\n\nTools find duplicates. They don't tell you which record to keep, which fields to merge, what to do with associated deals and tickets, or how to prevent the next one. Without a process, you just create duplicates faster than the tool can clean them.\n\nStart with prevention rules \u2014 required fields, validation on entry, controlled import paths. The cleanup tool is the last 10%, not the first 90%.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-05-27",
@@ -48,22 +48,22 @@
   {
     "date": "2026-05-28",
     "posted": false,
-    "text": "Three properties every B2B CRM should have, and most don't:\n\n- Source of truth for company size (not \"we have three different ones from three integrations\")\n- A single canonical owner field that drives routing, reporting, and notifications\n- A reliable \"last meaningful activity\" timestamp that isn't fooled by automated emails\n\nIf you don't have these, every report downstream is approximate at best."
+    "text": "Three properties every B2B CRM should have, and most don't:\n\n- Source of truth for company size (not \"we have three different ones from three integrations\")\n- A single canonical owner field that drives routing, reporting, and notifications\n- A reliable \"last meaningful activity\" timestamp that isn't fooled by automated emails\n\nIf you don't have these, every report downstream is approximate at best.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-05-29",
     "posted": false,
-    "text": "The fastest way to improve CRM data quality isn't a tool. It's a Friday afternoon report that emails the sales manager a list of every deal closed that week with missing key fields.\n\nSuddenly the fields get filled in. Funny how that works."
+    "text": "The fastest way to improve CRM data quality isn't a tool. It's a Friday afternoon report that emails the sales manager a list of every deal closed that week with missing key fields.\n\nSuddenly the fields get filled in. Funny how that works.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-06-01",
     "posted": false,
-    "text": "Watched a sales ops lead spend two hours every Monday morning building the same pipeline report by hand. Pulling CSVs, pivoting, pasting into Slack.\n\nWhen I asked why, the answer was: \"the automated one doesn't have the columns leadership wants.\"\n\nTook 40 minutes to rebuild the automated one with the right columns. That's 100 hours a year back.\n\nMost \"we need new software\" conversations end this way. The tool already does it. Someone just never had the time to set it up properly."
+    "text": "Watched a sales ops lead spend two hours every Monday morning building the same pipeline report by hand. Pulling CSVs, pivoting, pasting into Slack.\n\nWhen I asked why, the answer was: \"the automated one doesn't have the columns leadership wants.\"\n\nTook 40 minutes to rebuild the automated one with the right columns. That's 100 hours a year back.\n\nMost \"we need new software\" conversations end this way. The tool already does it. Someone just never had the time to set it up properly.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-06-02",
     "posted": false,
-    "text": "Before you build a workflow, write the sentence:\n\n\"When [trigger], do [action], unless [exception], and notify [person] if [condition].\"\n\nIf you can't write that sentence cleanly, the workflow isn't ready to be built. You'll discover the edge cases six weeks later when leads are being routed to the wrong rep and nobody can figure out why.\n\nWorkflows fail in the design, not the build."
+    "text": "Before you build a workflow, write the sentence:\n\n\"When [trigger], do [action], unless [exception], and notify [person] if [condition].\"\n\nIf you can't write that sentence cleanly, the workflow isn't ready to be built. You'll discover the edge cases six weeks later when leads are being routed to the wrong rep and nobody can figure out why.\n\nWorkflows fail in the design, not the build.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-06-03",
@@ -73,22 +73,22 @@
   {
     "date": "2026-06-04",
     "posted": false,
-    "text": "A good CRM automation does one thing.\n\nA bad CRM automation does seven things, has four branches, depends on a property that was renamed last year, and only runs on the third Tuesday of the month if the contact's owner is in EMEA.\n\nWhen in doubt, build two workflows instead of one. Future-you will thank present-you."
+    "text": "A good CRM automation does one thing.\n\nA bad CRM automation does seven things, has four branches, depends on a property that was renamed last year, and only runs on the third Tuesday of the month if the contact's owner is in EMEA.\n\nWhen in doubt, build two workflows instead of one. Future-you will thank present-you.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-06-05",
     "posted": false,
-    "text": "The phrase \"we'll just handle that in the CRM\" has caused more downstream pain than almost any other sentence in modern B2B operations.\n\nUsually said in a meeting where nobody from ops is present."
+    "text": "The phrase \"we'll just handle that in the CRM\" has caused more downstream pain than almost any other sentence in modern B2B operations.\n\nUsually said in a meeting where nobody from ops is present.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-06-08",
     "posted": false,
-    "text": "The dashboard nobody uses is the one that takes 10 seconds to load and shows 14 charts.\n\nThe dashboard everyone uses shows three numbers. Pipeline created this week. Deals stuck more than 30 days in their current stage. Activities logged per rep.\n\nLess is more, and it's not even close."
+    "text": "The dashboard nobody uses is the one that takes 10 seconds to load and shows 14 charts.\n\nThe dashboard everyone uses shows three numbers. Pipeline created this week. Deals stuck more than 30 days in their current stage. Activities logged per rep.\n\nLess is more, and it's not even close.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-06-09",
     "posted": false,
-    "text": "A sales leader told me her team \"wouldn't adopt the CRM.\"\n\nSat with three reps for an hour each. Two of them had open tabs to spreadsheets where they were tracking their own pipeline because the CRM views were unusable. The third was logging activities in a personal notebook because she'd been burned by a sync issue years ago.\n\nThese were not adoption problems. These were UX problems and trust problems. Once we rebuilt their views around how they actually worked, adoption took care of itself.\n\nIf your team is \"resisting the CRM,\" the most useful thing you can do is shadow three of them for a day. The reason is always in there."
+    "text": "A sales leader told me her team \"wouldn't adopt the CRM.\"\n\nSat with three reps for an hour each. Two of them had open tabs to spreadsheets where they were tracking their own pipeline because the CRM views were unusable. The third was logging activities in a personal notebook because she'd been burned by a sync issue years ago.\n\nThese were not adoption problems. These were UX problems and trust problems. Once we rebuilt their views around how they actually worked, adoption took care of itself.\n\nIf your team is \"resisting the CRM,\" the most useful thing you can do is shadow three of them for a day. The reason is always in there.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-06-10",
@@ -98,7 +98,7 @@
   {
     "date": "2026-06-11",
     "posted": false,
-    "text": "Reporting tip that has saved me more meetings than I can count:\n\nFor every recurring report you publish, add a \"what changed since last time\" line at the top. Not \"pipeline is $4.2M.\" Instead: \"Pipeline is $4.2M, up $300k from last week, driven by three new enterprise deals from the partnerships channel.\"\n\nPeople don't want numbers. They want the story the numbers tell."
+    "text": "Reporting tip that has saved me more meetings than I can count:\n\nFor every recurring report you publish, add a \"what changed since last time\" line at the top. Not \"pipeline is $4.2M.\" Instead: \"Pipeline is $4.2M, up $300k from last week, driven by three new enterprise deals from the partnerships channel.\"\n\nPeople don't want numbers. They want the story the numbers tell.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-06-12",
@@ -108,12 +108,12 @@
   {
     "date": "2026-06-15",
     "posted": false,
-    "text": "Your CRM says the customer is on the Pro plan. Your billing system says Starter. Your CS platform says Enterprise.\n\nWhich one's right? Usually nobody knows, because there's no agreed-on source of truth \u2014 there's just whichever system the person asking the question logged into first.\n\nPick one. Make every other system point at it. Until you do, every report is a coin flip."
+    "text": "Your CRM says the customer is on the Pro plan. Your billing system says Starter. Your CS platform says Enterprise.\n\nWhich one's right? Usually nobody knows, because there's no agreed-on source of truth \u2014 there's just whichever system the person asking the question logged into first.\n\nPick one. Make every other system point at it. Until you do, every report is a coin flip.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-06-16",
     "posted": false,
-    "text": "A sales manager once told me he didn't trust his CRM dashboard \"because it doesn't match what my reps tell me on Friday calls.\"\n\nI asked which one he trusted more. He said his reps.\n\nThen why have the dashboard.\n\nTook a month to figure out the dashboard was actually right and the reps were doing optimistic math out loud. Once everyone trusted the data, the Friday calls got shorter and the forecasts got more accurate.\n\nThe CRM is only useful if leadership treats it as the source of truth. The day leadership starts second-guessing it, the reps stop maintaining it."
+    "text": "A sales manager once told me he didn't trust his CRM dashboard \"because it doesn't match what my reps tell me on Friday calls.\"\n\nI asked which one he trusted more. He said his reps.\n\nThen why have the dashboard.\n\nTook a month to figure out the dashboard was actually right and the reps were doing optimistic math out loud. Once everyone trusted the data, the Friday calls got shorter and the forecasts got more accurate.\n\nThe CRM is only useful if leadership treats it as the source of truth. The day leadership starts second-guessing it, the reps stop maintaining it.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-06-17",
@@ -123,32 +123,32 @@
   {
     "date": "2026-06-18",
     "posted": false,
-    "text": "The hardest thing about CRM admin isn't building anything new.\n\nIt's deciding what to retire."
+    "text": "The hardest thing about CRM admin isn't building anything new.\n\nIt's deciding what to retire.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-06-19",
     "posted": false,
-    "text": "Custom objects are usually a mistake.\n\nYes, your business has \"projects\" or \"subscriptions\" or \"units\" that don't fit neatly into Contacts/Companies/Deals. And yes, your CRM lets you model them.\n\nBut every custom object adds: a new permission matrix, a new reporting surface, new sync logic with downstream systems, new training for reps, new edge cases your automations don't handle.\n\nNine times out of ten you can solve the same problem with a well-structured property on the parent object plus a tag. The tenth time genuinely needs a custom object \u2014 and you'll know because the \"just use a property\" workaround keeps breaking."
+    "text": "Custom objects are usually a mistake.\n\nYes, your business has \"projects\" or \"subscriptions\" or \"units\" that don't fit neatly into Contacts/Companies/Deals. And yes, your CRM lets you model them.\n\nBut every custom object adds: a new permission matrix, a new reporting surface, new sync logic with downstream systems, new training for reps, new edge cases your automations don't handle.\n\nNine times out of ten you can solve the same problem with a well-structured property on the parent object plus a tag. The tenth time genuinely needs a custom object \u2014 and you'll know because the \"just use a property\" workaround keeps breaking.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-06-22",
     "posted": false,
-    "text": "Watched a team spend three months building a \"unified customer view\" dashboard.\n\nIt pulled from CRM, billing, support, product, marketing automation. Sixteen widgets. Color-coded health bars. Beautiful.\n\nNobody used it.\n\nWhy? Because the people who needed customer information already had a Slack channel where they'd ping each other with \"hey, what's going on with Acme?\" That workflow had 100% adoption, near-zero latency, and the conversation history was searchable.\n\nThe dashboard solved a problem nobody had. The Slack channel was working.\n\nBefore you build anything, ask: how are people solving this without my tool? Sometimes the answer is \"not very well.\" Sometimes it's \"actually, fine.\" The second one is more common than you'd think."
+    "text": "Watched a team spend three months building a \"unified customer view\" dashboard.\n\nIt pulled from CRM, billing, support, product, marketing automation. Sixteen widgets. Color-coded health bars. Beautiful.\n\nNobody used it.\n\nWhy? Because the people who needed customer information already had a Slack channel where they'd ping each other with \"hey, what's going on with Acme?\" That workflow had 100% adoption, near-zero latency, and the conversation history was searchable.\n\nThe dashboard solved a problem nobody had. The Slack channel was working.\n\nBefore you build anything, ask: how are people solving this without my tool? Sometimes the answer is \"not very well.\" Sometimes it's \"actually, fine.\" The second one is more common than you'd think.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-06-23",
     "posted": false,
-    "text": "The four-question gut check before any CRM project:\n\n1. Who specifically asked for this? (Not \"leadership\" \u2014 a name.)\n2. What decision will they make with the output? (If they can't answer, it's vanity work.)\n3. What happens if I build the simplest version first and stop there?\n4. Who owns it after I'm done? (If nobody, it'll rot.)\n\nI've killed more half-finished projects with question 4 than the other three combined."
+    "text": "The four-question gut check before any CRM project:\n\n1. Who specifically asked for this? (Not \"leadership\" \u2014 a name.)\n2. What decision will they make with the output? (If they can't answer, it's vanity work.)\n3. What happens if I build the simplest version first and stop there?\n4. Who owns it after I'm done? (If nobody, it'll rot.)\n\nI've killed more half-finished projects with question 4 than the other three combined.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-06-24",
     "posted": false,
-    "text": "Your CRM is a tool, not a strategy. Your reporting is a tool, not a strategy. Your AI agent is a tool, not a strategy.\n\nYou still need to decide who you're going after, what you're selling them, and how. No software makes that decision for you. Most software pretends it can, and then you spend a year debugging why it didn't."
+    "text": "Your CRM is a tool, not a strategy. Your reporting is a tool, not a strategy. Your AI agent is a tool, not a strategy.\n\nYou still need to decide who you're going after, what you're selling them, and how. No software makes that decision for you. Most software pretends it can, and then you spend a year debugging why it didn't.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-06-25",
     "posted": false,
-    "text": "A founder asked me last quarter what's the one CRM change that would 10x his sales team's productivity.\n\nI said: \"There isn't one.\"\n\nHe looked frustrated. So I added: there are about 15 small changes \u2014 each worth maybe 5\u201310% \u2014 that add up to a significant improvement over six months. None of them are sexy. None of them look impressive in a board deck. But together they're the difference between a CRM that works and a CRM that gets abandoned for spreadsheets.\n\nThe companies that get this right treat CRM optimization as a continuous practice, not a project. The ones that don't keep replatforming every two years and wondering why nothing changes."
+    "text": "A founder asked me last quarter what's the one CRM change that would 10x his sales team's productivity.\n\nI said: \"There isn't one.\"\n\nHe looked frustrated. So I added: there are about 15 small changes \u2014 each worth maybe 5\u201310% \u2014 that add up to a significant improvement over six months. None of them are sexy. None of them look impressive in a board deck. But together they're the difference between a CRM that works and a CRM that gets abandoned for spreadsheets.\n\nThe companies that get this right treat CRM optimization as a continuous practice, not a project. The ones that don't keep replatforming every two years and wondering why nothing changes.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   },
   {
     "date": "2026-06-26",
@@ -158,6 +158,6 @@
   {
     "date": "2026-06-29",
     "posted": false,
-    "text": "If you can't explain in one sentence why a custom property exists, delete it.\n\n\"We might need it someday\" is not an explanation. Neither is \"Joe in finance asked for it in 2022.\"\n\nEvery dead property makes the live ones harder to trust. Reps stop reading field labels. Reports quietly pull from the wrong one. New hires waste their first week learning which fields are real.\n\nAdding fields is easy. Deleting is political. The fix is a recurring 30-minute \"kill list\" meeting \u2014 the team picks one property to remove, every two weeks, no exceptions. After a quarter you'll wonder how the instance ever got that bloated."
+    "text": "If you can't explain in one sentence why a custom property exists, delete it.\n\n\"We might need it someday\" is not an explanation. Neither is \"Joe in finance asked for it in 2022.\"\n\nEvery dead property makes the live ones harder to trust. Reps stop reading field labels. Reports quietly pull from the wrong one. New hires waste their first week learning which fields are real.\n\nAdding fields is easy. Deleting is political. The fix is a recurring 30-minute \"kill list\" meeting \u2014 the team picks one property to remove, every two weeks, no exceptions. After a quarter you'll wonder how the instance ever got that bloated.\n\nIf any of this resonates and you'd like to discuss it \u2014 or how I might help solve similar CRM problems \u2014 send me a DM."
   }
 ]
