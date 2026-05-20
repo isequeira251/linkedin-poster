@@ -1,7 +1,8 @@
 [
   {
     "note": "Watched a team spend 20 minutes in a meeting arguing about why the pipeline report was wrong. Turned out two people had different ideas of what 'closed' meant. The report was fine. The definitions weren't.",
-    "used": false
+    "used": true,
+    "used_at": "2026-05-20"
   },
   {
     "note": "Cleaned up a HubSpot portal today with 47 lifecycle stage values. Forty-seven. Half were typos or one-offs someone added for a single campaign in 2022 and never removed.",

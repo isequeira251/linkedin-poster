@@ -309,5 +309,26 @@
     "date": "2026-07-17",
     "posted": false,
     "text": "If your CRM sends reps 40 notifications a day, it sends them zero. They've muted the tab.\n\nNotification fatigue is self-inflicted. Every 'a contact opened your email' alert trains people to ignore the 'a deal worth $200k just went cold' alert sitting right next to it.\n\nAudit your notifications like you'd audit properties. Keep the handful that demand action. Kill the rest, or route them to a digest nobody has to react to in real time.\n\nThe goal isn't more awareness. It's making the few alerts that matter impossible to miss.\n\nIf your team has muted CRM notifications entirely, DM me \u2014 pruning the noise is what gets the signal noticed again."
+  },
+  {
+    "date": "2026-05-20",
+    "note": "Watched a team spend 20 minutes in a meeting arguing about why the pipeline report was wrong. Turned out two people had different ideas of what 'closed' meant. The report was fine. The definitions weren't.",
+    "text": "Watched a team argue for 20 minutes about a broken pipeline report.\n\nThe report wasn't broken.\n\nOne person counted a deal as \"closed\" when the contract was signed. The other waited until payment cleared. Same stage, same property, two completely different mental models.\n\nNo dashboard fixes that. No new tool fixes that. You can rebuild the report in Looker, Tableau, or HubSpot's native dashboards and you'll get the same fight next quarter.\n\nThis is what I mean when I say most CRM problems are definition problems. The data is usually fine. The plumbing is usually fine. What's missing is a one-sentence, written-down answer to: what does this stage actually mean, and who decides when a deal enters it?\n\nIf you can't answer that for every stage in your pipeline, the next \"the numbers look off\" meeting is already on the calendar. You just don't know it yet.\n\nWhat's the stage in your pipeline that two people on your team would define differently right now?",
+    "generated": true,
+    "hook_options": [
+      "Watched a team argue for 20 minutes about a broken pipeline report. The report wasn't broken.",
+      "Two people. Two definitions of 'closed.' One useless pipeline report.",
+      "Your pipeline report isn't wrong. Your team just doesn't agree on what 'closed' means.",
+      "20-minute meeting about a wrong pipeline report. The report was right."
+    ],
+    "self_score": {
+      "hook": 8,
+      "specificity": 9,
+      "human": 9,
+      "comment_bait": 9
+    },
+    "posted": true,
+    "posted_at": "2026-05-20T13:28:34.786851+00:00",
+    "post_id": "urn:li:share:7462856801001168898"
   }
 ]
