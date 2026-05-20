@@ -53,6 +53,27 @@ def warn_if_token_expiring() -> None:
         )
 
 
+def _skip_reason(posts: list, today: str, override: str | None, real_today: str) -> str | None:
+    """Return a message explaining why we should NOT post, or None to proceed.
+
+    Idempotency has two modes:
+      - Forced run (OVERRIDE_DATE set): post for that date unless it was already
+        published, so manual re-runs can't double-post the same date.
+      - Normal run: publish at most once per real calendar day, keyed on
+        posted_at (when we actually published) rather than an entry's target
+        date. Keying on the target date is what let a post pre-published for a
+        future date (via OVERRIDE_DATE) wrongly suppress that date's own
+        scheduled run.
+    """
+    if override:
+        if any(p["date"] == today and p.get("posted") for p in posts):
+            return f"{today} was already published; nothing to do."
+        return None
+    if any(p.get("posted") and str(p.get("posted_at", ""))[:10] == real_today for p in posts):
+        return f"Already published a post today ({real_today}); nothing to do."
+    return None
+
+
 def _next_unused_note() -> tuple[list, dict | None]:
     """Return (all_notes, first_unused_note) from notes.json, or ([], None)."""
     if not NOTES_FILE.exists():
@@ -90,9 +111,14 @@ def main() -> int:
         return 1
     posts = json.loads(POSTS_FILE.read_text())
 
-    # Idempotency: never post twice for the same day.
-    if any(p["date"] == today and p.get("posted") for p in posts):
-        print(f"Already posted for {today}; nothing to do.")
+    skip_reason = _skip_reason(
+        posts,
+        today,
+        override=os.environ.get("OVERRIDE_DATE"),
+        real_today=date.today().isoformat(),
+    )
+    if skip_reason:
+        print(skip_reason)
         warn_if_token_expiring()
         return 0
     warn_if_token_expiring()

@@ -21,11 +21,6 @@
     "post_id": "urn:li:share:7462490358334074880"
   },
   {
-    "date": "2026-05-20",
-    "posted": false,
-    "text": "If your CRM sends reps 40 notifications a day, it sends them zero. They've muted the tab.\n\nNotification fatigue is self-inflicted. Every 'a contact opened your email' alert trains people to ignore the 'a deal worth $200k just went cold' alert sitting right next to it.\n\nAudit your notifications like you'd audit properties. Keep the handful that demand action. Kill the rest, or route them to a digest nobody has to react to in real time.\n\nThe goal isn't more awareness. It's making the few alerts that matter impossible to miss.\n\nIf your team has muted CRM notifications entirely, DM me \u2014 pruning the noise is what gets the signal noticed again."
-  },
-  {
     "date": "2026-05-21",
     "posted": false,
     "text": "A simple CRM health check I run before touching anything:\n\n1. Pull the last 90 days of closed deals. How many are missing a close reason?\n2. Pull all open deals over 90 days old. Why are they still open?\n3. Pull all contacts created in the last 30 days. What % have a lifecycle stage that makes sense?\n4. Look at your top 3 workflows. When were they last edited? By whom?\n5. Count your active properties. Now count the ones used in a report or workflow in the last year.\n\nThe gap between those last two numbers is usually where the real work is.\n\nHappy to walk through this on a real instance if anyone wants a second set of eyes \u2014 DM me."
@@ -309,5 +304,10 @@
     "date": "2026-07-16",
     "posted": false,
     "text": "Open your CRM's permissions panel. How many roles do you have. How many of them are 'X but slightly different.'\n\nPermissions debt is the quietest tech debt. Nobody notices it until someone leaves the company and you spend a week figuring out which records they could see. Or until the audit comes and you can't explain why marketing has edit access to closed-won opportunities.\n\nA quarterly review of who-can-see-what is not glamorous. It's also the single biggest predictor of whether your CRM will pass a SOC 2 audit on the first try.\n\nIf your permissions structure has grown organically for years, send me a DM \u2014 happy to walk through how to clean it up without breaking workflows."
+  },
+  {
+    "date": "2026-07-17",
+    "posted": false,
+    "text": "If your CRM sends reps 40 notifications a day, it sends them zero. They've muted the tab.\n\nNotification fatigue is self-inflicted. Every 'a contact opened your email' alert trains people to ignore the 'a deal worth $200k just went cold' alert sitting right next to it.\n\nAudit your notifications like you'd audit properties. Keep the handful that demand action. Kill the rest, or route them to a digest nobody has to react to in real time.\n\nThe goal isn't more awareness. It's making the few alerts that matter impossible to miss.\n\nIf your team has muted CRM notifications entirely, DM me \u2014 pruning the noise is what gets the signal noticed again."
   }
 ]
