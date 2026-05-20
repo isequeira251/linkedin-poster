@@ -1,21 +1,16 @@
-"""Daily runner: publishes today's post, generating it on the fly when needed.
+"""Daily runner: ghostwrites today's post from the notes pool, falling back to
+a pre-written post when the pool can't produce one.
 
-Each posts.json entry is {date, posted, ...} plus one of:
-  - "text": a pre-written, ready-to-publish post (legacy / hand-authored).
-  - "note": a raw note the ghostwriter turns into a post at run time.
-  - "bubble" (optional): true forces the card's thought bubble, false suppresses
-    it. Omit to let generate_card decide from hook length.
+Priority each run (for `today`, and only if nothing was posted yet today):
+  1. DEFAULT — the next unused note in notes.json: ghostwrite it, and if the
+     draft clears MIN_AVG_SCORE, publish it and append the result to posts.json.
+  2. FALLBACK — if there's no unused note, or the draft scored below the gate,
+     publish today's unposted pre-written `text` entry in posts.json instead.
+  3. Otherwise, do nothing.
 
-Order of operations for `today`:
-  1. A scheduled entry with "text" -> publish it as-is.
-  2. A scheduled entry with "note" (no "text") -> ghostwrite it, then publish.
-  3. Nothing scheduled -> pull the next unused note from notes.json, ghostwrite
-     it, publish, and append the result to posts.json.
-
-So the hand-written queue keeps flowing until it runs out, after which the
-notes pool auto-generates a fresh post every day. Generated posts are quality-
-gated: if the model's average self-score is below MIN_AVG_SCORE (default 6.0,
-set 0 to disable), nothing is posted and the run fails so it can be retried.
+posts.json entries are {date, posted, ...}. Pre-written entries carry "text";
+generated entries also carry "generated": true, "note", "hook_options", and
+"self_score". "bubble" (optional) forces/suppresses the card thought bubble.
 
 Reads credentials from env vars (LINKEDIN_ACCESS_TOKEN, LINKEDIN_PERSON_URN)
 or token.json, and ANTHROPIC_API_KEY for generation. Built for GitHub Actions
@@ -72,19 +67,18 @@ def _avg_score(self_score: dict) -> float:
     return sum(vals) / len(vals) if vals else 0.0
 
 
-def _ghostwrite_or_die(raw_input: str) -> dict:
-    """Generate a draft and enforce the optional quality gate. Raises SystemExit
-    (without consuming the note) if the draft scores below MIN_AVG_SCORE."""
+def _ghostwrite(raw_input: str) -> dict | None:
+    """Generate a draft. Return it if it clears MIN_AVG_SCORE; return None (so
+    the caller falls back to a pre-written post) if it scores below the gate.
+    On a fallback the note is left unused, so it's retried on the next run."""
     print(f"Ghostwriting from note: {raw_input[:70]!r}...")
     draft = generate_post(raw_input)
     score = _avg_score(draft["self_score"])
-    print(f"Self-score avg {score:.1f}  detail={draft['self_score']}")
     min_score = float(os.environ.get("MIN_AVG_SCORE", DEFAULT_MIN_AVG_SCORE))
+    print(f"Self-score avg {score:.1f}  detail={draft['self_score']}  (gate={min_score})")
     if min_score and score < min_score:
-        raise SystemExit(
-            f"ERROR: draft scored {score:.1f} < MIN_AVG_SCORE={min_score}; not "
-            f"posting. Rework the note or lower MIN_AVG_SCORE, then re-run."
-        )
+        print("WARN: draft below gate; falling back to a pre-written post.", file=sys.stderr)
+        return None
     return draft
 
 
@@ -96,48 +90,48 @@ def main() -> int:
         return 1
     posts = json.loads(POSTS_FILE.read_text())
 
-    todays = [p for p in posts if p["date"] == today and not p.get("posted")]
-    if len(todays) > 1:
-        print(f"WARN: {len(todays)} posts scheduled for {today}; posting the first only.")
+    # Idempotency: never post twice for the same day.
+    if any(p["date"] == today and p.get("posted") for p in posts):
+        print(f"Already posted for {today}; nothing to do.")
+        warn_if_token_expiring()
+        return 0
     warn_if_token_expiring()
 
-    # Decide what to publish, generating from a note when there's no ready text.
-    target = todays[0] if todays else None
-    note_entry: tuple[list, dict] | None = None  # set when pulling from the pool
+    target = None       # the posts.json entry we'll publish
     bubble = None
+    consume_note = None  # (notes_list, note) to mark used on success
 
-    if target is not None and target.get("text"):
-        text = target["text"]
-        bubble = target.get("bubble")
-        print(f"Publishing pre-written entry for {today}.")
-    elif target is not None and target.get("note"):
-        draft = _ghostwrite_or_die(target["note"])
-        text = draft["post"]
-        bubble = target.get("bubble")
-        target.update(
-            text=text,
-            generated=True,
-            hook_options=draft["hook_options"],
-            self_score=draft["self_score"],
-        )
-    else:
-        notes, note = _next_unused_note()
-        if note is None:
-            print(f"Nothing scheduled for {today} and no unused notes left.")
+    # 1) Default: ghostwrite the next unused note.
+    notes, note = _next_unused_note()
+    if note is not None:
+        draft = _ghostwrite(note["note"])
+        if draft is not None:
+            target = {
+                "date": today,
+                "note": note["note"],
+                "text": draft["post"],
+                "generated": True,
+                "hook_options": draft["hook_options"],
+                "self_score": draft["self_score"],
+            }
+            posts.append(target)
+            consume_note = (notes, note)
+
+    # 2) Fallback: today's unposted pre-written entry.
+    if target is None:
+        prewritten = [
+            p for p in posts
+            if p["date"] == today and not p.get("posted")
+            and p.get("text") and not p.get("generated")
+        ]
+        if not prewritten:
+            print(f"No usable note and no pre-written post for {today}; nothing to do.")
             return 0
-        draft = _ghostwrite_or_die(note["note"])
-        text = draft["post"]
-        target = {
-            "date": today,
-            "note": note["note"],
-            "text": text,
-            "generated": True,
-            "hook_options": draft["hook_options"],
-            "self_score": draft["self_score"],
-        }
-        posts.append(target)
-        note_entry = (notes, note)
+        target = prewritten[0]
+        bubble = target.get("bubble")
+        print(f"Publishing pre-written fallback for {today}.")
 
+    text = target["text"]
     access_token, person_urn = load_credentials()
 
     print(f"Generating card for {today}...")
@@ -152,8 +146,8 @@ def main() -> int:
     POSTS_FILE.write_text(json.dumps(posts, indent=2) + "\n")
     print(f"Updated {POSTS_FILE}")
 
-    if note_entry is not None:
-        notes, note = note_entry
+    if consume_note is not None:
+        notes, note = consume_note
         note["used"] = True
         note["used_at"] = today
         NOTES_FILE.write_text(json.dumps(notes, indent=2) + "\n")
