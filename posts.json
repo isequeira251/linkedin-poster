@@ -31,6 +31,16 @@
     "text": "The most underrated CRM skill is saying no to a stakeholder who wants \"just one more field.\"\n\nEvery field has a maintenance cost. Every field is a place where data can go stale, get mistyped, or contradict another field. The default answer should be \"what existing property can we use\" \u2014 not \"let's add one.\"\n\nIf your portal has 300 properties and you can't remember why most of them exist, DM me \u2014 pruning is most of what I do."
   },
   {
+    "date": "2026-05-23",
+    "posted": false,
+    "text": "A deal isn't a relationship with one person. It's a relationship with a committee.\n\nMost CRMs let you tag contact roles on a deal \u2014 champion, economic buyer, technical evaluator, blocker. Almost nobody fills them in. Then the champion leaves, the deal stalls, and nobody knows who else to call.\n\nMap the buying committee on every deal over a certain size. When someone goes dark, you'll have a backup. When you win, you'll know who actually drove it.\n\nIf your deals live and die on a single contact, DM me \u2014 mapping the committee is one of the highest-leverage habits a sales team can build."
+  },
+  {
+    "date": "2026-05-24",
+    "posted": false,
+    "text": "Win/loss analysis is the most skipped high-value activity in sales.\n\nEveryone's too busy chasing the next deal to study the last one. So the same losing patterns repeat for years. The same objection sinks deal after deal and nobody connects the dots.\n\nYou don't need a fancy program. A required two-field note on every closed deal \u2014 'what actually drove this' and 'what would have changed it' \u2014 gives you a quarterly review worth more than most sales training.\n\nIf you close deals but never study why, send me a DM \u2014 the lightweight version of this is a one-day setup."
+  },
+  {
     "date": "2026-05-25",
     "posted": false,
     "text": "Bad CRM data isn't a data problem. It's an incentive problem.\n\nIf reps don't see value in updating a field, they won't. Threats won't fix it. Mandatory fields just produce garbage data faster. The fix is making the data useful to the person entering it \u2014 sales sequences that pull from notes, deal views that surface the next action, dashboards that reward thoroughness.\n\nThe reps who keep the cleanest data are the ones whose own workflow depends on it.\n\nIf you're trying to fix data hygiene with mandates and it isn't sticking, DM me \u2014 the incentive redesign is usually the actual fix."
@@ -54,6 +64,16 @@
     "date": "2026-05-29",
     "posted": false,
     "text": "The fastest way to improve CRM data quality isn't a tool. It's a Friday afternoon report that emails the sales manager a list of every deal closed that week with missing key fields.\n\nSuddenly the fields get filled in. Funny how that works.\n\nIf your reps treat data entry as optional, message me \u2014 there are a handful of low-drama accountability loops that change behavior fast."
+  },
+  {
+    "date": "2026-05-30",
+    "posted": false,
+    "text": "Data enrichment tools are sold as a fix for bad data. They're not. They're a fix for missing data.\n\nIf your records are wrong, enrichment overwrites them with someone else's guess. If your records are empty, enrichment fills useful gaps. Know which problem you have before you buy.\n\nThe teams that get value from enrichment turn it on for specific fields (company size, industry, tech stack) and leave the rest alone. The teams that don't let it overwrite everything and then can't trust any field.\n\nIf you're weighing an enrichment tool and not sure it'll help, DM me \u2014 happy to talk through what it can and can't fix."
+  },
+  {
+    "date": "2026-05-31",
+    "posted": false,
+    "text": "'Single view of the customer' is the most expensive phrase in B2B software.\n\nIt sounds achievable. It rarely is. The data lives in five systems with five owners and five definitions, and unifying it perfectly is a multi-year project that's obsolete before it ships.\n\nWhat actually works: pick the three or four fields people genuinely need in one place, sync those reliably, and stop. A 'good-enough view of the customer' beats a perfect one that never arrives.\n\nIf you're staring down a 'single view' project that keeps growing, send me a DM \u2014 scoping it down is usually the win."
   },
   {
     "date": "2026-06-01",
@@ -81,6 +101,16 @@
     "text": "The phrase \"we'll just handle that in the CRM\" has caused more downstream pain than almost any other sentence in modern B2B operations.\n\nUsually said in a meeting where nobody from ops is present.\n\nIf ops keeps getting handed problems that were designed without them, DM me \u2014 I help teams build the muscle to push back earlier."
   },
   {
+    "date": "2026-06-06",
+    "posted": false,
+    "text": "Your marketing emails are landing in spam and you're blaming the copy. It's probably the domain.\n\nDeliverability is mostly technical hygiene: SPF, DKIM, and DMARC set up correctly, a warmed-up sending domain, and a list that isn't full of dead addresses. Get those wrong and the best subject line in the world lands in a folder nobody opens.\n\nCheck your authentication records before you rewrite another email. The fix is usually a config change, not a creative one.\n\nIf your open rates are quietly declining, DM me \u2014 deliverability audits are straightforward and the ROI is immediate."
+  },
+  {
+    "date": "2026-06-07",
+    "posted": false,
+    "text": "The best activity logging is the kind reps don't have to do.\n\nModern CRMs can auto-capture emails and meetings from connected inboxes and calendars. Turn it on. The data you get from automatic capture is more complete and more honest than anything reps log by hand under deadline pressure.\n\nManual logging should be reserved for the things a machine can't see \u2014 the content of a call, the read on a stakeholder, the next step. Let the system handle the rest.\n\nIf your reps are spending real time on data entry that could be automated, send me a DM."
+  },
+  {
     "date": "2026-06-08",
     "posted": false,
     "text": "The dashboard nobody uses is the one that takes 10 seconds to load and shows 14 charts.\n\nThe dashboard everyone uses shows three numbers. Pipeline created this week. Deals stuck more than 30 days in their current stage. Activities logged per rep.\n\nLess is more, and it's not even close.\n\nIf your dashboards are 14 charts deep and nobody opens them, send me a DM \u2014 the rebuild is usually a half-day, not a quarter."
@@ -104,6 +134,16 @@
     "date": "2026-06-12",
     "posted": false,
     "text": "A month of posts on improving CRM performance, and the takeaway I keep coming back to:\n\nThe teams that get the most out of their CRM aren't the ones with the biggest tech stack or the fanciest setup. They're the ones who treat it as a living system \u2014 pruned regularly, well-understood by the people who use it, and tied to decisions that actually get made.\n\nTools don't fix culture. But a thoughtful, well-maintained CRM removes the friction that makes good culture hard to sustain.\n\nIf any of these posts hit a nerve and you're staring at a CRM that's grown more than it's been gardened, I help teams (mostly on HubSpot) work through exactly this. Send me a DM \u2014 even if it's just to compare notes."
+  },
+  {
+    "date": "2026-06-13",
+    "posted": false,
+    "text": "Everyone worries about duplicate contacts. The quieter problem is duplicate companies.\n\n'Acme Inc,' 'Acme, Inc.,' 'Acme Incorporated,' and 'acme.com' all as separate company records. Now your account-based reporting is wrong, your territory assignments overlap, and two reps are working the same logo without knowing it.\n\nCompany dedup is harder than contact dedup because the matching signals are weaker. Domain is your best key \u2014 normalize on it ruthlessly.\n\nIf your account list has the same company three times under different spellings, DM me \u2014 happy to share how I approach company-level dedup."
+  },
+  {
+    "date": "2026-06-14",
+    "posted": false,
+    "text": "The number every sales leader should know and most can't recite: pipeline coverage ratio.\n\nOpen pipeline for the quarter divided by the quota for the quarter. Under 3x and you're almost certainly going to miss \u2014 there isn't enough in the funnel to absorb normal loss rates. Over 5x and either you're sandbagging or your pipeline is full of deals that aren't real.\n\nIf your CRM can't show you this number in one click, that's the first report to build. Everything about forecast confidence flows from it.\n\nIf you don't have coverage ratio at your fingertips, send me a DM \u2014 it's a 20-minute build."
   },
   {
     "date": "2026-06-15",
@@ -131,6 +171,16 @@
     "text": "Custom objects are usually a mistake.\n\nYes, your business has \"projects\" or \"subscriptions\" or \"units\" that don't fit neatly into Contacts/Companies/Deals. And yes, your CRM lets you model them.\n\nBut every custom object adds: a new permission matrix, a new reporting surface, new sync logic with downstream systems, new training for reps, new edge cases your automations don't handle.\n\nNine times out of ten you can solve the same problem with a well-structured property on the parent object plus a tag. The tenth time genuinely needs a custom object \u2014 and you'll know because the \"just use a property\" workaround keeps breaking.\n\nIf you're weighing a custom object and not sure it's worth the maintenance tax, send me a DM \u2014 happy to talk it through before you commit."
   },
   {
+    "date": "2026-06-20",
+    "posted": false,
+    "text": "Your contact database has a hoarding problem.\n\nContacts from a trade show in 2019. Leads who never replied. People who left the companies you sold to three jobs ago. They inflate your numbers, hurt your deliverability, and make every list slower to build.\n\nArchiving isn't deleting \u2014 it's moving the dead weight out of the active working set. A quarterly archive of contacts with zero engagement in 18+ months keeps the database honest.\n\nIf your contact count keeps climbing but engagement keeps falling, DM me \u2014 the archive process is a one-time setup with permanent payoff."
+  },
+  {
+    "date": "2026-06-21",
+    "posted": false,
+    "text": "If you sell software, your CRM is missing your most predictive data: product usage.\n\nA contact who logs in daily and invites teammates is a different sales conversation than one who signed up and vanished. Yet most sales teams work off form fills and email opens while the usage data sits in a separate system nobody connects.\n\nPipe a few key usage signals into the CRM \u2014 last login, active seats, feature adoption \u2014 and your reps suddenly know who's actually worth a call.\n\nIf your sales team is flying blind on product usage, send me a DM \u2014 wiring in the key signals changes everything about prioritization."
+  },
+  {
     "date": "2026-06-22",
     "posted": false,
     "text": "Watched a team spend three months building a \"unified customer view\" dashboard.\n\nIt pulled from CRM, billing, support, product, marketing automation. Sixteen widgets. Color-coded health bars. Beautiful.\n\nNobody used it.\n\nWhy? Because the people who needed customer information already had a Slack channel where they'd ping each other with \"hey, what's going on with Acme?\" That workflow had 100% adoption, near-zero latency, and the conversation history was searchable.\n\nThe dashboard solved a problem nobody had. The Slack channel was working.\n\nBefore you build anything, ask: how are people solving this without my tool? Sometimes the answer is \"not very well.\" Sometimes it's \"actually, fine.\" The second one is more common than you'd think.\n\nIf you're about to build something big to solve a problem people are already working around, DM me \u2014 sometimes the answer is 'leave it alone.'"
@@ -154,6 +204,16 @@
     "date": "2026-06-26",
     "posted": false,
     "text": "Six weeks of posts on CRM performance, and the thing I keep coming back to:\n\nThe teams that get this right treat their CRM like a garden \u2014 not a one-time install. Continuous pruning. Continuous re-planting. Definitions that drift get redefined. Workflows that age get retired. Reports that nobody reads get killed.\n\nThe teams that get it wrong treat it like a renovation project. Big push every 18 months. Replatform. Migrate. Retrain. Then it slowly rots until the next replatform.\n\nIf you're staring at a CRM that feels like it's drifting toward the second pattern, send me a DM. The fix isn't a tool \u2014 it's a cadence."
+  },
+  {
+    "date": "2026-06-27",
+    "posted": false,
+    "text": "The worst moment in most customer relationships is the handoff from sales to CS.\n\nThe rep who spent two months learning the account disappears. The CS manager inherits a closed-won deal with no context \u2014 no notes on why they bought, what was promised, who the real users are. The customer re-explains everything and quietly loses confidence.\n\nA structured handoff in the CRM \u2014 required fields at close that capture goals, promises, and key contacts \u2014 turns that cliff into a bridge.\n\nIf your sales-to-CS handoff loses context every time, DM me \u2014 the fix is a short checklist enforced at the close stage."
+  },
+  {
+    "date": "2026-06-28",
+    "posted": false,
+    "text": "Unmanaged discounting is a margin leak hiding in your CRM.\n\nWhen every rep can apply any discount to close a deal, two things happen: margins erode quietly, and customers learn that your price is fiction. The deal that closed at 40% off trains the next buyer to demand the same.\n\nBuild discount approval into the deal workflow \u2014 anything past a threshold routes to a manager. Not to slow deals down, but to make the exception visible and deliberate.\n\nIf discounting on your team is a free-for-all, send me a DM \u2014 governance workflows are quick to build and pay for themselves fast."
   },
   {
     "date": "2026-06-29",
@@ -181,6 +241,16 @@
     "text": "Ask five people at your company what an 'active customer' is. You'll get six answers.\n\nMarketing says 'opened an email in the last 90 days.' Sales says 'on a paid plan with usage above zero.' CS says 'logged in within the trailing month.' Finance says 'invoiced last quarter.' Product says 'has at least one active seat.'\n\nEvery definition is reasonable. None of them match each other. Your dashboards have been quietly disagreeing for years.\n\nIf you've never sat down to define 'active customer' across teams, send me a DM \u2014 this is the cheapest hour of alignment you'll get all quarter."
   },
   {
+    "date": "2026-07-04",
+    "posted": false,
+    "text": "The longest-running argument in B2B: was that deal marketing-sourced or sales-sourced?\n\nMarketing claims the lead. Sales claims the relationship. Both are partly right, and the fight wastes more energy than the attribution is worth.\n\nThe healthiest teams stop trying to assign single-source credit and adopt a simple shared model \u2014 first touch and last touch both recorded, both visible, neither team's bonus riding on a coin flip. The CRM should inform the conversation, not referee a turf war.\n\nIf attribution fights are eating your team's energy, DM me \u2014 a shared model defuses most of it."
+  },
+  {
+    "date": "2026-07-05",
+    "posted": false,
+    "text": "'The VP asked for a report' is how most CRM clutter begins.\n\nA one-time question becomes a permanent dashboard. The VP looks at it twice and forgets it. Six months later it's still auto-refreshing, still maintained, still cited in meetings by people who don't know it's stale.\n\nBefore you build a report, ask: is this a question or a system? Questions get answered once. Systems get built and owned. Confusing the two is how you end up with 80 dashboards and trust in none.\n\nIf your reporting has metastasized from one-off requests, send me a DM \u2014 the cleanup is mostly about saying no going forward."
+  },
+  {
     "date": "2026-07-06",
     "posted": false,
     "text": "The sales-marketing SLA most teams sign and forget:\n\n'Marketing will pass MQLs within 24 hours of qualification. Sales will action MQLs within 24 hours of receipt. Either side can dispute the qualification within 48 hours.'\n\nNice document. Lives in Notion. Doesn't exist in the CRM.\n\nThe version that actually works: a workflow that timestamps the MQL pass, alerts the sales manager when the 24-hour SLA breaches, and reports breach rates weekly. Now you have an SLA. Before, you had a hope.\n\nIf your SLAs live in docs and not in your CRM, DM me \u2014 wiring them in is usually a half-day's work."
@@ -204,6 +274,16 @@
     "date": "2026-07-10",
     "posted": false,
     "text": "Every CRM has tech debt. Most teams pretend it doesn't.\n\nThen the rebuild happens. And the rebuild turns up workflows nobody understands, properties nobody owns, integrations nobody can map. Six months and three-hundred-thousand dollars later, the rebuild ships and everyone swears they'll keep the new instance clean.\n\nEighteen months after that, it looks exactly like the old one.\n\nThe way out is treating CRM as continuous practice, not project. A small amount of cleanup, every quarter, forever.\n\nIf your CRM is heading toward 'we need to rebuild' territory, DM me \u2014 the maintenance practice is cheaper than the rebuild every time."
+  },
+  {
+    "date": "2026-07-11",
+    "posted": false,
+    "text": "Selling internationally turns your clean CRM into a mess of edge cases.\n\nPhone numbers in twelve formats. Dates as MM/DD here and DD/MM there. Company suffixes \u2014 GmbH, Ltd, SARL, Pty \u2014 that break your dedup matching. Currencies that need a single reporting standard. Address fields that assume US states.\n\nNone of it is hard individually. All of it compounds if you don't standardize on entry. Normalize formats at the point of import, not in cleanup six months later.\n\nIf your international data is a formatting swamp, DM me \u2014 happy to share the normalization rules I start with."
+  },
+  {
+    "date": "2026-07-12",
+    "posted": false,
+    "text": "'Is the team actually using the CRM?' is a measurable question. Most leaders treat it as a vibe.\n\nThe signals are right there: percentage of deals with a next step and a date, activities logged per rep per week, percentage of contacts with complete core fields, time between stage changes. Trend those four and you know exactly where adoption is real and where it's theater.\n\nYou can't improve adoption you don't measure. And 'it feels like people aren't using it' is not a metric.\n\nIf you want a simple CRM adoption scorecard for your team, send me a DM \u2014 it's a half-day to set up and it changes the conversation."
   },
   {
     "date": "2026-07-13",
