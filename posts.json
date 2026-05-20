@@ -159,5 +159,75 @@
     "date": "2026-06-29",
     "posted": false,
     "text": "If you can't explain in one sentence why a custom property exists, delete it.\n\n\"We might need it someday\" is not an explanation. Neither is \"Joe in finance asked for it in 2022.\"\n\nEvery dead property makes the live ones harder to trust. Reps stop reading field labels. Reports quietly pull from the wrong one. New hires waste their first week learning which fields are real.\n\nAdding fields is easy. Deleting is political. The fix is a recurring 30-minute \"kill list\" meeting \u2014 the team picks one property to remove, every two weeks, no exceptions. After a quarter you'll wonder how the instance ever got that bloated.\n\nIf your property list has gotten ahead of you, DM me \u2014 the kill-list meeting is one of the higher-leverage things a CRM team can do."
+  },
+  {
+    "date": "2026-06-30",
+    "posted": false,
+    "text": "The most useful CRM metric nobody tracks: 'time in current stage.'\n\nDeal age tells you how long the deal has existed. Time in current stage tells you whether momentum has stalled. A 90-day-old deal in Negotiation is healthy. A 90-day-old deal stuck in Discovery for 60 of those days is dying.\n\nBuild the report. Sort it. Look at the top 10. Those are the deals your team is lying to themselves about.\n\nIf you can't easily build this report in your CRM today, DM me \u2014 it's usually a 30-minute fix that changes how forecast calls go."
+  },
+  {
+    "date": "2026-07-01",
+    "posted": false,
+    "text": "'Lost - Price' is not a lost reason. It's a shrug.\n\nThe actual lost reasons that help you change behavior look like: 'lost to incumbent because we couldn't prove ROI in their evaluation window,' 'lost on security review,' 'champion left mid-cycle,' 'budget cycle slipped.'\n\nIf your lost-reason picklist has four generic options and one of them is 'other,' you're collecting data for a report nobody reads.\n\nIf your lost-reason data is too vague to be useful, send me a DM \u2014 rebuilding this picklist is one of the highest-ROI hours your RevOps team can spend."
+  },
+  {
+    "date": "2026-07-02",
+    "posted": false,
+    "text": "Most companies discover the cost of mandatory fields the hard way.\n\nReps figure out the workaround within a week. They type 'TBD' in every text field. They pick the first dropdown option for every required dropdown. The fields are filled in. The data is worthless.\n\nMandatory fields work for two things: enforcing core record integrity (every contact has an email) and capturing decision-quality data at a moment the rep is naturally engaged (close reason at the moment of close). Everything else just teaches reps to game your CRM.\n\nIf your required fields are producing garbage data and you're not sure which to keep, DM me \u2014 happy to walk through how to triage them."
+  },
+  {
+    "date": "2026-07-03",
+    "posted": false,
+    "text": "Ask five people at your company what an 'active customer' is. You'll get six answers.\n\nMarketing says 'opened an email in the last 90 days.' Sales says 'on a paid plan with usage above zero.' CS says 'logged in within the trailing month.' Finance says 'invoiced last quarter.' Product says 'has at least one active seat.'\n\nEvery definition is reasonable. None of them match each other. Your dashboards have been quietly disagreeing for years.\n\nIf you've never sat down to define 'active customer' across teams, send me a DM \u2014 this is the cheapest hour of alignment you'll get all quarter."
+  },
+  {
+    "date": "2026-07-06",
+    "posted": false,
+    "text": "The sales-marketing SLA most teams sign and forget:\n\n'Marketing will pass MQLs within 24 hours of qualification. Sales will action MQLs within 24 hours of receipt. Either side can dispute the qualification within 48 hours.'\n\nNice document. Lives in Notion. Doesn't exist in the CRM.\n\nThe version that actually works: a workflow that timestamps the MQL pass, alerts the sales manager when the 24-hour SLA breaches, and reports breach rates weekly. Now you have an SLA. Before, you had a hope.\n\nIf your SLAs live in docs and not in your CRM, DM me \u2014 wiring them in is usually a half-day's work."
+  },
+  {
+    "date": "2026-07-07",
+    "posted": false,
+    "text": "Changing a deal owner in your CRM does more damage than people realize.\n\nMost CRMs overwrite the owner field without preserving history. Six months later you're trying to answer 'who closed this deal' and the answer is 'whoever owns it now,' which is wrong.\n\nThe fix is a workflow that copies the old owner to a 'previous owner' field on any change, and stamps a 'last owner change date.' Your historical reporting survives reorgs, churn, and territory shifts.\n\nIf your historical pipeline reports look weird after a reorg, send me a DM \u2014 owner-change tracking is usually the missing piece."
+  },
+  {
+    "date": "2026-07-08",
+    "posted": false,
+    "text": "Calculated properties are the most underused feature in HubSpot.\n\nExamples of things I've solved with them in the last year: 'is this deal at risk' (true if stage age > 30 days AND no activity in 14 days), 'company tier' (based on revenue, employee count, deal history), 'customer lifecycle in months' (today minus first close date).\n\nThe alternative \u2014 a workflow that updates a property on a schedule \u2014 drifts the moment the underlying data changes. A calculated property is always right. It's also slower to query at scale, which is the tradeoff.\n\nIf you have workflows updating properties that could be a calculated property instead, DM me \u2014 happy to walk through which is right for what."
+  },
+  {
+    "date": "2026-07-09",
+    "posted": false,
+    "text": "What I look at when a new sales hire isn't ramping in the CRM:\n\nDay 30: are they logging activities, or just doing them? If activities aren't logged, the manager has no shot at coaching.\n\nDay 60: are their deals moving through stages, or piling up in early discovery? Pile-ups usually mean qualification training never landed.\n\nDay 90: is their pipeline-to-quota ratio in a normal range for the role? If not, the input mix is wrong \u2014 too few accounts, wrong ICP fit, or unrealistic conversion expectations.\n\nThese three checks beat any onboarding survey. The data tells you what coaching the rep actually needs.\n\nIf you don't have a structured way to read new-hire CRM data for coaching signals, send me a DM \u2014 happy to share the framework."
+  },
+  {
+    "date": "2026-07-10",
+    "posted": false,
+    "text": "Every CRM has tech debt. Most teams pretend it doesn't.\n\nThen the rebuild happens. And the rebuild turns up workflows nobody understands, properties nobody owns, integrations nobody can map. Six months and three-hundred-thousand dollars later, the rebuild ships and everyone swears they'll keep the new instance clean.\n\nEighteen months after that, it looks exactly like the old one.\n\nThe way out is treating CRM as continuous practice, not project. A small amount of cleanup, every quarter, forever.\n\nIf your CRM is heading toward 'we need to rebuild' territory, DM me \u2014 the maintenance practice is cheaper than the rebuild every time."
+  },
+  {
+    "date": "2026-07-13",
+    "posted": false,
+    "text": "The forecast call your reps dread is a CRM data problem in disguise.\n\nIf reps can update their deal stage right before the call, your forecast is performative. If stage definitions are fuzzy, every rep is forecasting on a different scale. If the system of record is 'whatever the rep said on Friday,' the dashboard is theater.\n\nReal forecast hygiene: stage changes tracked with timestamps, definitions documented and tested quarterly, a freeze on commit-stage changes 48 hours before the call. Boring. Effective.\n\nIf your forecast accuracy is unreliable and you suspect the CRM data is the cause, DM me \u2014 happy to audit how your stages are actually being used."
+  },
+  {
+    "date": "2026-07-14",
+    "posted": false,
+    "text": "Modeling a multi-product company in your CRM is harder than it looks.\n\nThe question is always: are these one deal with line items, or separate deals? The answer is almost always 'it depends on the sales motion.' If they're sold together, one deal. If they're sold separately to the same buyer at different times, separate deals. If they're cross-sells from CS to existing accounts, almost always separate deals.\n\nGet this wrong and your pipeline reports double-count or under-count for years. The schema decision is structural \u2014 once you pick, changing it is brutal.\n\nIf you're growing into a multi-product motion and not sure how to model it, send me a DM \u2014 this is the conversation worth having before, not after."
+  },
+  {
+    "date": "2026-07-15",
+    "posted": false,
+    "text": "Renewals are not a sales funnel. They're a customer success funnel that happens to involve revenue.\n\nMost teams cram renewals into the new-business pipeline anyway. They use the same stages. They use the same close-date logic. They get useless reporting because a renewal that lands on time is not the same event as a new deal that closes after a competitive process.\n\nA separate pipeline for renewals \u2014 even just for reporting \u2014 clarifies more than any other single CRM change I recommend to growth-stage companies.\n\nIf your renewals and new business are colliding in the same pipeline, DM me \u2014 splitting them is a one-week project with multi-year payoff."
+  },
+  {
+    "date": "2026-07-16",
+    "posted": false,
+    "text": "Open your CRM's permissions panel. How many roles do you have. How many of them are 'X but slightly different.'\n\nPermissions debt is the quietest tech debt. Nobody notices it until someone leaves the company and you spend a week figuring out which records they could see. Or until the audit comes and you can't explain why marketing has edit access to closed-won opportunities.\n\nA quarterly review of who-can-see-what is not glamorous. It's also the single biggest predictor of whether your CRM will pass a SOC 2 audit on the first try.\n\nIf your permissions structure has grown organically for years, send me a DM \u2014 happy to walk through how to clean it up without breaking workflows."
+  },
+  {
+    "date": "2026-07-17",
+    "posted": false,
+    "text": "The honest test of your CRM's health: pull a report from the same week six months ago. Can you tell what was happening at the company that week?\n\nWere there deals in motion? Who was working on what? What were the priorities? If the data tells you, your CRM is doing its job. If you can't reconstruct the week, you have a record-keeping system, not a CRM.\n\nSix months out is the right horizon. Closer than that, you remember. Farther than that, no one expects clarity. Six months is where institutional memory should live, and where most CRMs quietly fail.\n\nIf your historical reporting falls apart past 90 days, DM me \u2014 the fix is usually a handful of properties and one good workflow."
   }
 ]
