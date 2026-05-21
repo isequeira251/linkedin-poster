@@ -6,7 +6,8 @@
   },
   {
     "note": "Cleaned up a HubSpot portal today with 47 lifecycle stage values. Forty-seven. Half were typos or one-offs someone added for a single campaign in 2022 and never removed.",
-    "used": false
+    "used": true,
+    "used_at": "2026-05-21"
   },
   {
     "note": "A client asked me to build a complicated lead-scoring model. I asked when they last looked at their current one. Nobody could remember. We turned it off for a month and the sales numbers didn't move.",

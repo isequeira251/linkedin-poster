@@ -330,5 +330,26 @@
     "posted": true,
     "posted_at": "2026-05-20T13:28:34.786851+00:00",
     "post_id": "urn:li:share:7462856801001168898"
+  },
+  {
+    "date": "2026-05-21",
+    "note": "Cleaned up a HubSpot portal today with 47 lifecycle stage values. Forty-seven. Half were typos or one-offs someone added for a single campaign in 2022 and never removed.",
+    "text": "47 lifecycle stage values in one HubSpot portal. That is not a CRM, that is a graveyard.\n\nThe breakdown was about what you'd expect:\n\n- 6 actual stages anyone could define\n- 4 typos of those 6 (\"Custmer\", \"MQL \" with a trailing space)\n- 12 one-offs from 2022 campaigns nobody remembers\n- The rest? Stages someone invented because the existing ones \"didn't quite fit\"\n\nThis is the part people miss when they blame the tool. HubSpot didn't do this. A series of small, reasonable-in-the-moment decisions did, made by people who never had to agree on what a customer actually is.\n\nBefore you buy a new platform, or build a new workflow, or hire a new ops person, try this: get sales, marketing, and CS in a room and ask them to define MQL. Out loud. Watch what happens.\n\nThe cleanup isn't the project. The agreement is. The cleanup is just what you do once the adults have decided.\n\nWhat's the highest stage count you've inherited, and did anyone defend it with a straight face?\n\nIf you're staring at a portal like this and don't know where to start, my inbox is open.",
+    "generated": true,
+    "hook_options": [
+      "47 lifecycle stage values in one HubSpot portal. That is not a CRM, that is a graveyard.",
+      "Cleaned up a portal today with 47 lifecycle stages. Half were typos.",
+      "Your CRM doesn't have a data problem. It has a definitions problem.",
+      "A lifecycle stage called 'MQL ' (with a trailing space) is not a stage. It's a crime scene."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 9,
+      "human": 9,
+      "comment_bait": 9
+    },
+    "posted": true,
+    "posted_at": "2026-05-21T10:03:05.206345+00:00",
+    "post_id": "urn:li:share:7463167472737759232"
   }
 ]
