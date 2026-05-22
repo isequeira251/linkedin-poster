@@ -372,5 +372,14 @@
     "posted": true,
     "posted_at": "2026-05-22T10:03:50.000863+00:00",
     "post_id": "urn:li:share:7463530050416582656"
+  },
+  {
+    "date": "2026-05-23",
+    "text": "Nobody noticed when the sync broke.\n\nThe report just looked a little off. Someone raised it in a meeting four\ndays later. By then, four days of pipeline data had drifted.\n\nThe fix was obvious in retrospect: a daily digest. Five numbers emailed\nevery morning.\n\nContacts created yesterday. Deals missing an amount. Lifecycle stage\ndistribution. Active workflow errors. Form submissions from the past 24\nhours.\n\nNot a dashboard. Not a BI tool. A boring email with five lines.\n\nIf a number moves in a way that doesn't make sense, you catch it the day it\nhappens \u2014 not when someone finally runs the report.\n\nAn unobserved CRM degrades silently. A daily digest is the cheapest\nearly-warning system in your stack.\n\nMost portals I walk into have zero monitoring. Does yours have any?\n\nIf you want to set something like this up, drop me a message.\n\n#HubSpot",
+    "approved": true,
+    "approved_message_id": "<CADyZB32UYMcJFW=m7s_NSVLavkEDzf4RXg_hZ1j-dmkdSwB+9g@mail.gmail.com>",
+    "posted": true,
+    "posted_at": "2026-05-22T17:20:48.754539+00:00",
+    "post_id": "urn:li:share:7463640019950522369"
   }
 ]
