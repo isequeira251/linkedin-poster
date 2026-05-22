@@ -351,5 +351,26 @@
     "posted": true,
     "posted_at": "2026-05-21T10:03:05.206345+00:00",
     "post_id": "urn:li:share:7463167472737759232"
+  },
+  {
+    "date": "2026-05-22",
+    "note": "A client asked me to build a complicated lead-scoring model. I asked when they last looked at their current one. Nobody could remember. We turned it off for a month and the sales numbers didn't move.",
+    "text": "We turned off their lead scoring model for a month. Sales didn't move.\n\nA client asked me to build them a more sophisticated lead-scoring model.\n\nFirst question I asked: when did you last look at the one you have?\n\nNobody in the room could answer.\n\nSo instead of building, we turned the existing model off. Thirty days. See what happens.\n\nSame pipeline. Same close rate. Same everything.\n\nThat model wasn't filtering leads. It wasn't prioritizing rep effort. It was just making the CRM feel more serious than it was.\n\nThis happens more than people admit.\n\nLead scoring sounds rigorous. So teams build one, move on, and never check if it's actually connected to outcomes. The model sits there assigning scores, and nobody asks whether those scores change anything.\n\nBefore you add complexity, try the subtraction test. Turn it off. Wait 30 days.\n\nIf nothing changes, you didn't have a model. You had a number.\n\nHas your sales team ever pushed back and said the scores feel meaningless \u2014 and what did you actually do with that?\n\nIf you want a second set of eyes on what you've got running, feel free to drop me a message.",
+    "generated": true,
+    "hook_options": [
+      "We turned off their lead scoring model for a month. Sales didn't move.",
+      "Nobody in the room could remember when they'd last looked at their lead scoring model. That told me everything I needed to know.",
+      "The best lead scoring audit I've ever run: turn it off and wait.",
+      "A client wanted a more sophisticated lead-scoring model. I suggested we try deleting the one they had first."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 9,
+      "human": 9,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-05-22T10:03:50.000863+00:00",
+    "post_id": "urn:li:share:7463530050416582656"
   }
 ]
