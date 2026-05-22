@@ -46,6 +46,10 @@ def main() -> int:
 
     import email  # local import keeps the module importable for unit tests
 
+    # FORCE_RECARD re-cards drafts that already have an image (regenerate the
+    # graphic with a fresh photo); normally those are skipped.
+    force = str(os.environ.get("FORCE_RECARD", "")).strip().lower() in ("1", "true", "yes")
+
     address = os.environ["GMAIL_ADDRESS"]
     mail = imaplib.IMAP4_SSL(IMAP_HOST)
     decorated = 0
@@ -66,7 +70,7 @@ def main() -> int:
                 continue
             msg = email.message_from_bytes(mdata[0][1])
             subject = (msg.get("Subject") or "").strip()
-            if _has_image(msg):
+            if _has_image(msg) and not force:
                 print(f"skip (already carded): {subject[:60]}")
                 continue
             body = _plaintext(msg).strip()
