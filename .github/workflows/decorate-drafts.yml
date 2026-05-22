@@ -7,6 +7,11 @@ name: Decorate LinkedIn Drafts
 
 on:
   workflow_dispatch:
+    inputs:
+      force:
+        description: 'Re-card drafts that already have an image (regenerate graphics)'
+        type: boolean
+        default: false
   schedule:
     - cron: '25 11 * * 1-5'  # ~7:25am ET, just after the draft routine
     - cron: '0 16 * * 1-5'   # ~noon ET catch-up
@@ -29,4 +34,5 @@ jobs:
           GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          FORCE_RECARD: ${{ inputs.force }}
         run: python decorate_drafts.py
