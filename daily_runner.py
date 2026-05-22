@@ -126,6 +126,7 @@ def main() -> int:
 
     target = None       # the posts.json entry we'll publish
     bubble = None
+    approved_img = None  # card image carried by an approved email, if any
     consume_note = None  # (notes_list, note) to mark used on success
 
     # 0) Highest priority: a human-approved post. The LinkedIn Draft Agent (a
@@ -143,7 +144,7 @@ def main() -> int:
             print(f"WARN: could not check approved inbox: {e}", file=sys.stderr)
             approved = None
         if approved is not None:
-            msg_id, approved_text = approved
+            msg_id, approved_text, approved_img = approved
             target = {
                 "date": today,
                 "text": approved_text,
@@ -187,8 +188,12 @@ def main() -> int:
     text = target["text"]
     access_token, person_urn = load_credentials()
 
-    print(f"Generating card for {today}...")
-    card_bytes = generate_card(text, bubble=bubble)
+    if approved_img is not None:
+        print(f"Using the approved card from the +linkedin email ({len(approved_img)} bytes)...")
+        card_bytes = approved_img
+    else:
+        print(f"Generating card for {today}...")
+        card_bytes = generate_card(text, bubble=bubble)
     print(f"Posting for {today} (with image, {len(card_bytes)} bytes)...")
     post_id = post_to_linkedin(text, access_token, person_urn, image_bytes=card_bytes)
     print(f"Posted: {post_id}")

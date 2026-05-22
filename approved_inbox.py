@@ -53,6 +53,18 @@ def _plaintext(msg: email.message.Message) -> str:
     return payload.decode(msg.get_content_charset() or "utf-8", "replace")
 
 
+def _first_image(msg: email.message.Message) -> bytes | None:
+    """Return the bytes of the first image part (the approved card), or None."""
+    if not msg.is_multipart():
+        return None
+    for part in msg.walk():
+        if part.get_content_type().startswith("image/"):
+            payload = part.get_payload(decode=True)
+            if payload:
+                return payload
+    return None
+
+
 def _clean_body(raw: str) -> str:
     """Trim a trailing signature or quoted reply if one slipped into the send."""
     text = raw.replace("\r\n", "\n").strip()
@@ -67,10 +79,11 @@ def _clean_body(raw: str) -> str:
     return text[:cut].strip()
 
 
-def fetch_oldest_approved(exclude_message_ids: set[str]) -> tuple[str, str] | None:
-    """Return (message_id, post_text) for the oldest approved-but-unposted post,
-    or None. Approved = you sent it to the +linkedin alias; unposted = its
-    Message-ID is not in exclude_message_ids."""
+def fetch_oldest_approved(exclude_message_ids: set[str]) -> tuple[str, str, bytes | None] | None:
+    """Return (message_id, post_text, card_bytes) for the oldest approved-but-
+    unposted post, or None. card_bytes is the attached card image if the approved
+    email carried one (else None). Approved = you sent it to the +linkedin alias;
+    unposted = its Message-ID is not in exclude_message_ids."""
     alias = _approval_alias()
     mail = imaplib.IMAP4_SSL(IMAP_HOST)
     try:
@@ -98,14 +111,14 @@ def fetch_oldest_approved(exclude_message_ids: set[str]) -> tuple[str, str] | No
                 dt = parsedate_to_datetime(msg.get("Date"))
             except (TypeError, ValueError):
                 dt = None
-            candidates.append((dt, mid, body))
+            candidates.append((dt, mid, body, _first_image(msg)))
 
         if not candidates:
             return None
         # Oldest first; messages with an unparseable date sort last.
         candidates.sort(key=lambda c: (c[0] is None, c[0]))
-        _, mid, body = candidates[0]
-        return mid, body
+        _, mid, body, card = candidates[0]
+        return mid, body, card
     finally:
         try:
             mail.logout()
