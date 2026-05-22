@@ -23,6 +23,7 @@ import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
 
+from approved_inbox import fetch_oldest_approved
 from generate_card import generate_card
 from ghostwriter import generate_post
 from linkedin_post import load_credentials, post_to_linkedin
@@ -127,21 +128,47 @@ def main() -> int:
     bubble = None
     consume_note = None  # (notes_list, note) to mark used on success
 
-    # 1) Default: ghostwrite the next unused note.
-    notes, note = _next_unused_note()
-    if note is not None:
-        draft = _ghostwrite(note["note"])
-        if draft is not None:
+    # 0) Highest priority: a human-approved post. The LinkedIn Draft Agent (a
+    #    scheduled remote agent) leaves candidate posts as Gmail drafts; sending
+    #    one to the +linkedin alias approves it. Approved posts take precedence
+    #    over the auto-generated notes pool, which is now the safety net for days
+    #    nothing was approved. Skipped entirely unless GMAIL_* env is configured.
+    if os.environ.get("GMAIL_APP_PASSWORD"):
+        try:
+            posted_ids = {
+                p["approved_message_id"] for p in posts if p.get("approved_message_id")
+            }
+            approved = fetch_oldest_approved(posted_ids)
+        except Exception as e:  # never let inbox trouble block the auto-pool
+            print(f"WARN: could not check approved inbox: {e}", file=sys.stderr)
+            approved = None
+        if approved is not None:
+            msg_id, approved_text = approved
             target = {
                 "date": today,
-                "note": note["note"],
-                "text": draft["post"],
-                "generated": True,
-                "hook_options": draft["hook_options"],
-                "self_score": draft["self_score"],
+                "text": approved_text,
+                "approved": True,
+                "approved_message_id": msg_id,
             }
             posts.append(target)
-            consume_note = (notes, note)
+            print("Publishing human-approved post from the +linkedin inbox.")
+
+    # 1) Default: ghostwrite the next unused note (only if nothing was approved).
+    if target is None:
+        notes, note = _next_unused_note()
+        if note is not None:
+            draft = _ghostwrite(note["note"])
+            if draft is not None:
+                target = {
+                    "date": today,
+                    "note": note["note"],
+                    "text": draft["post"],
+                    "generated": True,
+                    "hook_options": draft["hook_options"],
+                    "self_score": draft["self_score"],
+                }
+                posts.append(target)
+                consume_note = (notes, note)
 
     # 2) Fallback: today's unposted pre-written entry.
     if target is None:
