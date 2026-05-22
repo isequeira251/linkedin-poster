@@ -52,7 +52,9 @@ def main() -> int:
     try:
         mail.login(address, os.environ["GMAIL_APP_PASSWORD"])
         mail.select(DRAFTS, readonly=False)
-        typ, data = mail.uid("SEARCH", None, "HEADER", "SUBJECT", "LI POST")
+        # The quotes around the value matter: an unquoted "LI POST" parses as two
+        # IMAP tokens and the server rejects the command (BAD).
+        typ, data = mail.uid("SEARCH", None, "HEADER", "SUBJECT", '"LI POST"')
         if typ != "OK" or not data or not data[0]:
             print("No LI POST drafts to decorate.")
             return 0
