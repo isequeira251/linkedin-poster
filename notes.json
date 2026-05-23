@@ -16,7 +16,8 @@
   },
   {
     "note": "Spent the morning untangling a workflow that fired three emails to the same person because someone had built three separate workflows all watching the same property. Nobody owned the overlap.",
-    "used": false
+    "used": true,
+    "used_at": "2026-05-23"
   },
   {
     "note": "The most useful thing I did this week was delete things. 12 unused properties, 5 dead workflows, a dashboard nobody had opened in a year. CRM hygiene is mostly subtraction.",

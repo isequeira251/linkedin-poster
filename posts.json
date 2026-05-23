@@ -381,5 +381,26 @@
     "posted": true,
     "posted_at": "2026-05-22T17:20:48.754539+00:00",
     "post_id": "urn:li:share:7463640019950522369"
+  },
+  {
+    "date": "2026-05-23",
+    "note": "Spent the morning untangling a workflow that fired three emails to the same person because someone had built three separate workflows all watching the same property. Nobody owned the overlap.",
+    "text": "A contact got three emails this morning. Not a bug. Three workflows, one property, zero ownership.\n\nSomeone built workflow A. Then someone built workflow B for a different campaign. Then workflow C. All three watching the same property change.\n\nNobody checked what was already running.\n\nLooks like a HubSpot problem. It's not. It's an ownership problem.\n\nThe tool did exactly what it was told. Three times.\n\nThe fix isn't a suppression list or a nested enrollment condition. It's one question: who is responsible for knowing what fires when this property changes?\n\nMost portals don't have an answer to that. So workflows pile up, and eventually a real person gets three of the same email in a row and wonders what's going on over there.\n\nThat's not a workflow bug. It's a governance gap that finally got loud enough to notice.\n\nWhat's the messiest overlap you've inherited walking into a new portal?\n\nHappy to take a look if you've got a workflow graveyard you're trying to sort out.",
+    "generated": true,
+    "hook_options": [
+      "A contact got three emails this morning. Not a bug. Three workflows, one property, zero ownership.",
+      "Three workflows. Same trigger. Same contact. Nobody thought to check what was already running.",
+      "Most workflow problems aren't workflow problems. They're ownership problems that finally got loud enough to notice.",
+      "Spent the morning untangling three workflows all watching the same property. The tool wasn't broken. The governance was."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 8,
+      "human": 9,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-05-23T10:03:36.394164+00:00",
+    "post_id": "urn:li:share:7463892380895715328"
   }
 ]
