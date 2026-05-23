@@ -1,10 +1,11 @@
 """Render a LinkedIn post card: stock photo of people working, byline strip, and
-optionally a thought bubble with the post's hook text.
+optionally the post's hook text in the top-right corner.
 
-Bubble decision:
+Corner-text decision:
 - If `bubble=True/False` is passed, that wins.
-- Otherwise, the bubble appears only when the extracted hook is shorter than
-  BUBBLE_HOOK_MAX_CHARS — short, punchy lines work in a bubble; longer ones don't.
+- Otherwise, the hook text appears only when it is shorter than
+  CORNER_HOOK_MAX_CHARS — short, punchy lines work as a corner caption; longer
+  ones don't.
 
 Usage as a library:
     from generate_card import generate_card
@@ -28,7 +29,7 @@ import sys
 from pathlib import Path
 
 import requests
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageDraw, ImageFont
 
 CARD_SIZE = 1200
 ASSETS = Path(__file__).parent / "assets"
@@ -45,28 +46,24 @@ PEXELS_QUERIES = [
     "colleagues discussing project",
 ]
 
-BUBBLE_COLOR = (255, 255, 255)
-BUBBLE_TEXT_COLOR = (10, 37, 64)         # deep navy
+CORNER_TEXT_COLOR = (255, 255, 255)       # white, reads over the darkened photo
+CORNER_TEXT_OUTLINE = (10, 37, 64)        # deep navy outline for legibility
 BYLINE_COLOR = (255, 255, 255)
 BYLINE_TAG_COLOR = (190, 215, 255)
 OVERLAY_OPACITY = 110                     # 0..255; higher = darker photo
 
-BUBBLE_W = 300
-BUBBLE_H = 200
-BUBBLE_X = CARD_SIZE - BUBBLE_W - 50  # far right, 50px margin from right edge
-BUBBLE_Y = 90
-BUBBLE_RADIUS = 24
-BUBBLE_PAD = 26
-# Auto-bubble heuristic: only short, punchy hooks get a bubble — longer hooks
-# read fine on their own and the bubble clutters the card.
-BUBBLE_HOOK_MAX_CHARS = 120
-
-# Trail drifts down-left from bubble's bottom-left toward the woman in white
-THOUGHT_TRAIL = [
-    (BUBBLE_X + 18, BUBBLE_Y + BUBBLE_H + 8, 24),
-    (BUBBLE_X - 8, BUBBLE_Y + BUBBLE_H + 38, 16),
-    (BUBBLE_X - 28, BUBBLE_Y + BUBBLE_H + 62, 10),
-]
+# Top-right corner text block. Lines are right-aligned, anchored CORNER_MARGIN
+# from the top and right edges.
+CORNER_MARGIN = 60
+CORNER_TEXT_W = 620                       # max width of the text block
+CORNER_TEXT_H = 380                       # max height of the text block
+CORNER_TEXT_RIGHT = CARD_SIZE - CORNER_MARGIN
+CORNER_TEXT_TOP = CORNER_MARGIN
+CORNER_TEXT_OUTLINE_W = 3
+CORNER_START_FONT = 60                    # largest font size tried for corner text
+# Auto-text heuristic: only short, punchy hooks get the corner caption — longer
+# hooks read fine on their own and clutter the card.
+CORNER_HOOK_MAX_CHARS = 120
 
 BYLINE_NAME = "Ian Sequeira"
 BYLINE_TAG = "Notes on CRM performance"
@@ -109,8 +106,14 @@ def _wrap_to_fit(text: str, font: ImageFont.FreeTypeFont, max_width: int, draw: 
     return lines
 
 
-def _fit_font_size(text: str, max_width: int, max_height: int, draw: ImageDraw.ImageDraw) -> tuple[ImageFont.FreeTypeFont, list[str], int]:
-    for size in range(76, 18, -2):
+def _fit_font_size(
+    text: str,
+    max_width: int,
+    max_height: int,
+    draw: ImageDraw.ImageDraw,
+    start_size: int = 76,
+) -> tuple[ImageFont.FreeTypeFont, list[str], int]:
+    for size in range(start_size, 18, -2):
         font = _font(FONT_BOLD, FALLBACK_BOLD, size)
         lines = _wrap_to_fit(text, font, max_width, draw)
         line_height = int(size * 1.28)
@@ -200,27 +203,29 @@ def _prepare_background() -> Image.Image:
     return photo
 
 
-def _draw_thought_bubble(canvas: Image.Image) -> None:
-    shadow_layer = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
-    shadow_draw = ImageDraw.Draw(shadow_layer)
-    shadow_draw.rounded_rectangle(
-        [BUBBLE_X + 6, BUBBLE_Y + 12, BUBBLE_X + BUBBLE_W + 6, BUBBLE_Y + BUBBLE_H + 12],
-        radius=BUBBLE_RADIUS,
-        fill=(0, 0, 0, 90),
-    )
-    for cx, cy, d in THOUGHT_TRAIL:
-        shadow_draw.ellipse([cx + 6 - d // 2, cy + 12 - d // 2, cx + 6 + d // 2, cy + 12 + d // 2], fill=(0, 0, 0, 70))
-    shadow_layer = shadow_layer.filter(ImageFilter.GaussianBlur(radius=10))
-    canvas.alpha_composite(shadow_layer)
+def _draw_corner_text(canvas: Image.Image, hook: str) -> None:
+    """Render the hook as right-aligned text in the top-right corner of the photo.
 
+    White text with a navy outline keeps it legible over any background, with no
+    bubble or container around it.
+    """
     draw = ImageDraw.Draw(canvas)
-    draw.rounded_rectangle(
-        [BUBBLE_X, BUBBLE_Y, BUBBLE_X + BUBBLE_W, BUBBLE_Y + BUBBLE_H],
-        radius=BUBBLE_RADIUS,
-        fill=BUBBLE_COLOR,
+    font, lines, line_height = _fit_font_size(
+        hook, CORNER_TEXT_W, CORNER_TEXT_H, draw, start_size=CORNER_START_FONT
     )
-    for cx, cy, d in THOUGHT_TRAIL:
-        draw.ellipse([cx - d // 2, cy - d // 2, cx + d // 2, cy + d // 2], fill=BUBBLE_COLOR)
+    y = CORNER_TEXT_TOP
+    for line in lines:
+        line_w = draw.textlength(line, font=font)
+        x = CORNER_TEXT_RIGHT - line_w  # right-align against the right margin
+        draw.text(
+            (x, y),
+            line,
+            font=font,
+            fill=CORNER_TEXT_COLOR,
+            stroke_width=CORNER_TEXT_OUTLINE_W,
+            stroke_fill=CORNER_TEXT_OUTLINE,
+        )
+        y += line_height
 
 
 def generate_card(
@@ -232,26 +237,15 @@ def generate_card(
     canvas = _prepare_background()
 
     hook = extract_hook(post_text)
-    show_bubble = bubble if bubble is not None else len(hook) < BUBBLE_HOOK_MAX_CHARS
+    show_text = bubble if bubble is not None else len(hook) < CORNER_HOOK_MAX_CHARS
     print(
-        f"Card: hook_chars={len(hook)} bubble={show_bubble} "
+        f"Card: hook_chars={len(hook)} corner_text={show_text} "
         f"(override={bubble!r})",
         file=sys.stderr,
     )
 
-    if show_bubble:
-        _draw_thought_bubble(canvas)
-        draw = ImageDraw.Draw(canvas)
-        text_max_width = BUBBLE_W - 2 * BUBBLE_PAD
-        text_max_height = BUBBLE_H - 2 * BUBBLE_PAD
-        font, lines, line_height = _fit_font_size(hook, text_max_width, text_max_height, draw)
-        total_text_height = line_height * len(lines)
-        y = BUBBLE_Y + BUBBLE_PAD + (text_max_height - total_text_height) // 2
-        for line in lines:
-            line_w = draw.textlength(line, font=font)
-            x = BUBBLE_X + (BUBBLE_W - line_w) // 2
-            draw.text((x, y), line, font=font, fill=BUBBLE_TEXT_COLOR)
-            y += line_height
+    if show_text:
+        _draw_corner_text(canvas, hook)
 
     byline_strip = Image.new("RGBA", (CARD_SIZE, 140), (10, 37, 64, 220))
     canvas.alpha_composite(byline_strip, (0, CARD_SIZE - 140))
