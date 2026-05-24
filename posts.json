@@ -402,5 +402,26 @@
     "posted": true,
     "posted_at": "2026-05-23T10:03:36.394164+00:00",
     "post_id": "urn:li:share:7463892380895715328"
+  },
+  {
+    "date": "2026-05-24",
+    "note": "The most useful thing I did this week was delete things. 12 unused properties, 5 dead workflows, a dashboard nobody had opened in a year. CRM hygiene is mostly subtraction.",
+    "text": "12 unused properties. 5 dead workflows. 1 dashboard nobody had opened in a year. Gone. Best work I did all week.\n\nMost CRM work gets framed as building \u2014 new automations, new reports, new properties for that one sales ask from six months ago.\n\nBut the mess compounds quietly.\n\nDead workflows still fire on edge cases. Unused properties show up in forms and confuse reps. Dashboards nobody trusts take up space and quietly erode confidence in the ones that matter.\n\nSubtraction is maintenance. And maintenance is the actual job.\n\nThere's no slide for \"deleted 12 properties\" in a project update. Nobody asks for a before/after screenshot. It just makes the system faster to navigate, easier to trust, and cheaper to keep running.\n\nCRM hygiene is mostly subtraction.\n\nWhat's the last thing you removed from your CRM that you wish you'd cut sooner?\n\nIf your portal's grown into something you don't quite recognize, feel free to drop me a message.",
+    "generated": true,
+    "hook_options": [
+      "12 unused properties. 5 dead workflows. 1 dashboard nobody had opened in a year. Gone. Best work I did all week.",
+      "Nobody brags about deleting 12 CRM properties. They should.",
+      "The most productive hour I logged this week was spent deleting things.",
+      "I did less in HubSpot this week than I have in months. The portal is finally better for it."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 9,
+      "human": 9,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-05-24T10:03:30.592894+00:00",
+    "post_id": "urn:li:share:7464254742865739777"
   }
 ]

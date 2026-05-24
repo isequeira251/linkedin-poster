@@ -21,7 +21,8 @@
   },
   {
     "note": "The most useful thing I did this week was delete things. 12 unused properties, 5 dead workflows, a dashboard nobody had opened in a year. CRM hygiene is mostly subtraction.",
-    "used": false
+    "used": true,
+    "used_at": "2026-05-24"
   },
   {
     "note": "Opened a CRM where 99% of contacts had no owner. You can't run a single rep-level report on that, no accountability, no territory cuts, nothing. Spent a day backfilling owner from the majority deal owner on each company. Coverage went from 1% to 23% and suddenly the reports actually meant something. Ownership is the backbone everyone forgets until it's missing.",
