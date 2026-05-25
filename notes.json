@@ -26,7 +26,8 @@
   },
   {
     "note": "Opened a CRM where 99% of contacts had no owner. You can't run a single rep-level report on that, no accountability, no territory cuts, nothing. Spent a day backfilling owner from the majority deal owner on each company. Coverage went from 1% to 23% and suddenly the reports actually meant something. Ownership is the backbone everyone forgets until it's missing.",
-    "used": false
+    "used": true,
+    "used_at": "2026-05-25"
   },
   {
     "note": "Two reps' meetings weren't showing up in any report. They were logging them as plain notes instead of meeting activities. Instead of nagging them to change how they work, I wrote a job that reads the note, figures out what kind of meeting it was, and creates the activity behind the scenes. Meet people where they are; fix it in code.",

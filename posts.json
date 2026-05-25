@@ -423,5 +423,26 @@
     "posted": true,
     "posted_at": "2026-05-24T10:03:30.592894+00:00",
     "post_id": "urn:li:share:7464254742865739777"
+  },
+  {
+    "date": "2026-05-25",
+    "note": "Opened a CRM where 99% of contacts had no owner. You can't run a single rep-level report on that, no accountability, no territory cuts, nothing. Spent a day backfilling owner from the majority deal owner on each company. Coverage went from 1% to 23% and suddenly the reports actually meant something. Ownership is the backbone everyone forgets until it's missing.",
+    "text": "99% of contacts had no owner. The CRM had been live for two years.\n\nNo rep-level reports possible. No territory cuts. No accountability by contact. Just names floating in the database with no one attached to them.\n\nSpent a day backfilling. Method: find the majority deal owner on each associated company, assign that rep to the contacts.\n\nNot glamorous. Lots of edge cases. Still worth doing.\n\nCoverage went from 1% to 23%.\n\nThat's still bad. But suddenly the reports meant something. You could see gaps. You could assign blame. You could have a real conversation about coverage.\n\nBefore that fix, every pipeline discussion was theater. The foundation wasn't there.\n\nContact owner is what everything else queries against: territory reports, sequences, routing, attribution. It's the first field that has to be right before anything else can be.\n\nMost CRMs I open have this problem sitting quietly in the background. Teams build the dashboards first and wonder why the numbers don't hold up.\n\nWhat does contact owner coverage actually look like in your CRM right now? Curious if anyone has checked recently or has a number to share.\n\nIf you want a second set of eyes on it, feel free to reach out.",
+    "generated": true,
+    "hook_options": [
+      "99% of contacts had no owner. The CRM had been live for two years.",
+      "You can't run a single rep-level report if contacts have no owner. Most CRMs are full of them.",
+      "Contact owner coverage: 1%. Pipeline reports: meaningless. Those two things are directly related.",
+      "The most important field in your CRM is probably the one your team stopped filling in."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 9,
+      "human": 9,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-05-25T10:02:53.936614+00:00",
+    "post_id": "urn:li:share:7464616976913698816"
   }
 ]
