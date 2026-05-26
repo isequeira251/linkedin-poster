@@ -31,7 +31,8 @@
   },
   {
     "note": "Two reps' meetings weren't showing up in any report. They were logging them as plain notes instead of meeting activities. Instead of nagging them to change how they work, I wrote a job that reads the note, figures out what kind of meeting it was, and creates the activity behind the scenes. Meet people where they are; fix it in code.",
-    "used": false
+    "used": true,
+    "used_at": "2026-05-26"
   },
   {
     "note": "'Meetings booked this week' was double-counting and nobody could figure out why. Reps log meetings days after they happen, so the create date is today but the meeting actually occurred last Tuesday. The report keyed off create date, so every retro-logged meeting inflated the number. Know which date your report is actually counting.",

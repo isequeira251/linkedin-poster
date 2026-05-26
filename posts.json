@@ -444,5 +444,26 @@
     "posted": true,
     "posted_at": "2026-05-25T10:02:53.936614+00:00",
     "post_id": "urn:li:share:7464616976913698816"
+  },
+  {
+    "date": "2026-05-26",
+    "note": "Two reps' meetings weren't showing up in any report. They were logging them as plain notes instead of meeting activities. Instead of nagging them to change how they work, I wrote a job that reads the note, figures out what kind of meeting it was, and creates the activity behind the scenes. Meet people where they are; fix it in code.",
+    "text": "I stopped nagging two reps about their meeting logs. I wrote a job instead.\n\nThey weren't skipping the log \u2014 they were dropping notes instead of meeting activities. Same information, wrong object type. Invisible in every report.\n\nStandard advice: walk them through it, retrain, hope it sticks.\n\nWhat I did: wrote a job that reads the note, infers the meeting type, and creates the activity record in the background. They never changed a thing. The pipeline data fixed itself.\n\nThe reps weren't wrong. Notes feel natural. Meeting activities feel like admin overhead. If your data model requires friction to stay clean, it won't stay clean.\n\nYou can train against human instinct, or you can build around it.\n\nMeet people where they are. Fix it in the system.\n\nWhat's the logging behavior you've been correcting the longest \u2014 and have you actually looked at whether you could route around it instead?\n\nThinking through something like this? My inbox is open.",
+    "generated": true,
+    "hook_options": [
+      "I stopped nagging two reps about their meeting logs. I wrote a job instead.",
+      "Two reps' meetings were invisible in every report. They were logging them \u2014 just as notes, not activities.",
+      "The standard CRM fix is retrain the reps. I haven't done that in a while.",
+      "Reps don't log meetings wrong because they're careless. They log them where it feels natural. That's your system's problem."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 9,
+      "human": 9,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-05-26T10:04:21.434011+00:00",
+    "post_id": "urn:li:share:7464979733445918721"
   }
 ]
