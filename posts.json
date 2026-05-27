@@ -465,5 +465,26 @@
     "posted": true,
     "posted_at": "2026-05-26T10:04:21.434011+00:00",
     "post_id": "urn:li:share:7464979733445918721"
+  },
+  {
+    "date": "2026-05-27",
+    "note": "'Meetings booked this week' was double-counting and nobody could figure out why. Reps log meetings days after they happen, so the create date is today but the meeting actually occurred last Tuesday. The report keyed off create date, so every retro-logged meeting inflated the number. Know which date your report is actually counting.",
+    "text": "The meeting happened last Tuesday.\nThe rep logged it on Friday.\nHubSpot created the record today.\n\nYour \"meetings booked this week\" report is counting today.\n\nThis is how a perfectly good CRM produces a number nobody can explain. The report isn't broken. It's just measuring something different from what you think.\n\nCreate date is when the rep touched the keyboard.\nMeeting date is when the call happened.\n\nDifferent properties. Most date-filtered reports default to create date. Most reps log late. So every catch-up entry inflates the current week and leaves the real week undercounted.\n\nYou end up spending 20 minutes in a retro explaining a swing that has nothing to do with actual pipeline activity.\n\nFix is one field: filter on Activity Date, not Create Date. Before you trust any meeting volume report, check which date it's actually keying off.\n\nIf you pulled up your meetings report right now, would you know which date it's filtering on?\n\nIf you've got a reporting setup that's been bugging you, feel free to send me a message.",
+    "generated": true,
+    "hook_options": [
+      "The meeting happened last Tuesday. HubSpot thinks it happened today.",
+      "'Meetings booked this week' was double-counting. Took a while to figure out why.",
+      "Your meetings report is probably counting create date, not meeting date.",
+      "One wrong date field. Weeks of confusing week-over-week numbers."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 9,
+      "human": 8,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-05-27T10:04:30.865749+00:00",
+    "post_id": "urn:li:share:7465342160935227392"
   }
 ]

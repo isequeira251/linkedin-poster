@@ -36,7 +36,8 @@
   },
   {
     "note": "'Meetings booked this week' was double-counting and nobody could figure out why. Reps log meetings days after they happen, so the create date is today but the meeting actually occurred last Tuesday. The report keyed off create date, so every retro-logged meeting inflated the number. Know which date your report is actually counting.",
-    "used": false
+    "used": true,
+    "used_at": "2026-05-27"
   },
   {
     "note": "Built a property, backfilled it across a couple thousand records, then deleted it a week later. No workflow could keep it current, and a field that's quietly wrong is worse than no field, because people trust it and they shouldn't. If you can't keep it accurate automatically, don't ship it.",
