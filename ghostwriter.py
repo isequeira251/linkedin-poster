@@ -41,6 +41,10 @@ VOICE = """\
     * Most "CRM problems" are definition problems, not tool problems.
     * Good automation is invisible. If it feels automated, it's bad.
     * RevOps is plumbing, not strategy theater — the unglamorous work is the work.
+    * AI on a dirty CRM doesn't fix the mess, it scales it. A model is only ever
+      as good as the records under it.
+    * The fix for a CRM problem is rarely another tool. It's usually a
+      definition, an owner, or a deletion.
 - Tone: direct, dry, no fluff, lightly contrarian. Sounds like someone who has
   cleaned up the mess, not someone selling the dream.
 - Writes like a practitioner, not a marketer. Uses lifecycle stages, workflows,
