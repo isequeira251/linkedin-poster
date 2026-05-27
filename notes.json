@@ -58,5 +58,37 @@
   {
     "note": "Built a nightly job that scores a few thousand accounts on a dozen signals: engagement, deal velocity, days since last order. The clever model wasn't the point. The point was that a human used to eyeball this for the top 20 accounts and ignore the other few thousand. Automation's real value is coverage, not cleverness.",
     "used": false
+  },
+  {
+    "note": "Everyone wants an AI agent running their CRM. Nobody wants to talk about the database it's reading from. Point an agent at stale stages and duplicate accounts and it doesn't fix anything, it just makes the wrong call faster, at 3am, with no one watching. Autonomy amplifies whatever's already in the data. Clean it before you hand over the keys.",
+    "used": false
+  },
+  {
+    "note": "The lead-scoring model, the forecast, the AI insights: they're all just a mirror of the data underneath. Feed a model a CRM where a third of the records are stale and you don't get bad luck, you get confident, well-formatted wrong answers. The bottleneck was never the algorithm. It's the records nobody has touched in a year.",
+    "used": false
+  },
+  {
+    "note": "Watched a team try to fix a reporting problem by buying a sixth tool. The problem wasn't a missing tool. 'Qualified lead' already meant three different things across the five tools they had. Every system you bolt on is one more place your definitions can fork. Most stacks don't need another app. They need someone to decide what the words mean.",
+    "used": false
+  },
+  {
+    "note": "Bought contact data has a half-life. The title was right the day you enriched it. Eighteen months later the person changed jobs and your sequence is greeting a stranger. The data you actually own, what your own forms and calls and product captured, is the only data that doesn't rot on someone else's schedule. Spend more on what you capture than on what you buy.",
+    "used": false
+  },
+  {
+    "note": "No one's CRM problem has ever been 'not enough seats.' But that's where the money goes: more licenses, another module, while the data layer holding it all up gets nothing. If half your records are wrong, a bigger CRM just gives you more room to be wrong in. Fund the plumbing. It's the least exciting line item and the only one that pays you back.",
+    "used": false
+  },
+  {
+    "note": "RevOps keeps getting sold as a transformation. A framework, a maturity curve, a forty-slide deck. The actual wins this quarter: fixed a date filter, deleted a handful of dead workflows, got owner coverage up so the reports finally meant something. None of that goes on a conference stage. It's also the only thing that moved a number.",
+    "used": false
+  },
+  {
+    "note": "A forecast is only as honest as the stage data feeding it. If reps move deals to commit late and let closed-lost sit untouched, the number on the board is fiction with a confidence interval. You don't fix a bad forecast in the forecast. You fix it three steps upstream, in whether the pipeline reflects what's actually happening.",
+    "used": false
+  },
+  {
+    "note": "The fastest way to get clean activity data is to stop asking reps to type it in. Every required field is one that gets logged late, half-filled, or skipped, and then you build a forecast on the gaps. Capture it from the source: the email, the calendar, the call recording. Reps should sell. The system should do the paperwork.",
+    "used": false
   }
 ]
