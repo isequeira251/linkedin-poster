@@ -41,7 +41,8 @@
   },
   {
     "note": "Built a property, backfilled it across a couple thousand records, then deleted it a week later. No workflow could keep it current, and a field that's quietly wrong is worse than no field, because people trust it and they shouldn't. If you can't keep it accurate automatically, don't ship it.",
-    "used": false
+    "used": true,
+    "used_at": "2026-05-28"
   },
   {
     "note": "A manager wanted to coach a rep for low meeting numbers. The problem: the meeting report was broken. You can't hold someone accountable to a number they can correctly prove is wrong. Fix the data first, then have the performance conversation. A bad report doesn't just mislead, it hands people a valid excuse.",

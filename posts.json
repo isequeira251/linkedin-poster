@@ -486,5 +486,26 @@
     "posted": true,
     "posted_at": "2026-05-27T10:04:30.865749+00:00",
     "post_id": "urn:li:share:7465342160935227392"
+  },
+  {
+    "date": "2026-05-28",
+    "note": "Built a property, backfilled it across a couple thousand records, then deleted it a week later. No workflow could keep it current, and a field that's quietly wrong is worse than no field, because people trust it and they shouldn't. If you can't keep it accurate automatically, don't ship it.",
+    "text": "Built it. Backfilled roughly 2,000 records. Deleted it a week later.\n\nNo workflow could keep it current, and I wasn't going to babysit it manually.\n\nA field that's quietly wrong is worse than no field.\n\nNo field: people don't know, so they don't rely on it.\nWrong field: people trust it, report off it, route leads with it.\n\nThe damage is proportional to how much it looks right.\n\nOne question before you ship any new property:\n\nCan this stay accurate without anyone thinking about it?\n\nIf the answer involves a quarterly audit or \"someone will check it\" \u2014 that's not a plan. That's a wish. Kill the field before it starts lying to people.\n\nA blank is honest. A stale field isn't.\n\nWhat's the property in your CRM that everyone uses but nobody actually owns?\n\nHappy to think through a property audit with you \u2014 just send me a message.",
+    "generated": true,
+    "hook_options": [
+      "Built it. Backfilled ~2,000 records. Deleted it a week later.",
+      "A wrong field is worse than no field. Most CRM admins build it anyway.",
+      "I deleted a property I spent a week building. Best decision I made that month.",
+      "The most dangerous field in your CRM is the one that looks accurate but isn't."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 9,
+      "human": 9,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-05-28T10:03:51.742106+00:00",
+    "post_id": "urn:li:share:7465704385013190656"
   }
 ]
