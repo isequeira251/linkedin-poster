@@ -46,7 +46,8 @@
   },
   {
     "note": "A manager wanted to coach a rep for low meeting numbers. The problem: the meeting report was broken. You can't hold someone accountable to a number they can correctly prove is wrong. Fix the data first, then have the performance conversation. A bad report doesn't just mislead, it hands people a valid excuse.",
-    "used": false
+    "used": true,
+    "used_at": "2026-05-29"
   },
   {
     "note": "A sync ran overnight and silently overwrote the owner field on a big chunk of the contact database. No error, no alert, just wrong data by morning. Now every integration I build keeps an audit trail and a way to restore the previous value. Assume your syncs will clobber something eventually, because they will.",

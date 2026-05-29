@@ -507,5 +507,26 @@
     "posted": true,
     "posted_at": "2026-05-28T10:03:51.742106+00:00",
     "post_id": "urn:li:share:7465704385013190656"
+  },
+  {
+    "date": "2026-05-29",
+    "note": "A manager wanted to coach a rep for low meeting numbers. The problem: the meeting report was broken. You can't hold someone accountable to a number they can correctly prove is wrong. Fix the data first, then have the performance conversation. A bad report doesn't just mislead, it hands people a valid excuse.",
+    "text": "The rep wasn't underperforming. The report was.\n\nA manager came to me ready to coach someone on low meeting numbers.\n\nBefore the conversation happened, someone thought to check the report.\n\nIt was broken. Wrong filters, missing data. The number being cited was simply wrong.\n\nHere's what a bad report actually does:\n\nIt doesn't just mislead the manager. It hands the rep a valid out.\n\nThe moment they can correctly prove the data is off, the accountability conversation is over. They win by default. Not because they're right about their output, but because you gave them a way to walk.\n\nFix the report first. Always.\n\nThen run the performance conversation with numbers no one can reasonably dispute.\n\nHas a broken report ever given someone a legitimate excuse to dodge a conversation that actually needed to happen?\n\nIf your reporting is creating that kind of friction, feel free to message me.",
+    "generated": true,
+    "hook_options": [
+      "You can't hold someone accountable to a number they can correctly prove is wrong.",
+      "A broken meeting report isn't just a data problem. It's a get-out-of-jail card.",
+      "The rep wasn't underperforming. The report was.",
+      "Before you have a performance conversation, make sure the data you're using isn't broken."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 8,
+      "human": 9,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-05-29T10:03:55.340757+00:00",
+    "post_id": "urn:li:share:7466066787659386881"
   }
 ]
