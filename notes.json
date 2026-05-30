@@ -51,7 +51,8 @@
   },
   {
     "note": "A sync ran overnight and silently overwrote the owner field on a big chunk of the contact database. No error, no alert, just wrong data by morning. Now every integration I build keeps an audit trail and a way to restore the previous value. Assume your syncs will clobber something eventually, because they will.",
-    "used": false
+    "used": true,
+    "used_at": "2026-05-30"
   },
   {
     "note": "Built a dedup system and learned the real lesson the hard way: dedup is not a project you finish. New duplicates show up every day from forms, imports, and integrations. If it isn't running on a schedule, you're mopping the floor with the faucet still on.",
