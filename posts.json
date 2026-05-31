@@ -549,5 +549,26 @@
     "posted": true,
     "posted_at": "2026-05-30T10:02:18.403547+00:00",
     "post_id": "urn:li:share:7466428769138810881"
+  },
+  {
+    "date": "2026-05-31",
+    "note": "Built a dedup system and learned the real lesson the hard way: dedup is not a project you finish. New duplicates show up every day from forms, imports, and integrations. If it isn't running on a schedule, you're mopping the floor with the faucet still on.",
+    "text": "You didn't finish dedup. You finished the backlog.\n\nThere's a difference.\n\nThe backlog is the pile you inherited \u2014 years of bad imports, rogue integrations, nobody checking the duplicate logic on your forms.\n\nYou clean it. Close the Jira ticket. Feel good.\n\nThen a form fires. A list import lands. A sync runs with different email casing. The pile starts again.\n\nDuplicates aren't a state you fix. They're a rate you manage.\n\nIf dedup isn't running on a schedule \u2014 checking new records, merging where confidence is high, flagging for review where it isn't \u2014 you're mopping with the faucet still on.\n\nThe practical fix: a recurring job that checks new contacts against existing records within 24 hours of creation. Catch them early. Merging a fresh duplicate takes minutes. Merging an 18-month-old one costs a quarter of someone's time and a reporting conversation nobody wants to have.\n\nThe project gets you clean. The schedule keeps you there.\n\nWhat broke your dedup last time \u2014 forms, imports, or something weirder?\n\nIf you're mid-mess right now, feel free to drop me a note.",
+    "generated": true,
+    "hook_options": [
+      "You didn't finish dedup. You finished the backlog.",
+      "The day you called dedup 'done,' your forms were already building the next pile.",
+      "Dedup is not a state you reach. It's a rate you manage.",
+      "Most dedup projects end right when they should start running."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 9,
+      "human": 9,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-05-31T10:01:57.459794+00:00",
+    "post_id": "urn:li:share:7466791069272174592"
   }
 ]

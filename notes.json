@@ -56,7 +56,8 @@
   },
   {
     "note": "Built a dedup system and learned the real lesson the hard way: dedup is not a project you finish. New duplicates show up every day from forms, imports, and integrations. If it isn't running on a schedule, you're mopping the floor with the faucet still on.",
-    "used": false
+    "used": true,
+    "used_at": "2026-05-31"
   },
   {
     "note": "Built a nightly job that scores a few thousand accounts on a dozen signals: engagement, deal velocity, days since last order. The clever model wasn't the point. The point was that a human used to eyeball this for the top 20 accounts and ignore the other few thousand. Automation's real value is coverage, not cleverness.",
