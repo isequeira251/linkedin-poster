@@ -61,7 +61,8 @@
   },
   {
     "note": "Built a nightly job that scores a few thousand accounts on a dozen signals: engagement, deal velocity, days since last order. The clever model wasn't the point. The point was that a human used to eyeball this for the top 20 accounts and ignore the other few thousand. Automation's real value is coverage, not cleverness.",
-    "used": false
+    "used": true,
+    "used_at": "2026-06-01"
   },
   {
     "note": "Everyone wants an AI agent running their CRM. Nobody wants to talk about the database it's reading from. Point an agent at stale stages and duplicate accounts and it doesn't fix anything, it just makes the wrong call faster, at 3am, with no one watching. Autonomy amplifies whatever's already in the data. Clean it before you hand over the keys.",

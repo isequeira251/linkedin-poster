@@ -570,5 +570,26 @@
     "posted": true,
     "posted_at": "2026-05-31T10:01:57.459794+00:00",
     "post_id": "urn:li:share:7466791069272174592"
+  },
+  {
+    "date": "2026-06-01",
+    "note": "Built a nightly job that scores a few thousand accounts on a dozen signals: engagement, deal velocity, days since last order. The clever model wasn't the point. The point was that a human used to eyeball this for the top 20 accounts and ignore the other few thousand. Automation's real value is coverage, not cleverness.",
+    "text": "The model scores 3,000 accounts. The human was watching 20.\n\nBuilt a nightly scoring job. A dozen signals: engagement, deal velocity, days since last order. Weighted arithmetic. Nothing clever.\n\nBefore it existed, one person reviewed a shortlist every Monday morning. Top 20 accounts. Maybe 30 on a good week.\n\nThe other few thousand had no one watching. No flag if a good customer went quiet. No nudge if deal velocity dropped. Nothing.\n\nThat's what the automation fixed.\n\nNot the quality of the insight. The coverage.\n\nThe rep who got the alert on account 847 didn't care whether it came from a neural net or a spreadsheet formula. They cared that they got it at all.\n\nAutomation's real value is usually the dark matter \u2014 the signals and accounts that technically existed in the CRM but had no one paying attention to them. Less about doing old things faster. More about seeing what was invisible before.\n\nWhat's the equivalent gap in your setup right now? The thing that's happening but nobody's actually watching?\n\nIf you want a second set of eyes on where to point automation first, my inbox is open.",
+    "generated": true,
+    "hook_options": [
+      "The model scores 3,000 accounts. The human was watching 20.",
+      "A rep was manually reviewing 20 accounts every Monday. The other 2,980 had no one watching.",
+      "We built a nightly scoring model. The clever part wasn't the point.",
+      "Automation's real ROI isn't cleverness. It's coverage."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 9,
+      "human": 9,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-06-01T10:02:15.559034+00:00",
+    "post_id": "urn:li:share:7467153532899491840"
   }
 ]
