@@ -591,5 +591,26 @@
     "posted": true,
     "posted_at": "2026-06-01T10:02:15.559034+00:00",
     "post_id": "urn:li:share:7467153532899491840"
+  },
+  {
+    "date": "2026-06-02",
+    "note": "Everyone wants an AI agent running their CRM. Nobody wants to talk about the database it's reading from. Point an agent at stale stages and duplicate accounts and it doesn't fix anything, it just makes the wrong call faster, at 3am, with no one watching. Autonomy amplifies whatever's already in the data. Clean it before you hand over the keys.",
+    "text": "An AI agent running on stale CRM data doesn't fix your pipeline.\n\nIt makes the wrong call faster, at 3am, with no one watching.\n\nEveryone wants the agent. Nobody wants to talk about the database it's reading from.\n\nDuplicate accounts. Lifecycle stages that haven't moved in eight months. Deal owners who left the company. Records with no activity, no owner, no useful signal.\n\nPoint an agent at that and you don't get intelligence. You get automation with false confidence. That's worse than a manual mistake. It doesn't stop, and nobody's watching it.\n\nAutonomy amplifies whatever's already in the data.\n\nBefore you hand over the keys: audit the stages. Dedup the accounts. Define what \"active\" actually means. Set guardrails on what the agent can touch and what it can't.\n\nThat's not an AI strategy. It's data hygiene. But it's what separates a useful agent from an expensive liability.\n\nWhat's the messiest CRM state you've seen handed off to an AI tool before it was ready?\n\nBuilding out an agent workflow and want a second pair of eyes, feel free to drop me a note.",
+    "generated": true,
+    "hook_options": [
+      "An AI agent running on stale CRM data doesn't fix your pipeline. It makes the wrong call faster, at 3am, with no one watching.",
+      "Everyone's excited to hand an AI agent the keys to their CRM. Nobody wants to talk about what's actually in the database.",
+      "The scariest CRM setup isn't a broken workflow. It's a confident AI agent reading dirty data.",
+      "Your AI agent will execute exactly as well as your last data cleanup. When was that?"
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 9,
+      "human": 9,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-06-02T10:03:47.834458+00:00",
+    "post_id": "urn:li:share:7467516305848446976"
   }
 ]

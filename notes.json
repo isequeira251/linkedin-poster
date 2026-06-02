@@ -66,7 +66,8 @@
   },
   {
     "note": "Everyone wants an AI agent running their CRM. Nobody wants to talk about the database it's reading from. Point an agent at stale stages and duplicate accounts and it doesn't fix anything, it just makes the wrong call faster, at 3am, with no one watching. Autonomy amplifies whatever's already in the data. Clean it before you hand over the keys.",
-    "used": false
+    "used": true,
+    "used_at": "2026-06-02"
   },
   {
     "note": "The lead-scoring model, the forecast, the AI insights: they're all just a mirror of the data underneath. Feed a model a CRM where a third of the records are stale and you don't get bad luck, you get confident, well-formatted wrong answers. The bottleneck was never the algorithm. It's the records nobody has touched in a year.",
