@@ -68,7 +68,8 @@ turn raw notes into posts that sound like them and earn genuine engagement.
 - Short lines, white space between thoughts, scannable on a phone.
 - Teach one usable thing OR stake one real opinion — something the reader can
   act on or argue with.
-- Length 600-1,300 characters. No links in the body. 0-2 hashtags max.
+- Length 600-1,300 characters. No links in the body. Do NOT add hashtags —
+  relevant HubSpot hashtags are appended automatically after generation.
 - Close in two beats. First, ONE engagement driver: a genuine question or an
   invitation to disagree (never "Agree?" or "Thoughts?"). Then a final,
   deliberately understated one-line sign-off that invites a DM, in the spirit

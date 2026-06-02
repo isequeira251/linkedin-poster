@@ -26,6 +26,7 @@ from pathlib import Path
 from approved_inbox import fetch_oldest_approved
 from generate_card import generate_card
 from ghostwriter import generate_post
+from hashtags import append_hashtags
 from linkedin_post import load_credentials, post_to_linkedin
 
 POSTS_FILE = Path(__file__).parent / "posts.json"
@@ -186,6 +187,10 @@ def main() -> int:
         print(f"Publishing pre-written fallback for {today}.")
 
     text = target["text"]
+    # Card art uses the clean copy; relevant HubSpot hashtags live only on the
+    # post body (see hashtags.py). Covers every source — approved, generated,
+    # and pre-written — since they all funnel through target["text"] here.
+    post_body = append_hashtags(text)
     access_token, person_urn = load_credentials()
 
     if approved_img is not None:
@@ -195,12 +200,13 @@ def main() -> int:
         print(f"Generating card for {today}...")
         card_bytes = generate_card(text, bubble=bubble)
     print(f"Posting for {today} (with image, {len(card_bytes)} bytes)...")
-    post_id = post_to_linkedin(text, access_token, person_urn, image_bytes=card_bytes)
+    post_id = post_to_linkedin(post_body, access_token, person_urn, image_bytes=card_bytes)
     print(f"Posted: {post_id}")
 
     target["posted"] = True
     target["posted_at"] = datetime.now(timezone.utc).isoformat()
     target["post_id"] = post_id
+    target["posted_text"] = post_body  # exact body sent, hashtags included
     POSTS_FILE.write_text(json.dumps(posts, indent=2) + "\n")
     print(f"Updated {POSTS_FILE}")
 
