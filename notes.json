@@ -71,7 +71,8 @@
   },
   {
     "note": "The lead-scoring model, the forecast, the AI insights: they're all just a mirror of the data underneath. Feed a model a CRM where a third of the records are stale and you don't get bad luck, you get confident, well-formatted wrong answers. The bottleneck was never the algorithm. It's the records nobody has touched in a year.",
-    "used": false
+    "used": true,
+    "used_at": "2026-06-03"
   },
   {
     "note": "Watched a team try to fix a reporting problem by buying a sixth tool. The problem wasn't a missing tool. 'Qualified lead' already meant three different things across the five tools they had. Every system you bolt on is one more place your definitions can fork. Most stacks don't need another app. They need someone to decide what the words mean.",

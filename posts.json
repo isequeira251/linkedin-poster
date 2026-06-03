@@ -612,5 +612,27 @@
     "posted": true,
     "posted_at": "2026-06-02T10:03:47.834458+00:00",
     "post_id": "urn:li:share:7467516305848446976"
+  },
+  {
+    "date": "2026-06-03",
+    "note": "The lead-scoring model, the forecast, the AI insights: they're all just a mirror of the data underneath. Feed a model a CRM where a third of the records are stale and you don't get bad luck, you get confident, well-formatted wrong answers. The bottleneck was never the algorithm. It's the records nobody has touched in a year.",
+    "text": "AI doesn't fail loudly on a dirty CRM. It fails confidently.\n\nThat's the part nobody puts in the product demo.\n\nFeed a lead-scoring model records that haven't been touched in a year and you don't get error messages.\n\nYou get scores. Clean scores. Ranked, color-coded, ready to act on.\n\nSame with the forecast. Same with the \"AI insights\" tab.\n\nThey mirror whatever's underneath: contacts who changed jobs, deals that died quietly, lifecycle stages nobody updated.\n\nThe model can't tell you it's working on bad inputs. It just works.\n\nBefore you layer anything on top, one question worth asking: when did someone last look at the actual records? Not the dashboards. The records. The ones with no activity in 12 months, the duplicates that slipped through, the properties nobody fills in consistently.\n\nThe bottleneck was never the algorithm.\n\nIt's the records nobody owns.\n\nWhat does your CRM hygiene process actually look like right now: scheduled cleanup, triggered workflows, or something that only happens when things break?\n\nIf you're trying to figure out where to start, feel free to drop me a message.",
+    "generated": true,
+    "hook_options": [
+      "AI doesn't fail loudly on a dirty CRM. It fails confidently.",
+      "Your lead-scoring model isn't broken. It's working perfectly on records nobody has touched in 14 months.",
+      "A third of your CRM is stale. Your AI forecast is now very precise and completely wrong.",
+      "The bottleneck in your revenue AI isn't the algorithm. It's the contact last modified in Q3 2022."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 9,
+      "human": 9,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-06-03T10:03:44.020194+00:00",
+    "post_id": "urn:li:share:7467878679637946368",
+    "posted_text": "AI doesn't fail loudly on a dirty CRM. It fails confidently.\n\nThat's the part nobody puts in the product demo.\n\nFeed a lead-scoring model records that haven't been touched in a year and you don't get error messages.\n\nYou get scores. Clean scores. Ranked, color-coded, ready to act on.\n\nSame with the forecast. Same with the \"AI insights\" tab.\n\nThey mirror whatever's underneath: contacts who changed jobs, deals that died quietly, lifecycle stages nobody updated.\n\nThe model can't tell you it's working on bad inputs. It just works.\n\nBefore you layer anything on top, one question worth asking: when did someone last look at the actual records? Not the dashboards. The records. The ones with no activity in 12 months, the duplicates that slipped through, the properties nobody fills in consistently.\n\nThe bottleneck was never the algorithm.\n\nIt's the records nobody owns.\n\nWhat does your CRM hygiene process actually look like right now: scheduled cleanup, triggered workflows, or something that only happens when things break?\n\nIf you're trying to figure out where to start, feel free to drop me a message.\n\n#HubSpot #DataQuality #LeadScoring #MarketingAutomation #SalesOps"
   }
 ]
