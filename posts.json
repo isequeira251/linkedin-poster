@@ -634,5 +634,27 @@
     "posted_at": "2026-06-03T10:03:44.020194+00:00",
     "post_id": "urn:li:share:7467878679637946368",
     "posted_text": "AI doesn't fail loudly on a dirty CRM. It fails confidently.\n\nThat's the part nobody puts in the product demo.\n\nFeed a lead-scoring model records that haven't been touched in a year and you don't get error messages.\n\nYou get scores. Clean scores. Ranked, color-coded, ready to act on.\n\nSame with the forecast. Same with the \"AI insights\" tab.\n\nThey mirror whatever's underneath: contacts who changed jobs, deals that died quietly, lifecycle stages nobody updated.\n\nThe model can't tell you it's working on bad inputs. It just works.\n\nBefore you layer anything on top, one question worth asking: when did someone last look at the actual records? Not the dashboards. The records. The ones with no activity in 12 months, the duplicates that slipped through, the properties nobody fills in consistently.\n\nThe bottleneck was never the algorithm.\n\nIt's the records nobody owns.\n\nWhat does your CRM hygiene process actually look like right now: scheduled cleanup, triggered workflows, or something that only happens when things break?\n\nIf you're trying to figure out where to start, feel free to drop me a message.\n\n#HubSpot #DataQuality #LeadScoring #MarketingAutomation #SalesOps"
+  },
+  {
+    "date": "2026-06-04",
+    "note": "Watched a team try to fix a reporting problem by buying a sixth tool. The problem wasn't a missing tool. 'Qualified lead' already meant three different things across the five tools they had. Every system you bolt on is one more place your definitions can fork. Most stacks don't need another app. They need someone to decide what the words mean.",
+    "text": "A team bought a sixth tool to fix a reporting problem.\n\nThe reporting problem was that \"qualified lead\" meant three different things across the five tools they already had.\n\nEvery system you bolt on is one more place your definitions can fork.\n\nSales uses one threshold. Marketing uses another. The ops tool inherited a third from a migration nobody documented.\n\nThe reports disagreed because the data disagreed. The data disagreed because nobody ever wrote down: this is what a qualified lead is, here is who owns that definition, here is where it lives.\n\nNo tool solves that. Another tool makes it worse.\n\nMost stacks don't need another app. They need someone to decide what the words mean.\n\nWhat's the most contested term in your stack right now?\n\nHappy to compare notes if you're knee-deep in the same problem.",
+    "generated": true,
+    "hook_options": [
+      "A team bought a sixth tool to fix a reporting problem. The reporting problem was that 'qualified lead' meant three different things across the five tools they already had.",
+      "Six tools in the stack. Three definitions of 'qualified lead.' The reports couldn't agree because the humans hadn't.",
+      "The fix for a bad report is rarely another dashboard. It's a decision about what the words mean.",
+      "They couldn't agree on what a qualified lead was. So they bought another tool to disagree in."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 9,
+      "human": 9,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-06-04T10:04:06.820477+00:00",
+    "post_id": "urn:li:share:7468241163418943489",
+    "posted_text": "A team bought a sixth tool to fix a reporting problem.\n\nThe reporting problem was that \"qualified lead\" meant three different things across the five tools they already had.\n\nEvery system you bolt on is one more place your definitions can fork.\n\nSales uses one threshold. Marketing uses another. The ops tool inherited a third from a migration nobody documented.\n\nThe reports disagreed because the data disagreed. The data disagreed because nobody ever wrote down: this is what a qualified lead is, here is who owns that definition, here is where it lives.\n\nNo tool solves that. Another tool makes it worse.\n\nMost stacks don't need another app. They need someone to decide what the words mean.\n\nWhat's the most contested term in your stack right now?\n\nHappy to compare notes if you're knee-deep in the same problem.\n\n#HubSpot #Analytics #RevOps"
   }
 ]
