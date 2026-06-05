@@ -656,5 +656,27 @@
     "posted_at": "2026-06-04T10:04:06.820477+00:00",
     "post_id": "urn:li:share:7468241163418943489",
     "posted_text": "A team bought a sixth tool to fix a reporting problem.\n\nThe reporting problem was that \"qualified lead\" meant three different things across the five tools they already had.\n\nEvery system you bolt on is one more place your definitions can fork.\n\nSales uses one threshold. Marketing uses another. The ops tool inherited a third from a migration nobody documented.\n\nThe reports disagreed because the data disagreed. The data disagreed because nobody ever wrote down: this is what a qualified lead is, here is who owns that definition, here is where it lives.\n\nNo tool solves that. Another tool makes it worse.\n\nMost stacks don't need another app. They need someone to decide what the words mean.\n\nWhat's the most contested term in your stack right now?\n\nHappy to compare notes if you're knee-deep in the same problem.\n\n#HubSpot #Analytics #RevOps"
+  },
+  {
+    "date": "2026-06-05",
+    "note": "Bought contact data has a half-life. The title was right the day you enriched it. Eighteen months later the person changed jobs and your sequence is greeting a stranger. The data you actually own, what your own forms and calls and product captured, is the only data that doesn't rot on someone else's schedule. Spend more on what you capture than on what you buy.",
+    "text": "That job title was accurate the day you enriched it.\n\nEighteen months later, the person changed jobs.\n\nYour sequence doesn't know that. It's still greeting a stranger with their old company name in the subject line.\n\nBought and enriched data has a half-life. It decays on someone else's schedule. Whenever the person updates LinkedIn. Whenever the enrichment vendor refreshes their source. Whenever the company reorgs.\n\nYou have zero control over when any of that happens.\n\nThe data you actually own is different. What your forms captured. What a sales call confirmed. What product usage recorded. That came directly from the person. It reflects who they are right now, not who they were when someone scraped their profile.\n\nFirst-party data doesn't rot on someone else's schedule.\n\nMost teams spend more on enrichment than on improving what they capture at the source. That's backwards.\n\nBetter forms, better call logging, better product signals. That's the budget that compounds.\n\nWhat's the ratio of enrichment spend to capture investment at your company? Curious whether others have actually run those numbers.\n\nIf you're untangling a data quality question and want a second set of eyes, feel free to message me.",
+    "generated": true,
+    "hook_options": [
+      "That job title was accurate the day you enriched it. Eighteen months later, your sequence is greeting a stranger.",
+      "Enriched data has a half-life. You just don't know when it expires.",
+      "Most enrichment budgets are paying for data that's already rotting.",
+      "Bought contact data decays on someone else's schedule. First-party data doesn't."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 9,
+      "human": 9,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-06-05T10:03:35.567050+00:00",
+    "post_id": "urn:li:share:7468603418480136192",
+    "posted_text": "That job title was accurate the day you enriched it.\n\nEighteen months later, the person changed jobs.\n\nYour sequence doesn't know that. It's still greeting a stranger with their old company name in the subject line.\n\nBought and enriched data has a half-life. It decays on someone else's schedule. Whenever the person updates LinkedIn. Whenever the enrichment vendor refreshes their source. Whenever the company reorgs.\n\nYou have zero control over when any of that happens.\n\nThe data you actually own is different. What your forms captured. What a sales call confirmed. What product usage recorded. That came directly from the person. It reflects who they are right now, not who they were when someone scraped their profile.\n\nFirst-party data doesn't rot on someone else's schedule.\n\nMost teams spend more on enrichment than on improving what they capture at the source. That's backwards.\n\nBetter forms, better call logging, better product signals. That's the budget that compounds.\n\nWhat's the ratio of enrichment spend to capture investment at your company? Curious whether others have actually run those numbers.\n\nIf you're untangling a data quality question and want a second set of eyes, feel free to message me.\n\n#HubSpot #DataQuality #MarketingAutomation"
   }
 ]

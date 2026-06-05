@@ -81,7 +81,8 @@
   },
   {
     "note": "Bought contact data has a half-life. The title was right the day you enriched it. Eighteen months later the person changed jobs and your sequence is greeting a stranger. The data you actually own, what your own forms and calls and product captured, is the only data that doesn't rot on someone else's schedule. Spend more on what you capture than on what you buy.",
-    "used": false
+    "used": true,
+    "used_at": "2026-06-05"
   },
   {
     "note": "No one's CRM problem has ever been 'not enough seats.' But that's where the money goes: more licenses, another module, while the data layer holding it all up gets nothing. If half your records are wrong, a bigger CRM just gives you more room to be wrong in. Fund the plumbing. It's the least exciting line item and the only one that pays you back.",
