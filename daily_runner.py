@@ -24,6 +24,7 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 
 from approved_inbox import fetch_oldest_approved
+from cta import append_cta
 from generate_card import generate_card
 from ghostwriter import generate_post
 from hashtags import append_hashtags
@@ -190,7 +191,9 @@ def main() -> int:
     # Card art uses the clean copy; relevant HubSpot hashtags live only on the
     # post body (see hashtags.py). Covers every source — approved, generated,
     # and pre-written — since they all funnel through target["text"] here.
-    post_body = append_hashtags(text)
+    # CTA (scheduling link) goes on the body between the copy and the hashtags;
+    # the card art keeps using the clean `text`, so the link never hits the image.
+    post_body = append_hashtags(append_cta(text))
     access_token, person_urn = load_credentials()
 
     if approved_img is not None:
