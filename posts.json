@@ -678,5 +678,27 @@
     "posted_at": "2026-06-05T10:03:35.567050+00:00",
     "post_id": "urn:li:share:7468603418480136192",
     "posted_text": "That job title was accurate the day you enriched it.\n\nEighteen months later, the person changed jobs.\n\nYour sequence doesn't know that. It's still greeting a stranger with their old company name in the subject line.\n\nBought and enriched data has a half-life. It decays on someone else's schedule. Whenever the person updates LinkedIn. Whenever the enrichment vendor refreshes their source. Whenever the company reorgs.\n\nYou have zero control over when any of that happens.\n\nThe data you actually own is different. What your forms captured. What a sales call confirmed. What product usage recorded. That came directly from the person. It reflects who they are right now, not who they were when someone scraped their profile.\n\nFirst-party data doesn't rot on someone else's schedule.\n\nMost teams spend more on enrichment than on improving what they capture at the source. That's backwards.\n\nBetter forms, better call logging, better product signals. That's the budget that compounds.\n\nWhat's the ratio of enrichment spend to capture investment at your company? Curious whether others have actually run those numbers.\n\nIf you're untangling a data quality question and want a second set of eyes, feel free to message me.\n\n#HubSpot #DataQuality #MarketingAutomation"
+  },
+  {
+    "date": "2026-06-06",
+    "note": "No one's CRM problem has ever been 'not enough seats.' But that's where the money goes: more licenses, another module, while the data layer holding it all up gets nothing. If half your records are wrong, a bigger CRM just gives you more room to be wrong in. Fund the plumbing. It's the least exciting line item and the only one that pays you back.",
+    "text": "No one's CRM problem has ever been \"not enough seats.\"\n\nBut that's where the money goes.\n\nMore licenses. Another module. An upgrade to the tier with the shiny features.\n\nMeanwhile, the data layer holding everything up gets nothing.\n\nDuplicate contacts. Lifecycle stages no one has touched in two years. Properties nobody owns. Fields with 14 different spellings of the same value.\n\nIf half your records are wrong, a bigger CRM doesn't fix the problem.\n\nIt just gives you more room to be wrong in.\n\nData cleanup, definition work, ownership rules. Nobody wants to fund it. It's the only line item that actually pays you back.\n\nScoring, automation, attribution, AI. All of it only works as well as what's underneath.\n\nWhat's the last thing your CRM budget actually funded: the tool or the plumbing?\n\nIf you're staring at a renewal and wondering whether the upgrade earns its keep, happy to think it through with you.",
+    "generated": true,
+    "hook_options": [
+      "No one's CRM problem has ever been 'not enough seats.'",
+      "Your CRM budget is probably backwards.",
+      "More licenses won't fix bad data. They just give it more room to spread.",
+      "Half your records are wrong. A new module won't change that."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 9,
+      "human": 9,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-06-06T10:02:44.670008+00:00",
+    "post_id": "urn:li:share:7468965592289685504",
+    "posted_text": "No one's CRM problem has ever been \"not enough seats.\"\n\nBut that's where the money goes.\n\nMore licenses. Another module. An upgrade to the tier with the shiny features.\n\nMeanwhile, the data layer holding everything up gets nothing.\n\nDuplicate contacts. Lifecycle stages no one has touched in two years. Properties nobody owns. Fields with 14 different spellings of the same value.\n\nIf half your records are wrong, a bigger CRM doesn't fix the problem.\n\nIt just gives you more room to be wrong in.\n\nData cleanup, definition work, ownership rules. Nobody wants to fund it. It's the only line item that actually pays you back.\n\nScoring, automation, attribution, AI. All of it only works as well as what's underneath.\n\nWhat's the last thing your CRM budget actually funded: the tool or the plumbing?\n\nIf you're staring at a renewal and wondering whether the upgrade earns its keep, happy to think it through with you.\n\n\ud83d\udcc5 Want a second set of eyes on your HubSpot setup? Grab a time with me: https://calendar.app.google/uk9YhnkaMWUc2QjY6\n\n#HubSpot #DataQuality #MarketingAutomation #CRM #Analytics"
   }
 ]

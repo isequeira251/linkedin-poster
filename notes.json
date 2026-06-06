@@ -86,7 +86,8 @@
   },
   {
     "note": "No one's CRM problem has ever been 'not enough seats.' But that's where the money goes: more licenses, another module, while the data layer holding it all up gets nothing. If half your records are wrong, a bigger CRM just gives you more room to be wrong in. Fund the plumbing. It's the least exciting line item and the only one that pays you back.",
-    "used": false
+    "used": true,
+    "used_at": "2026-06-06"
   },
   {
     "note": "RevOps keeps getting sold as a transformation. A framework, a maturity curve, a forty-slide deck. The actual wins this quarter: fixed a date filter, deleted a handful of dead workflows, got owner coverage up so the reports finally meant something. None of that goes on a conference stage. It's also the only thing that moved a number.",
