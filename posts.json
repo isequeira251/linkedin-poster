@@ -700,5 +700,27 @@
     "posted_at": "2026-06-06T10:02:44.670008+00:00",
     "post_id": "urn:li:share:7468965592289685504",
     "posted_text": "No one's CRM problem has ever been \"not enough seats.\"\n\nBut that's where the money goes.\n\nMore licenses. Another module. An upgrade to the tier with the shiny features.\n\nMeanwhile, the data layer holding everything up gets nothing.\n\nDuplicate contacts. Lifecycle stages no one has touched in two years. Properties nobody owns. Fields with 14 different spellings of the same value.\n\nIf half your records are wrong, a bigger CRM doesn't fix the problem.\n\nIt just gives you more room to be wrong in.\n\nData cleanup, definition work, ownership rules. Nobody wants to fund it. It's the only line item that actually pays you back.\n\nScoring, automation, attribution, AI. All of it only works as well as what's underneath.\n\nWhat's the last thing your CRM budget actually funded: the tool or the plumbing?\n\nIf you're staring at a renewal and wondering whether the upgrade earns its keep, happy to think it through with you.\n\n\ud83d\udcc5 Want a second set of eyes on your HubSpot setup? Grab a time with me: https://calendar.app.google/uk9YhnkaMWUc2QjY6\n\n#HubSpot #DataQuality #MarketingAutomation #CRM #Analytics"
+  },
+  {
+    "date": "2026-06-07",
+    "note": "RevOps keeps getting sold as a transformation. A framework, a maturity curve, a forty-slide deck. The actual wins this quarter: fixed a date filter, deleted a handful of dead workflows, got owner coverage up so the reports finally meant something. None of that goes on a conference stage. It's also the only thing that moved a number.",
+    "text": "The biggest RevOps win this quarter was a date filter fix.\n\nNot a framework rollout. Not a maturity curve. A date filter.\n\nAlso killed a handful of workflows that had been running on vibes since 2022. Got owner coverage to a point where the pipeline report finally reflected reality instead of wishful thinking.\n\nNone of that goes on a conference stage.\n\nIt's also the only thing that actually moved a number.\n\nRevOps keeps getting packaged as transformation. Forty slides, a new operating model, a cross-functional alignment session. The consultants love it. The vendors love it. The people cleaning up the actual records... less so.\n\nThe unglamorous work is the work. A broken date filter means your forecasts are lying to you. Dead workflows mean you're firing sequences into the void. Missing owners mean your reports are measuring noise.\n\nFix those. The transformation follows, quietly, without a deck.\n\nWhat's the most embarrassing small fix that ended up being the real unlock for your team?\n\nIf any of this sounds familiar in your instance, my inbox is open.",
+    "generated": true,
+    "hook_options": [
+      "The biggest RevOps win this quarter was a date filter fix.",
+      "RevOps transformation is a forty-slide deck. The actual work is a deleted workflow.",
+      "Nobody puts 'fixed a broken date filter' on a conference stage. It's also the only thing that moved the number.",
+      "RevOps keeps getting sold as transformation. This quarter's win was deleting five dead workflows."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 9,
+      "human": 9,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-06-07T10:04:24.894924+00:00",
+    "post_id": "urn:li:share:7469328400633995264",
+    "posted_text": "The biggest RevOps win this quarter was a date filter fix.\n\nNot a framework rollout. Not a maturity curve. A date filter.\n\nAlso killed a handful of workflows that had been running on vibes since 2022. Got owner coverage to a point where the pipeline report finally reflected reality instead of wishful thinking.\n\nNone of that goes on a conference stage.\n\nIt's also the only thing that actually moved a number.\n\nRevOps keeps getting packaged as transformation. Forty slides, a new operating model, a cross-functional alignment session. The consultants love it. The vendors love it. The people cleaning up the actual records... less so.\n\nThe unglamorous work is the work. A broken date filter means your forecasts are lying to you. Dead workflows mean you're firing sequences into the void. Missing owners mean your reports are measuring noise.\n\nFix those. The transformation follows, quietly, without a deck.\n\nWhat's the most embarrassing small fix that ended up being the real unlock for your team?\n\nIf any of this sounds familiar in your instance, my inbox is open.\n\n\ud83d\udcc5 Want a second set of eyes on your HubSpot setup? Grab a time with me: https://calendar.app.google/uk9YhnkaMWUc2QjY6\n\n#HubSpot #RevOps #MarketingAutomation #SalesOps #CRM"
   }
 ]

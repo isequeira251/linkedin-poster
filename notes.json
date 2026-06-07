@@ -91,7 +91,8 @@
   },
   {
     "note": "RevOps keeps getting sold as a transformation. A framework, a maturity curve, a forty-slide deck. The actual wins this quarter: fixed a date filter, deleted a handful of dead workflows, got owner coverage up so the reports finally meant something. None of that goes on a conference stage. It's also the only thing that moved a number.",
-    "used": false
+    "used": true,
+    "used_at": "2026-06-07"
   },
   {
     "note": "A forecast is only as honest as the stage data feeding it. If reps move deals to commit late and let closed-lost sit untouched, the number on the board is fiction with a confidence interval. You don't fix a bad forecast in the forecast. You fix it three steps upstream, in whether the pipeline reflects what's actually happening.",
