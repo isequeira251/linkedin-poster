@@ -96,7 +96,8 @@
   },
   {
     "note": "A forecast is only as honest as the stage data feeding it. If reps move deals to commit late and let closed-lost sit untouched, the number on the board is fiction with a confidence interval. You don't fix a bad forecast in the forecast. You fix it three steps upstream, in whether the pipeline reflects what's actually happening.",
-    "used": false
+    "used": true,
+    "used_at": "2026-06-08"
   },
   {
     "note": "The fastest way to get clean activity data is to stop asking reps to type it in. Every required field is one that gets logged late, half-filled, or skipped, and then you build a forecast on the gaps. Capture it from the source: the email, the calendar, the call recording. Reps should sell. The system should do the paperwork.",
