@@ -101,6 +101,7 @@
   },
   {
     "note": "The fastest way to get clean activity data is to stop asking reps to type it in. Every required field is one that gets logged late, half-filled, or skipped, and then you build a forecast on the gaps. Capture it from the source: the email, the calendar, the call recording. Reps should sell. The system should do the paperwork.",
-    "used": false
+    "used": true,
+    "used_at": "2026-06-09"
   }
 ]

@@ -744,5 +744,27 @@
     "posted_at": "2026-06-08T10:03:01.799523+00:00",
     "post_id": "urn:li:share:7469690441618276352",
     "posted_text": "Reps who move deals to Commit two days before month-end aren't forecasting. They're negotiating.\n\nThe deal didn't change. The pressure did.\n\nAnd meanwhile, six closed-lost deals are still sitting in Proposal Sent because no one touched them after the prospect went dark.\n\nThat's the data your board number is built on.\n\nYou can build a beautiful weighted pipeline view in HubSpot. Confidence intervals, forecast categories, all of it. But if the stage data is stale, you're presenting fiction with good formatting.\n\nThe fix isn't in the forecast. It's in whether stage definitions reflect buyer reality, whether someone actually owns pipeline hygiene, and whether closed-lost ever gets marked before it becomes a ghost in next quarter's number.\n\nFix those and the forecast gets honest almost by accident.\n\nWhat skews the number most in your org: late Commit moves, or deals that should've been closed-lost six weeks ago?\n\nIf you're trying to untangle it, drop me a note.\n\n\ud83d\udcc5 Want a second set of eyes on your HubSpot setup? Grab a time with me: https://calendar.app.google/uk9YhnkaMWUc2QjY6\n\n#HubSpot #DataQuality #SalesOps"
+  },
+  {
+    "date": "2026-06-09",
+    "note": "The fastest way to get clean activity data is to stop asking reps to type it in. Every required field is one that gets logged late, half-filled, or skipped, and then you build a forecast on the gaps. Capture it from the source: the email, the calendar, the call recording. Reps should sell. The system should do the paperwork.",
+    "text": "The problem isn't that reps don't log activities.\nIt's that you're asking them to.\n\nEvery required field is a small bet that a rep, mid-deal, will stop and fill in a form correctly.\n\nThey won't. Or they will: sometime around 5pm on Friday, from memory, with three calls blurred together.\n\nSo you get data. Just not accurate data.\n\nThe fix isn't more required fields or another training on CRM hygiene.\n\nIt's capturing activity from the source.\n\nEmail sends from the inbox. Meetings from the calendar. Calls from the recording tool. Sequences from HubSpot's own activity log.\n\nNone of that requires a rep to type anything.\n\nWhen you wire the sources, the CRM fills itself. The reps sell. The system does the paperwork.\n\nThe forecast you're building on manual logs isn't a forecast. It's a survey of who remembered to click \"Log Activity.\"\n\nWhat's one activity type in your CRM you'd actually trust if it came from the source rather than a rep's memory?\n\nIf you're untangling your activity capture setup, feel free to message me.",
+    "generated": true,
+    "hook_options": [
+      "Your forecast is built on what reps remembered to type.",
+      "Every required field in your CRM is a tax on your pipeline data.",
+      "Required fields don't create clean activity data. They create creative data entry.",
+      "The problem isn't that reps don't log activities. It's that you're asking them to."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 9,
+      "human": 9,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-06-09T10:04:55.784232+00:00",
+    "post_id": "urn:li:share:7470053307902984192",
+    "posted_text": "The problem isn't that reps don't log activities.\nIt's that you're asking them to.\n\nEvery required field is a small bet that a rep, mid-deal, will stop and fill in a form correctly.\n\nThey won't. Or they will: sometime around 5pm on Friday, from memory, with three calls blurred together.\n\nSo you get data. Just not accurate data.\n\nThe fix isn't more required fields or another training on CRM hygiene.\n\nIt's capturing activity from the source.\n\nEmail sends from the inbox. Meetings from the calendar. Calls from the recording tool. Sequences from HubSpot's own activity log.\n\nNone of that requires a rep to type anything.\n\nWhen you wire the sources, the CRM fills itself. The reps sell. The system does the paperwork.\n\nThe forecast you're building on manual logs isn't a forecast. It's a survey of who remembered to click \"Log Activity.\"\n\nWhat's one activity type in your CRM you'd actually trust if it came from the source rather than a rep's memory?\n\nIf you're untangling your activity capture setup, feel free to message me.\n\n\ud83d\udcc5 Want a second set of eyes on your HubSpot setup? Grab a time with me: https://calendar.app.google/uk9YhnkaMWUc2QjY6\n\n#HubSpot #DataQuality #MarketingAutomation #SalesOps #CRM"
   }
 ]
