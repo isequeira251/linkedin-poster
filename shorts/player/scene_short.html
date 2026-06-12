@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  /* Vertical 1080x1920 variant for Shorts — same class contract as scene.html,
+     so player.js renders both. Type sized for phone viewing. */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0b1623; }
+  body { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; color: #33475b; }
+  #stage { width: 1080px; height: 1920px; position: relative; display: flex; align-items: center; justify-content: center; }
+
+  /* ---------- shared ---------- */
+  .fade { opacity: 0; transform: translateY(18px); transition: opacity .5s ease, transform .5s ease; }
+  .fade.in { opacity: 1; transform: translateY(0); }
+  .brand-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 14px;
+    background: linear-gradient(90deg, #ff7a59, #ff9b7a); }
+  .watermark { position: absolute; top: 120px; left: 0; right: 0; text-align: center;
+    font-size: 34px; font-weight: 700; color: rgba(255,255,255,.5); letter-spacing: 3px; }
+  .sim-note { position: absolute; bottom: 150px; left: 0; right: 0; text-align: center;
+    font-size: 24px; color: rgba(255,255,255,.35); }
+
+  /* ---------- title / outro ---------- */
+  .t-wrap { text-align: center; max-width: 960px; padding: 0 50px; }
+  .t-kicker { font-size: 36px; font-weight: 700; color: #ff7a59; text-transform: uppercase;
+    letter-spacing: 5px; margin-bottom: 40px; }
+  .t-title { font-size: 92px; font-weight: 800; color: #ffffff; line-height: 1.14; }
+  .t-sub { font-size: 44px; color: #9fb3c8; margin-top: 46px; line-height: 1.4; }
+
+  /* ---------- bullets ---------- */
+  .b-wrap { width: 940px; }
+  .b-head { font-size: 64px; font-weight: 800; color: #fff; margin-bottom: 70px; line-height: 1.18; }
+  .b-item { display: flex; align-items: flex-start; gap: 26px; margin-bottom: 56px; }
+  .b-dot { flex: 0 0 auto; width: 58px; height: 58px; border-radius: 50%; background: #ff7a59;
+    color: #fff; font-size: 32px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 4px; }
+  .b-text { font-size: 46px; color: #dbe5ee; line-height: 1.35; }
+  .b-text strong { color: #fff; }
+
+  /* ---------- code ---------- */
+  .c-wrap { width: 980px; }
+  .c-head { font-size: 52px; font-weight: 800; color: #fff; margin-bottom: 36px; line-height: 1.2; }
+  .c-box { background: #101d2c; border: 1px solid #24405d; border-radius: 18px; padding: 26px 0 40px; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
+  .c-titlebar { display: flex; gap: 12px; padding: 0 30px 22px; border-bottom: 1px solid #1d344d; align-items: center; }
+  .c-dot { width: 20px; height: 20px; border-radius: 50%; }
+  .c-file { margin-left: 16px; color: #6e8aa8; font-size: 26px; font-family: 'Cascadia Code', Consolas, monospace; }
+  .c-code { padding: 32px 36px 0; font-family: 'Cascadia Code', Consolas, monospace; font-size: 33px;
+    line-height: 1.6; color: #d7e3f0; white-space: pre-wrap; min-height: 520px; }
+  .c-code .cm { color: #5d7990a8; } .c-code .kw { color: #ff9b7a; } .c-code .str { color: #7bd88f; } .c-code .num { color: #6fc1ff; }
+  .caret { display: inline-block; width: 16px; height: 38px; background: #ff7a59; vertical-align: -6px; animation: blink 1s step-start infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* ---------- HubSpot-style UI (portrait card) ---------- */
+  .hs-frame { width: 1000px; height: 1240px; background: #f5f8fa; border-radius: 18px; overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0,0,0,.55); position: relative; display: flex; flex-direction: column; }
+  .hs-top { height: 76px; background: #33475b; display: flex; align-items: center; padding: 0 28px; gap: 28px; flex: 0 0 auto; }
+  .hs-logo { width: 40px; height: 40px; border-radius: 50%; background: #ff7a59; position: relative; }
+  .hs-nav { color: #cbd6e2; font-size: 25px; font-weight: 600; white-space: nowrap; }
+  .hs-nav.active { color: #fff; border-bottom: 3px solid #ff7a59; padding-bottom: 6px; }
+  .hs-body { flex: 1; padding: 36px 36px; overflow: hidden; }
+  .hs-h1 { font-size: 42px; font-weight: 700; color: #33475b; margin-bottom: 8px; }
+  .hs-h2 { font-size: 26px; color: #7c98b6; margin-bottom: 30px; }
+  table.hs { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden;
+    box-shadow: 0 2px 10px rgba(51,71,91,.12); }
+  table.hs th { text-align: left; font-size: 22px; color: #7c98b6; font-weight: 600; padding: 18px 22px;
+    border-bottom: 2px solid #e5eaf0; background: #f9fbfd; text-transform: uppercase; letter-spacing: 1px; }
+  table.hs td { font-size: 29px; color: #33475b; padding: 24px 22px; border-bottom: 1px solid #eef2f6; }
+  table.hs td.link { color: #0091ae; font-weight: 600; }
+  tr.hl { background: #fff4f1 !important; outline: 3px solid #ff7a59; outline-offset: -3px; }
+  .pill { display: inline-block; padding: 8px 20px; border-radius: 22px; font-size: 24px; font-weight: 600; }
+  .pill.warn { background: #fde8e8; color: #c0392b; } .pill.ok { background: #e0f5ec; color: #1b8c5a; }
+  .pill.info { background: #e5f5f8; color: #0091ae; }
+
+  .hs-modal { position: absolute; inset: 0; background: rgba(45,62,80,.55); display: flex;
+    align-items: center; justify-content: center; opacity: 0; transition: opacity .35s; pointer-events: none; }
+  .hs-modal.in { opacity: 1; }
+  .hs-modal .panel { width: 820px; background: #fff; border-radius: 16px; padding: 46px 50px;
+    transform: scale(.92); transition: transform .35s; box-shadow: 0 30px 90px rgba(0,0,0,.4); }
+  .hs-modal.in .panel { transform: scale(1); }
+  .panel h3 { font-size: 40px; color: #33475b; margin-bottom: 16px; }
+  .panel p { font-size: 29px; color: #516f90; line-height: 1.5; margin-bottom: 12px; }
+  .panel .btnrow { margin-top: 32px; display: flex; gap: 20px; }
+  .btn { font-size: 27px; font-weight: 600; padding: 16px 34px; border-radius: 8px; }
+  .btn.primary { background: #ff7a59; color: #fff; } .btn.ghost { background: #eaf0f6; color: #506e91; }
+
+  /* cursor */
+  #cursor { position: absolute; width: 38px; height: 38px; z-index: 99; pointer-events: none;
+    transition: left .9s cubic-bezier(.4,0,.2,1), top .9s cubic-bezier(.4,0,.2,1); left: 540px; top: 1500px; }
+  #cursor svg { filter: drop-shadow(0 3px 8px rgba(0,0,0,.45)); }
+  #cursor.click { animation: clickpulse .35s ease; }
+  @keyframes clickpulse { 40% { transform: scale(.72); } }
+
+  /* ---------- diagram (stacked vertically for portrait) ---------- */
+  .d-wrap { width: 940px; text-align: center; }
+  .d-head { font-size: 62px; font-weight: 800; color: #fff; margin-bottom: 70px; line-height: 1.18; }
+  .d-row { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; }
+  .d-box { background: #16283c; border: 2px solid #2c4a6b; border-radius: 18px; padding: 38px 46px; min-width: 620px; }
+  .d-box .big { font-size: 42px; font-weight: 700; color: #fff; }
+  .d-box .small { font-size: 29px; color: #8fa9c4; margin-top: 12px; line-height: 1.35; }
+  .d-box.accent { border-color: #ff7a59; background: #2a1d1c; }
+  .d-arrow { font-size: 64px; color: #ff7a59; padding: 18px 0; font-weight: 300; transform: rotate(90deg); }
+</style>
+</head>
+<body>
+  <div id="stage"></div>
+  <script src="player.js"></script>
+</body>
+</html>

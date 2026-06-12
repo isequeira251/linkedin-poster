@@ -7,3 +7,9 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+# shorts pipeline artifacts
+shorts/out/
+shorts/videos/
+shorts/node_modules/
+shorts/package-lock.json
