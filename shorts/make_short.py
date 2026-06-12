@@ -60,6 +60,30 @@ def todays_entry(posts: list[dict]) -> dict | None:
     return None
 
 
+def _slug_today() -> str:
+    return f"short-{datetime.now(timezone.utc).date().isoformat()}"
+
+
+def plan_pre_post(post_text: str) -> bool:
+    """Pre-post hook for daily_runner: run the gate + script generation BEFORE
+    the LinkedIn post goes out, so the post body can carry a "video in the
+    comments" teaser only on days a video is actually coming.
+
+    Saves script.json (or a SKIP marker) for main() to reuse — same workflow
+    job, same workspace. Returns True when a video is coming.
+    """
+    sys.path.insert(0, str(SHORTS))
+    from generate_script import generate
+    vdir = SHORTS / "videos" / _slug_today()
+    vdir.mkdir(parents=True, exist_ok=True)
+    script = generate(post_text)
+    if script is None:
+        (vdir / "SKIP").write_text("quality gate")
+        return False
+    (vdir / "script.json").write_text(json.dumps(script, indent=2))
+    return True
+
+
 def main() -> None:
     if not os.environ.get("YT_REFRESH_TOKEN"):
         print("YT_REFRESH_TOKEN not set — Shorts step disabled, skipping.")
@@ -81,17 +105,28 @@ def main() -> None:
         print("today's entry missing posted_text/post_id — skipping.")
         return
 
-    from generate_script import generate  # noqa: E402 (sys.path set in __main__)
-    script = generate(post_text)
-    if script is None:
+    slug = _slug_today()
+    vdir = SHORTS / "videos" / slug
+    spath = vdir / "script.json"
+    if (vdir / "SKIP").exists():
+        # pre-post gate already said no — don't second-guess it (the post
+        # carries no teaser, so a surprise video would be inconsistent)
+        print("pre-post gate skipped this post.")
         entry["short_skipped"] = "quality gate"
         posts_path.write_text(json.dumps(posts, indent=2))
         return
-
-    slug = f"short-{datetime.now(timezone.utc).date().isoformat()}"
-    vdir = SHORTS / "videos" / slug
-    vdir.mkdir(parents=True, exist_ok=True)
-    (vdir / "script.json").write_text(json.dumps(script, indent=2))
+    if spath.exists():
+        script = json.loads(spath.read_text())
+        print("reusing pre-post script.json")
+    else:
+        from generate_script import generate  # noqa: E402 (sys.path set in __main__)
+        script = generate(post_text)
+        if script is None:
+            entry["short_skipped"] = "quality gate"
+            posts_path.write_text(json.dumps(posts, indent=2))
+            return
+        vdir.mkdir(parents=True, exist_ok=True)
+        spath.write_text(json.dumps(script, indent=2))
 
     run([sys.executable, str(SHORTS / "pipeline" / "tts.py"), slug])
     run(["node", str(SHORTS / "pipeline" / "render.js"), slug])
