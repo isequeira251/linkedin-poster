@@ -43,6 +43,9 @@ jobs:
           # the auto notes pool. Omit these secrets to disable the approved path.
           GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          # Enables the pre-post Shorts gate (video teaser in the post body
+          # only on days a Short is coming). Same flag make_short.py keys on.
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: python daily_runner.py
 
       # ---- YouTube Short (runs only when YT_* secrets are set; never fails the job) ----

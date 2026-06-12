@@ -194,6 +194,27 @@ def main() -> int:
     # CTA (scheduling link) goes on the body between the copy and the hashtags;
     # the card art keeps using the clean `text`, so the link never hits the image.
     post_body = append_hashtags(append_cta(text))
+
+    # Video teaser: when shorts/make_short.py will turn this post into a
+    # YouTube Short (linked as the first comment), say so in the post body —
+    # a comment link nobody is told about barely gets clicked. The gate +
+    # script generation run HERE, pre-post, so the teaser only appears on
+    # days a video is actually coming; make_short.py reuses the saved script.
+    # Hard-guarded: any failure must never block posting — we just post
+    # without the teaser and make_short.py falls back to generating later.
+    if os.environ.get("YT_REFRESH_TOKEN"):
+        try:
+            sys.path.insert(0, str(Path(__file__).resolve().parent / "shorts"))
+            from make_short import plan_pre_post
+            if plan_pre_post(text):
+                post_body = append_hashtags(append_cta(
+                    text + "\n\n🎥 The 60-second video version is in the comments 👇"))
+                print("Shorts gate passed — video teaser added to post body.")
+            else:
+                print("Shorts gate skipped — posting without teaser.")
+        except Exception as e:
+            print(f"Shorts planning failed (posting without teaser): {e}")
+
     access_token, person_urn = load_credentials()
 
     if approved_img is not None:
