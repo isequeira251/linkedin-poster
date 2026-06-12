@@ -1,0 +1,8 @@
+{
+  "name": "linkedin-poster-shorts",
+  "private": true,
+  "description": "Playwright renderer for the daily YouTube Short",
+  "dependencies": {
+    "playwright": "1.60.0"
+  }
+}

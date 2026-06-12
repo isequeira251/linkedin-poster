@@ -1,0 +1,53 @@
+name: Shorts Smoke Test
+
+# Manual end-to-end test of the Shorts pipeline: generates a script from the
+# given text, renders, and uploads PRIVATE. No LinkedIn interaction, no
+# posts.json writes. Use before trusting the daily flow.
+
+on:
+  workflow_dispatch:
+    inputs:
+      post_text:
+        description: 'LinkedIn-post-style text to turn into a Short'
+        required: true
+        type: string
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - run: pip install -r requirements.txt
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-1.60.0
+
+      - name: Install Shorts renderer
+        working-directory: shorts
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+
+      - name: Generate + render + upload (private)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: claude-sonnet-4-6
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          POST_TEXT: ${{ inputs.post_text }}
+        run: python shorts/smoke_test.py
