@@ -147,8 +147,13 @@
   },
   {
     "date": "2026-06-13",
-    "posted": false,
-    "text": "Everyone worries about duplicate contacts. The quieter problem is duplicate companies.\n\n'Acme Inc,' 'Acme, Inc.,' 'Acme Incorporated,' and 'acme.com' all as separate company records. Now your account-based reporting is wrong, your territory assignments overlap, and two reps are working the same logo without knowing it.\n\nCompany dedup is harder than contact dedup because the matching signals are weaker. Domain is your best key \u2014 normalize on it ruthlessly.\n\nIf your account list has the same company three times under different spellings, DM me \u2014 happy to share how I approach company-level dedup."
+    "posted": true,
+    "text": "Everyone worries about duplicate contacts. The quieter problem is duplicate companies.\n\n'Acme Inc,' 'Acme, Inc.,' 'Acme Incorporated,' and 'acme.com' all as separate company records. Now your account-based reporting is wrong, your territory assignments overlap, and two reps are working the same logo without knowing it.\n\nCompany dedup is harder than contact dedup because the matching signals are weaker. Domain is your best key \u2014 normalize on it ruthlessly.\n\nIf your account list has the same company three times under different spellings, DM me \u2014 happy to share how I approach company-level dedup.",
+    "posted_at": "2026-06-13T10:03:43.852830+00:00",
+    "post_id": "urn:li:share:7471502557689978880",
+    "posted_text": "Everyone worries about duplicate contacts. The quieter problem is duplicate companies.\n\n'Acme Inc,' 'Acme, Inc.,' 'Acme Incorporated,' and 'acme.com' all as separate company records. Now your account-based reporting is wrong, your territory assignments overlap, and two reps are working the same logo without knowing it.\n\nCompany dedup is harder than contact dedup because the matching signals are weaker. Domain is your best key \u2014 normalize on it ruthlessly.\n\nIf your account list has the same company three times under different spellings, DM me \u2014 happy to share how I approach company-level dedup.\n\n\ud83c\udfa5 The 60-second video version is in the comments \ud83d\udc47\n\n\ud83d\udcc5 Want a second set of eyes on your HubSpot setup? Grab a time with me: https://calendar.app.google/uk9YhnkaMWUc2QjY6\n\n#HubSpot #DataQuality #SalesOps #CRM #Analytics",
+    "short_video_id": "hVT91qBqmog",
+    "short_url": "https://youtube.com/shorts/hVT91qBqmog"
   },
   {
     "date": "2026-06-14",
