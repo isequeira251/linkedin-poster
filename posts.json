@@ -167,8 +167,13 @@
   },
   {
     "date": "2026-06-15",
-    "posted": false,
-    "text": "Your CRM says the customer is on the Pro plan. Your billing system says Starter. Your CS platform says Enterprise.\n\nWhich one's right? Usually nobody knows, because there's no agreed-on source of truth \u2014 there's just whichever system the person asking the question logged into first.\n\nPick one. Make every other system point at it. Until you do, every report is a coin flip.\n\nIf your CRM, billing, and CS tools disagree on basic customer facts, DM me \u2014 picking a source of truth is the cheapest fix you can make this quarter."
+    "posted": true,
+    "text": "Your CRM says the customer is on the Pro plan. Your billing system says Starter. Your CS platform says Enterprise.\n\nWhich one's right? Usually nobody knows, because there's no agreed-on source of truth \u2014 there's just whichever system the person asking the question logged into first.\n\nPick one. Make every other system point at it. Until you do, every report is a coin flip.\n\nIf your CRM, billing, and CS tools disagree on basic customer facts, DM me \u2014 picking a source of truth is the cheapest fix you can make this quarter.",
+    "posted_at": "2026-06-15T10:02:06.175618+00:00",
+    "post_id": "urn:li:share:7472226923679502336",
+    "posted_text": "Your CRM says the customer is on the Pro plan. Your billing system says Starter. Your CS platform says Enterprise.\n\nWhich one's right? Usually nobody knows, because there's no agreed-on source of truth \u2014 there's just whichever system the person asking the question logged into first.\n\nPick one. Make every other system point at it. Until you do, every report is a coin flip.\n\nIf your CRM, billing, and CS tools disagree on basic customer facts, DM me \u2014 picking a source of truth is the cheapest fix you can make this quarter.\n\n\ud83c\udfa5 The 60-second video version is in the comments \ud83d\udc47\n\n\ud83d\udcc5 Want a second set of eyes on your HubSpot setup? Grab a time with me: https://calendar.app.google/uk9YhnkaMWUc2QjY6\n\n#HubSpot #CRM #Analytics",
+    "short_video_id": "dO0IY3LFykg",
+    "short_url": "https://youtube.com/shorts/dO0IY3LFykg"
   },
   {
     "date": "2026-06-16",
