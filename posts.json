@@ -187,8 +187,13 @@
   },
   {
     "date": "2026-06-17",
-    "posted": false,
-    "text": "Lead scoring rules that actually work:\n\n1. Score on behavior, not demographics. A VP who downloaded one whitepaper is less qualified than a Manager who opened three emails and visited the pricing page twice.\n\n2. Decay scores. If someone hit 80 six months ago and hasn't done anything since, they aren't an 80 anymore. Most scoring models forget this.\n\n3. Have a \"why\" next to every rule. If the rule is \"+10 for opening 3 emails,\" write down why three is the threshold. If you can't, lower it.\n\n4. Get sales to sign off. If sales doesn't trust the score, the score is useless.\n\nLead scoring fails in half the companies I see, almost always for one of these four reasons. Happy to look at yours if you want a sanity check \u2014 DM me."
+    "posted": true,
+    "text": "Lead scoring rules that actually work:\n\n1. Score on behavior, not demographics. A VP who downloaded one whitepaper is less qualified than a Manager who opened three emails and visited the pricing page twice.\n\n2. Decay scores. If someone hit 80 six months ago and hasn't done anything since, they aren't an 80 anymore. Most scoring models forget this.\n\n3. Have a \"why\" next to every rule. If the rule is \"+10 for opening 3 emails,\" write down why three is the threshold. If you can't, lower it.\n\n4. Get sales to sign off. If sales doesn't trust the score, the score is useless.\n\nLead scoring fails in half the companies I see, almost always for one of these four reasons. Happy to look at yours if you want a sanity check \u2014 DM me.",
+    "posted_at": "2026-06-17T10:04:34.822830+00:00",
+    "post_id": "urn:li:share:7472952322843754496",
+    "posted_text": "Lead scoring rules that actually work:\n\n1. Score on behavior, not demographics. A VP who downloaded one whitepaper is less qualified than a Manager who opened three emails and visited the pricing page twice.\n\n2. Decay scores. If someone hit 80 six months ago and hasn't done anything since, they aren't an 80 anymore. Most scoring models forget this.\n\n3. Have a \"why\" next to every rule. If the rule is \"+10 for opening 3 emails,\" write down why three is the threshold. If you can't, lower it.\n\n4. Get sales to sign off. If sales doesn't trust the score, the score is useless.\n\nLead scoring fails in half the companies I see, almost always for one of these four reasons. Happy to look at yours if you want a sanity check \u2014 DM me.\n\n\ud83c\udfa5 The 60-second video version is in the comments \ud83d\udc47\n\n\ud83d\udcc5 Want a second set of eyes on your HubSpot setup? Grab a time with me: https://calendar.app.google/uk9YhnkaMWUc2QjY6\n\n#HubSpot #LeadScoring #RevOps",
+    "short_video_id": "CDzH9qx3pMw",
+    "short_url": "https://youtube.com/shorts/CDzH9qx3pMw"
   },
   {
     "date": "2026-06-18",
