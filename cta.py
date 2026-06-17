@@ -1,28 +1,30 @@
-"""Append a scheduling call-to-action to a finished LinkedIn post.
+"""Append a call-to-action to a finished LinkedIn post.
 
-Keeps the booking link in exactly one place, mirroring how hashtags.py owns the
+Keeps the CTA link in exactly one place, mirroring how hashtags.py owns the
 hashtag block. The CTA is added to the post BODY only — after the copy, before
 the hashtag block (see daily_runner.py) — so it never lands on the card image,
 which renders from the clean post text.
 
     from cta import append_cta
-    body = append_cta(post_text)     # body + "\n\n📅 ... <booking link>"
+    body = append_cta(post_text)     # body + "\n\n📊 ... <scorecard link>"
 """
 
 from __future__ import annotations
 
-# Ian's free Google Calendar appointment-schedule booking page.
-BOOKING_URL = "https://calendar.app.google/uk9YhnkaMWUc2QjY6"
+# Ian's inbound CRM Health Check scorecard. It carries his Google Calendar
+# booking link internally, so the post points here (a single funnel entry)
+# rather than at a raw calendar link.
+SCORECARD_URL = "https://isequeira251.github.io/crm-health-check/"
 
-CTA = f"📅 Running HubSpot on a lean team? Grab a time — I help small and midsize businesses get more out of it without the enterprise overhead: {BOOKING_URL}"
+CTA = f"📊 How healthy is your CRM, really? Free 1-minute check — get your score and the top fixes (no signup): {SCORECARD_URL}"
 
 
 def append_cta(text: str) -> str:
-    """Return the post body with the scheduling CTA appended as a trailing block.
+    """Return the post body with the scorecard CTA appended as a trailing block.
 
-    Idempotent: if the booking link is already in the text (e.g. an approved or
-    pre-written post that wrote it inline), the text is returned unchanged so we
-    never double up the link."""
-    if BOOKING_URL in text:
+    Idempotent: if the scorecard link is already in the text (e.g. an approved
+    or pre-written post that wrote it inline), the text is returned unchanged so
+    we never double up the link."""
+    if SCORECARD_URL in text:
         return text
     return f"{text.rstrip()}\n\n{CTA}"
