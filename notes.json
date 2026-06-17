@@ -103,5 +103,25 @@
     "note": "The fastest way to get clean activity data is to stop asking reps to type it in. Every required field is one that gets logged late, half-filled, or skipped, and then you build a forecast on the gaps. Capture it from the source: the email, the calendar, the call recording. Reps should sell. The system should do the paperwork.",
     "used": true,
     "used_at": "2026-06-09"
+  },
+  {
+    "note": "A 12-person company asked me which HubSpot tier they needed to fix their problems. They were using about 4% of the one they already paid for. Most small teams don't have a tool problem, they have an adoption problem, and a bigger plan doesn't fix that.",
+    "used": false
+  },
+  {
+    "note": "Watched a founder personally chase every lead out of a shared inbox because 'the CRM was too much.' We set up one pipeline, three stages, and a single automation that logged the emails for him. He didn't change how he worked; the system just started remembering for him. Small teams don't need more CRM. They need less of it, set up right.",
+    "used": false
+  },
+  {
+    "note": "A small-business owner told me HubSpot 'didn't do anything.' They'd bought it, imported a spreadsheet, and never built a single workflow. The software isn't the product. The fifteen decisions about how your business actually runs are the product. The tool just enforces them.",
+    "used": false
+  },
+  {
+    "note": "The most expensive CRM mistake I see at small companies isn't the license. It's the owner spending Saturday rebuilding the same report by hand because nobody set the pipeline up to answer the question once. Your time is the budget. Spend an afternoon now or every weekend forever.",
+    "used": false
+  },
+  {
+    "note": "A 20-person shop wanted lead scoring 'like the big companies have.' They got 300 leads a month. You don't need a model to rank 300 leads, you need someone to actually call them. Half of 'we need automation' is really 'we haven't decided who owns the follow-up.'",
+    "used": false
   }
 ]

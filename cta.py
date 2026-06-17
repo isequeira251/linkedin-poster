@@ -14,7 +14,7 @@ from __future__ import annotations
 # Ian's free Google Calendar appointment-schedule booking page.
 BOOKING_URL = "https://calendar.app.google/uk9YhnkaMWUc2QjY6"
 
-CTA = f"📅 Want a second set of eyes on your HubSpot setup? Grab a time with me: {BOOKING_URL}"
+CTA = f"📅 Running HubSpot on a lean team? Grab a time — I help small and midsize businesses get more out of it without the enterprise overhead: {BOOKING_URL}"
 
 
 def append_cta(text: str) -> str:
