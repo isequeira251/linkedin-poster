@@ -15,7 +15,7 @@ import re
 import anthropic
 
 MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-6")
-BOOKING_LINE = "📅 Book a HubSpot consulting call: https://calendar.app.google/Hnb4hjABXYCWmx8N7"
+BOOKING_LINE = "📊 Free 1-min CRM health check (score + top fixes): https://isequeira251.github.io/crm-health-check/"
 HASHTAG_LINE = "#HubSpot #RevOps #CRM #Shorts"
 ALLOWED_TEMPLATES = {"title", "outro", "bullets", "code", "diagram", "ui"}
 
