@@ -106,7 +106,8 @@
   },
   {
     "note": "A 12-person company asked me which HubSpot tier they needed to fix their problems. They were using about 4% of the one they already paid for. Most small teams don't have a tool problem, they have an adoption problem, and a bigger plan doesn't fix that.",
-    "used": false
+    "used": true,
+    "used_at": "2026-06-18"
   },
   {
     "note": "Watched a founder personally chase every lead out of a shared inbox because 'the CRM was too much.' We set up one pipeline, three stages, and a single automation that logged the emails for him. He didn't change how he worked; the system just started remembering for him. Small teams don't need more CRM. They need less of it, set up right.",
