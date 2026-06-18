@@ -1,11 +1,20 @@
 """Render a LinkedIn post card: stock photo of people working, byline strip, and
-optionally the post's hook text in the top-right corner.
+a short, punchy caption overlaid in the top-right corner.
 
-Corner-text decision:
-- If `bubble=True/False` is passed, that wins.
-- Otherwise, the hook text appears only when it is shorter than
-  CORNER_HOOK_MAX_CHARS — short, punchy lines work as a corner caption; longer
-  ones don't.
+Corner-text (the words on the photo):
+- The overlay is a SHORT, PUNCHY caption (<=CAPTION_MAX_WORDS words) distilled
+  from the post's theme by a cheap LLM call (Anthropic; model from
+  ANTHROPIC_MODEL, default claude-haiku-4-5), cached on a hash of the post text
+  so re-renders cost ~$0.
+- If the LLM is unavailable (no ANTHROPIC_API_KEY / error / SDK missing), it
+  falls back to the deterministic first-paragraph hook so the card ALWAYS
+  renders.
+- show / hide: an explicit `bubble=True/False` always wins. Otherwise the
+  caption shows whenever we have an LLM caption (it is always short + legible);
+  for the deterministic fallback it shows only when shorter than
+  CORNER_HOOK_MAX_CHARS.
+
+Requires: pip install anthropic  (optional — the card still renders without it)
 
 Usage as a library:
     from generate_card import generate_card
@@ -21,6 +30,7 @@ Background photo selection (in order):
 3. If nothing usable, fall back to a solid navy canvas.
 """
 
+import hashlib
 import io
 import json
 import os
@@ -61,9 +71,33 @@ CORNER_TEXT_RIGHT = CARD_SIZE - CORNER_MARGIN
 CORNER_TEXT_TOP = CORNER_MARGIN
 CORNER_TEXT_OUTLINE_W = 3
 CORNER_START_FONT = 60                    # largest font size tried for corner text
-# Auto-text heuristic: only short, punchy hooks get the corner caption — longer
-# hooks read fine on their own and clutter the card.
+# Deterministic-fallback heuristic: when the LLM caption is unavailable, only
+# short hooks get the corner caption — longer ones clutter the card.
 CORNER_HOOK_MAX_CHARS = 120
+
+# Punchy caption: a cheap LLM distills the post into a short theme line for the
+# photo overlay. Model comes from ANTHROPIC_MODEL (CI pins sonnet-4-6); defaults
+# to Haiku locally. Result is cached on a hash of the post text so re-renders are
+# free, and any failure falls back to the deterministic hook (card never fails).
+CAPTION_MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-haiku-4-5")
+CAPTION_MAX_WORDS = 6  # target asked of the model (3-5 is ideal)
+CAPTION_RUNAWAY_WORDS = 9  # only trim output longer than this (guards runaways)
+CAPTION_CACHE_FILE = Path(__file__).parent / ".caption_cache.json"
+CAPTION_SYSTEM = (
+    "You write ultra-short text overlays for a LinkedIn image card by Ian "
+    'Sequeira, whose tagline is "Notes on CRM performance" (HubSpot / CRM / '
+    "revenue operations).\n"
+    "Given the full text of one of his posts, return ONE punchy caption that "
+    "captures the post's core idea — the kind of tight hook that reads well as "
+    "large text on a photo.\n"
+    "Rules:\n"
+    f"- At most {CAPTION_MAX_WORDS} words (3-5 is ideal). No trailing period.\n"
+    "- No surrounding quotes, no emoji, no hashtags, no markdown.\n"
+    "- Capture the *idea*; do not just copy the first sentence verbatim.\n"
+    '- Concrete and specific, not generic ("Stop guessing your lead source", '
+    'not "Thoughts on CRM").\n'
+    "Return only the caption text, nothing else."
+)
 
 BYLINE_NAME = "Ian Sequeira"
 BYLINE_TAG = "Notes on CRM performance"
@@ -87,6 +121,65 @@ def extract_hook(post_text: str, max_chars: int = 220) -> str:
         return first_paragraph
     cut = first_paragraph[:max_chars].rsplit(" ", 1)[0]
     return cut.rstrip(".,;:") + "…"
+
+
+def _caption_cache() -> dict:
+    try:
+        return json.loads(CAPTION_CACHE_FILE.read_text())
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def _clean_caption(text: str) -> str:
+    """Normalize the model's reply into a bare caption: first line, no quotes or
+    trailing punctuation. We only trim genuinely runaway output — the prompt asks
+    for <=CAPTION_MAX_WORDS words, and clipping a 7-8 word phrase mid-thought
+    reads worse than letting the font shrink, so the guard is deliberately loose."""
+    line = text.strip().splitlines()[0].strip() if text.strip() else ""
+    line = line.strip("\"'“”‘’ ").rstrip(".,;:!").strip()
+    words = line.split()
+    if len(words) > CAPTION_RUNAWAY_WORDS:
+        line = " ".join(words[:CAPTION_RUNAWAY_WORDS]) + "…"
+    return line
+
+
+def _punchy_caption(post_text: str) -> str | None:
+    """Distill the post into a short, punchy theme caption via a cheap LLM call.
+
+    Cached on a hash of the post text (re-renders cost ~$0). Returns None if the
+    Anthropic SDK/key is unavailable or the call fails, so the caller can fall
+    back to the deterministic hook — the card must never fail to render.
+    """
+    key = hashlib.sha256(post_text.strip().encode("utf-8")).hexdigest()
+    cache = _caption_cache()
+    if key in cache:
+        return cache[key] or None
+    if not os.environ.get("ANTHROPIC_API_KEY"):
+        return None
+    try:
+        import anthropic
+
+        client = anthropic.Anthropic()
+        resp = client.messages.create(
+            model=CAPTION_MODEL,
+            max_tokens=32,
+            system=CAPTION_SYSTEM,
+            messages=[{"role": "user", "content": post_text.strip()[:4000]}],
+        )
+        raw = next((b.text for b in resp.content if b.type == "text"), "")
+        caption = _clean_caption(raw)
+    except Exception as e:  # never let caption generation break the render
+        print(f"WARN: caption LLM failed ({e}); using deterministic hook.", file=sys.stderr)
+        return None
+    if not caption:
+        return None
+    cache[key] = caption
+    try:
+        CAPTION_CACHE_FILE.write_text(json.dumps(cache, indent=2) + "\n")
+    except OSError:
+        pass
+    print(f"Caption: {caption!r} (model={CAPTION_MODEL})", file=sys.stderr)
+    return caption
 
 
 def _wrap_to_fit(text: str, font: ImageFont.FreeTypeFont, max_width: int, draw: ImageDraw.ImageDraw) -> list[str]:
@@ -236,11 +329,17 @@ def generate_card(
 ) -> bytes:
     canvas = _prepare_background()
 
-    hook = extract_hook(post_text)
-    show_text = bubble if bubble is not None else len(hook) < CORNER_HOOK_MAX_CHARS
+    llm_caption = _punchy_caption(post_text)
+    hook = llm_caption or extract_hook(post_text)
+    if bubble is not None:
+        show_text = bubble
+    elif llm_caption:
+        show_text = True  # punchy caption is always short + legible
+    else:
+        show_text = len(hook) < CORNER_HOOK_MAX_CHARS  # deterministic fallback
     print(
-        f"Card: hook_chars={len(hook)} corner_text={show_text} "
-        f"(override={bubble!r})",
+        f"Card: caption={hook!r} source={'llm' if llm_caption else 'hook'} "
+        f"corner_text={show_text} (override={bubble!r})",
         file=sys.stderr,
     )
 
