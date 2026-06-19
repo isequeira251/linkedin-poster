@@ -825,5 +825,29 @@
     "posted_text": "A 12-person team asked me which HubSpot tier they needed. They were using 4% of the one they already had.\n\nThat number isn't unusual.\n\nSmall teams hit friction \u2014 messy contacts, no one logging calls, a pipeline that feels wrong \u2014 and the instinct is to fix it with more. More features, more automations, more plan.\n\nBut you can't automate your way out of an adoption problem.\n\nThe 4% isn't a feature gap. It's usually a signal that the team doesn't trust the tool, doesn't know how to use it, or hasn't agreed on what \"using it\" even means.\n\nThat's a definition problem. Sometimes a training problem. Almost never a tier problem.\n\nBefore you upgrade: pull your usage data. Count the workflows that are live vs. the ones someone built once and forgot. Look at which features you're paying for but haven't touched.\n\nThe fix is usually already inside the plan you're on. You just need to put someone in charge of it.\n\nWhat feature in your current plan have you been meaning to set up but never have?\n\nIf you're staring down a renewal or upgrade decision, shoot me a message before you click buy.\n\n\ud83c\udfa5 The 60-second video version is in the comments \ud83d\udc47\n\n\ud83d\udcca How healthy is your CRM, really? Free 1-minute check \u2014 get your score and the top fixes (no signup): https://isequeira251.github.io/crm-health-check/\n\n#HubSpot #MarketingAutomation #SalesOps #CRM",
     "short_video_id": "19EDVEeJrAI",
     "short_url": "https://youtube.com/shorts/19EDVEeJrAI"
+  },
+  {
+    "date": "2026-06-19",
+    "note": "Watched a founder personally chase every lead out of a shared inbox because 'the CRM was too much.' We set up one pipeline, three stages, and a single automation that logged the emails for him. He didn't change how he worked; the system just started remembering for him. Small teams don't need more CRM. They need less of it, set up right.",
+    "text": "A founder was personally chasing every lead out of a shared inbox because \"the CRM was too much.\"\n\nHe wasn't wrong. It was too much.\n\nSo we stripped it down.\n\nOne pipeline.\nThree stages.\nOne automation that logged his emails and moved the contact when he replied.\n\nHe didn't change how he worked. The system just started remembering for him.\n\nSmall teams don't need more CRM. They need less of it, set up right.\n\nThe failure mode isn't picking the wrong tool. It's someone overselling features you'll never use, stages you'll never maintain, and workflows that needed a consultant to explain.\n\nIf the system requires you to change how you work, it's not going to stick. The job is to fit the system around the actual behavior, then let it do the logging, the moving, the remembering.\n\nWhat does your current CRM have that nobody on your team has touched in six months? That's probably where the problem started.\n\nIf you're wading through something similar, drop me a DM and we can figure out what actually needs to be there.",
+    "generated": true,
+    "hook_options": [
+      "A founder was personally chasing every lead out of a shared inbox because 'the CRM was too much.'",
+      "The fix wasn't a better CRM. It was less CRM.",
+      "One pipeline. Three stages. One automation. That's the whole setup.",
+      "Most small teams don't have a CRM problem. They have a too-much-CRM problem."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 9,
+      "human": 9,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-06-19T10:03:58.671628+00:00",
+    "post_id": "urn:li:share:7473676945008906240",
+    "posted_text": "A founder was personally chasing every lead out of a shared inbox because \"the CRM was too much.\"\n\nHe wasn't wrong. It was too much.\n\nSo we stripped it down.\n\nOne pipeline.\nThree stages.\nOne automation that logged his emails and moved the contact when he replied.\n\nHe didn't change how he worked. The system just started remembering for him.\n\nSmall teams don't need more CRM. They need less of it, set up right.\n\nThe failure mode isn't picking the wrong tool. It's someone overselling features you'll never use, stages you'll never maintain, and workflows that needed a consultant to explain.\n\nIf the system requires you to change how you work, it's not going to stick. The job is to fit the system around the actual behavior, then let it do the logging, the moving, the remembering.\n\nWhat does your current CRM have that nobody on your team has touched in six months? That's probably where the problem started.\n\nIf you're wading through something similar, drop me a DM and we can figure out what actually needs to be there.\n\n\ud83c\udfa5 The 60-second video version is in the comments \ud83d\udc47\n\n\ud83d\udcca How healthy is your CRM, really? Free 1-minute check \u2014 get your score and the top fixes (no signup): https://isequeira251.github.io/crm-health-check/\n\n#HubSpot #MarketingAutomation #SalesOps #CRM",
+    "short_video_id": "X7_wJ_GKvLs",
+    "short_url": "https://youtube.com/shorts/X7_wJ_GKvLs"
   }
 ]

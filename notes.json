@@ -111,7 +111,8 @@
   },
   {
     "note": "Watched a founder personally chase every lead out of a shared inbox because 'the CRM was too much.' We set up one pipeline, three stages, and a single automation that logged the emails for him. He didn't change how he worked; the system just started remembering for him. Small teams don't need more CRM. They need less of it, set up right.",
-    "used": false
+    "used": true,
+    "used_at": "2026-06-19"
   },
   {
     "note": "A small-business owner told me HubSpot 'didn't do anything.' They'd bought it, imported a spreadsheet, and never built a single workflow. The software isn't the product. The fifteen decisions about how your business actually runs are the product. The tool just enforces them.",
