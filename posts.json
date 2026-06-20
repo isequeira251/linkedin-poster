@@ -849,5 +849,29 @@
     "posted_text": "A founder was personally chasing every lead out of a shared inbox because \"the CRM was too much.\"\n\nHe wasn't wrong. It was too much.\n\nSo we stripped it down.\n\nOne pipeline.\nThree stages.\nOne automation that logged his emails and moved the contact when he replied.\n\nHe didn't change how he worked. The system just started remembering for him.\n\nSmall teams don't need more CRM. They need less of it, set up right.\n\nThe failure mode isn't picking the wrong tool. It's someone overselling features you'll never use, stages you'll never maintain, and workflows that needed a consultant to explain.\n\nIf the system requires you to change how you work, it's not going to stick. The job is to fit the system around the actual behavior, then let it do the logging, the moving, the remembering.\n\nWhat does your current CRM have that nobody on your team has touched in six months? That's probably where the problem started.\n\nIf you're wading through something similar, drop me a DM and we can figure out what actually needs to be there.\n\n\ud83c\udfa5 The 60-second video version is in the comments \ud83d\udc47\n\n\ud83d\udcca How healthy is your CRM, really? Free 1-minute check \u2014 get your score and the top fixes (no signup): https://isequeira251.github.io/crm-health-check/\n\n#HubSpot #MarketingAutomation #SalesOps #CRM",
     "short_video_id": "X7_wJ_GKvLs",
     "short_url": "https://youtube.com/shorts/X7_wJ_GKvLs"
+  },
+  {
+    "date": "2026-06-20",
+    "note": "A small-business owner told me HubSpot 'didn't do anything.' They'd bought it, imported a spreadsheet, and never built a single workflow. The software isn't the product. The fifteen decisions about how your business actually runs are the product. The tool just enforces them.",
+    "text": "Imported a spreadsheet. Built zero workflows. 'HubSpot doesn't do anything.'\n\nCorrect.\n\nA business owner told me this recently. And honestly, for them, it really wasn't.\n\nBut that's not a software problem.\n\nThe software enforces decisions. You still have to make them first.\n\nWho owns a new lead the moment it comes in?\nWhat makes someone ready to talk to sales?\nWhen does a deal officially go dead?\n\nIf nobody's answered those, you have an expensive spreadsheet with a nicer interface.\n\nHubSpot doesn't make those calls. It holds the answers once you've made them, and runs the same logic every time so you don't have to think about it.\n\nThat's genuinely useful. But only after the decisions exist.\n\nMost CRM failures aren't tool failures. They're definition failures. Nobody ever sat down and wrote: here's what a lead is, here's who owns it, here's what happens next.\n\nThe tool didn't let you down. The process was never there.\n\nWhat's something your team treats as defined that nobody's actually written down yet?\n\nIf you want to think through something like this, my inbox is open.",
+    "generated": true,
+    "hook_options": [
+      "A business owner told me HubSpot didn't do anything. They were right.",
+      "You didn't buy HubSpot. You bought fifteen decisions you haven't made yet.",
+      "HubSpot doesn't work if you haven't decided how your business runs.",
+      "Imported a spreadsheet. Built zero workflows. 'HubSpot doesn't do anything.' Correct."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 8,
+      "human": 9,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-06-20T10:03:08.102572+00:00",
+    "post_id": "urn:li:share:7474039122521923584",
+    "posted_text": "Imported a spreadsheet. Built zero workflows. 'HubSpot doesn't do anything.'\n\nCorrect.\n\nA business owner told me this recently. And honestly, for them, it really wasn't.\n\nBut that's not a software problem.\n\nThe software enforces decisions. You still have to make them first.\n\nWho owns a new lead the moment it comes in?\nWhat makes someone ready to talk to sales?\nWhen does a deal officially go dead?\n\nIf nobody's answered those, you have an expensive spreadsheet with a nicer interface.\n\nHubSpot doesn't make those calls. It holds the answers once you've made them, and runs the same logic every time so you don't have to think about it.\n\nThat's genuinely useful. But only after the decisions exist.\n\nMost CRM failures aren't tool failures. They're definition failures. Nobody ever sat down and wrote: here's what a lead is, here's who owns it, here's what happens next.\n\nThe tool didn't let you down. The process was never there.\n\nWhat's something your team treats as defined that nobody's actually written down yet?\n\nIf you want to think through something like this, my inbox is open.\n\n\ud83c\udfa5 The 60-second video version is in the comments \ud83d\udc47\n\n\ud83d\udcca How healthy is your CRM, really? Free 1-minute check \u2014 get your score and the top fixes (no signup): https://isequeira251.github.io/crm-health-check/\n\n#HubSpot #MarketingAutomation #CRM",
+    "short_video_id": "MTiLQiE-44A",
+    "short_url": "https://youtube.com/shorts/MTiLQiE-44A"
   }
 ]

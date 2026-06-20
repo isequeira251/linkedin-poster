@@ -116,7 +116,8 @@
   },
   {
     "note": "A small-business owner told me HubSpot 'didn't do anything.' They'd bought it, imported a spreadsheet, and never built a single workflow. The software isn't the product. The fifteen decisions about how your business actually runs are the product. The tool just enforces them.",
-    "used": false
+    "used": true,
+    "used_at": "2026-06-20"
   },
   {
     "note": "The most expensive CRM mistake I see at small companies isn't the license. It's the owner spending Saturday rebuilding the same report by hand because nobody set the pipeline up to answer the question once. Your time is the budget. Spend an afternoon now or every weekend forever.",
