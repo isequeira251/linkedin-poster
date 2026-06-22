@@ -897,5 +897,29 @@
     "posted_text": "Saturday morning, rebuilding the same pipeline report by hand, again.\n\nThat's not a HubSpot problem. That's a setup problem.\n\nThe most expensive CRM mistake I see at small companies isn't the license. It's the owner's time, burned every week on something that should have been solved once.\n\nA pipeline report that answers your real question doesn't happen by default. Someone has to define what the stages mean, which properties to track, and what \"closed\" actually looks like for your team.\n\nMost small teams skip that part. They start logging deals and build reports after. \"After\" turns into every Saturday forever.\n\nThe fix isn't a new tool or a bigger HubSpot tier. It's one afternoon: set up the pipeline to answer the question you keep asking by hand.\n\nOne-time work. Recurring payoff.\n\nWhat's the report you keep rebuilding that should already exist?\n\nIf you want a hand figuring out where to start, my inbox is open.\n\n\ud83c\udfa5 The 60-second video version is in the comments \ud83d\udc47\n\n\ud83d\udcca How healthy is your CRM, really? Free 1-minute check \u2014 get your score and the top fixes (no signup): https://isequeira251.github.io/crm-health-check/\n\n#HubSpot #SalesOps #CRM #Analytics",
     "short_video_id": "_jg9K-66GqA",
     "short_url": "https://youtube.com/shorts/_jg9K-66GqA"
+  },
+  {
+    "date": "2026-06-22",
+    "note": "A 20-person shop wanted lead scoring 'like the big companies have.' They got 300 leads a month. You don't need a model to rank 300 leads, you need someone to actually call them. Half of 'we need automation' is really 'we haven't decided who owns the follow-up.'",
+    "text": "A 20-person shop asked me to build them lead scoring. I asked who was going to call the leads. Silence.\n\nThey were getting 300 leads a month.\n\nLead scoring has one job: help you prioritize when there are more leads than your team can realistically touch. At 300 leads a month, that's not the constraint. A rep can work through that list before lunch on Friday.\n\nThe constraint was that nobody had a name next to \"who follows up.\"\n\nLeads were going cold \u2014 not because they weren't ranked, but because ownership was unresolved. The ask for a scoring model was really an ask for someone to make a decision nobody wanted to make.\n\nHalf of \"we need automation\" is exactly this. Not a volume problem. Not a tooling gap. An unresolved accountability question dressed up as a technical one.\n\nThe system can send a reminder. But it can't send a reminder to nobody.\n\nBefore you build anything: who calls a new lead today? If you can't answer that in five seconds, that's the project.\n\nWhat's the last \"we need automation\" request that turned out to be something else entirely?\n\nIf you're working through something similar, feel free to message me \u2014 sometimes it just takes ten minutes to name the real problem.",
+    "generated": true,
+    "hook_options": [
+      "A 20-person shop asked me to build them lead scoring. I asked who was going to call the leads. Silence.",
+      "300 leads a month doesn't need a scoring model. It needs someone's name on the follow-up.",
+      "'We need automation' is usually code for 'we haven't decided who owns this yet.'",
+      "Lead scoring at 300 leads a month is like installing traffic signals on a dirt road with two cars."
+    ],
+    "self_score": {
+      "hook": 9,
+      "specificity": 9,
+      "human": 9,
+      "comment_bait": 8
+    },
+    "posted": true,
+    "posted_at": "2026-06-22T10:03:02.201308+00:00",
+    "post_id": "urn:li:share:7474763873590407168",
+    "posted_text": "A 20-person shop asked me to build them lead scoring. I asked who was going to call the leads. Silence.\n\nThey were getting 300 leads a month.\n\nLead scoring has one job: help you prioritize when there are more leads than your team can realistically touch. At 300 leads a month, that's not the constraint. A rep can work through that list before lunch on Friday.\n\nThe constraint was that nobody had a name next to \"who follows up.\"\n\nLeads were going cold \u2014 not because they weren't ranked, but because ownership was unresolved. The ask for a scoring model was really an ask for someone to make a decision nobody wanted to make.\n\nHalf of \"we need automation\" is exactly this. Not a volume problem. Not a tooling gap. An unresolved accountability question dressed up as a technical one.\n\nThe system can send a reminder. But it can't send a reminder to nobody.\n\nBefore you build anything: who calls a new lead today? If you can't answer that in five seconds, that's the project.\n\nWhat's the last \"we need automation\" request that turned out to be something else entirely?\n\nIf you're working through something similar, feel free to message me \u2014 sometimes it just takes ten minutes to name the real problem.\n\n\ud83c\udfa5 The 60-second video version is in the comments \ud83d\udc47\n\n\ud83d\udcca How healthy is your CRM, really? Free 1-minute check \u2014 get your score and the top fixes (no signup): https://isequeira251.github.io/crm-health-check/\n\n#HubSpot #LeadScoring #MarketingAutomation #CRM",
+    "short_video_id": "AzmpJh6qu98",
+    "short_url": "https://youtube.com/shorts/AzmpJh6qu98"
   }
 ]

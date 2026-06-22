@@ -126,6 +126,7 @@
   },
   {
     "note": "A 20-person shop wanted lead scoring 'like the big companies have.' They got 300 leads a month. You don't need a model to rank 300 leads, you need someone to actually call them. Half of 'we need automation' is really 'we haven't decided who owns the follow-up.'",
-    "used": false
+    "used": true,
+    "used_at": "2026-06-22"
   }
 ]
