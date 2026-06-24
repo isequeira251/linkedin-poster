@@ -232,8 +232,12 @@
   },
   {
     "date": "2026-06-24",
-    "posted": false,
-    "text": "Your CRM is a tool, not a strategy. Your reporting is a tool, not a strategy. Your AI agent is a tool, not a strategy.\n\nYou still need to decide who you're going after, what you're selling them, and how. No software makes that decision for you. Most software pretends it can, and then you spend a year debugging why it didn't.\n\nIf you're between platforms or stacks and feel like more tooling will fix things, send me a DM \u2014 happy to talk through what the tooling can and can't do for you."
+    "posted": true,
+    "text": "Your CRM is a tool, not a strategy. Your reporting is a tool, not a strategy. Your AI agent is a tool, not a strategy.\n\nYou still need to decide who you're going after, what you're selling them, and how. No software makes that decision for you. Most software pretends it can, and then you spend a year debugging why it didn't.\n\nIf you're between platforms or stacks and feel like more tooling will fix things, send me a DM \u2014 happy to talk through what the tooling can and can't do for you.",
+    "posted_at": "2026-06-24T10:04:32.142274+00:00",
+    "post_id": "urn:li:share:7475489026850836480",
+    "posted_text": "Your CRM is a tool, not a strategy. Your reporting is a tool, not a strategy. Your AI agent is a tool, not a strategy.\n\nYou still need to decide who you're going after, what you're selling them, and how. No software makes that decision for you. Most software pretends it can, and then you spend a year debugging why it didn't.\n\nIf you're between platforms or stacks and feel like more tooling will fix things, send me a DM \u2014 happy to talk through what the tooling can and can't do for you.\n\n\ud83d\udcca How healthy is your CRM, really? Free 1-minute check \u2014 get your score and the top fixes (no signup): https://isequeira251.github.io/crm-health-check/\n\n#HubSpot #CRM #Analytics #AI",
+    "short_skipped": "quality gate"
   },
   {
     "date": "2026-06-25",
