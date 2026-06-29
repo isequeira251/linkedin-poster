@@ -280,8 +280,13 @@
   },
   {
     "date": "2026-06-29",
-    "posted": false,
-    "text": "If you can't explain in one sentence why a custom property exists, delete it.\n\n\"We might need it someday\" is not an explanation. Neither is \"Joe in finance asked for it in 2022.\"\n\nEvery dead property makes the live ones harder to trust. Reps stop reading field labels. Reports quietly pull from the wrong one. New hires waste their first week learning which fields are real.\n\nAdding fields is easy. Deleting is political. The fix is a recurring 30-minute \"kill list\" meeting \u2014 the team picks one property to remove, every two weeks, no exceptions. After a quarter you'll wonder how the instance ever got that bloated.\n\nIf your property list has gotten ahead of you, DM me \u2014 the kill-list meeting is one of the higher-leverage things a CRM team can do."
+    "posted": true,
+    "text": "If you can't explain in one sentence why a custom property exists, delete it.\n\n\"We might need it someday\" is not an explanation. Neither is \"Joe in finance asked for it in 2022.\"\n\nEvery dead property makes the live ones harder to trust. Reps stop reading field labels. Reports quietly pull from the wrong one. New hires waste their first week learning which fields are real.\n\nAdding fields is easy. Deleting is political. The fix is a recurring 30-minute \"kill list\" meeting \u2014 the team picks one property to remove, every two weeks, no exceptions. After a quarter you'll wonder how the instance ever got that bloated.\n\nIf your property list has gotten ahead of you, DM me \u2014 the kill-list meeting is one of the higher-leverage things a CRM team can do.",
+    "posted_at": "2026-06-29T10:02:53.510258+00:00",
+    "post_id": "urn:li:share:7477300552331157504",
+    "posted_text": "If you can't explain in one sentence why a custom property exists, delete it.\n\n\"We might need it someday\" is not an explanation. Neither is \"Joe in finance asked for it in 2022.\"\n\nEvery dead property makes the live ones harder to trust. Reps stop reading field labels. Reports quietly pull from the wrong one. New hires waste their first week learning which fields are real.\n\nAdding fields is easy. Deleting is political. The fix is a recurring 30-minute \"kill list\" meeting \u2014 the team picks one property to remove, every two weeks, no exceptions. After a quarter you'll wonder how the instance ever got that bloated.\n\nIf your property list has gotten ahead of you, DM me \u2014 the kill-list meeting is one of the higher-leverage things a CRM team can do.\n\n\ud83c\udfa5 The 60-second video version is in the comments \ud83d\udc47\n\n\ud83d\udcca How healthy is your CRM, really? Free 1-minute check \u2014 get your score and the top fixes (no signup): https://isequeira251.github.io/crm-health-check/\n\n#HubSpot #SalesOps #CRM #Analytics",
+    "short_video_id": "rgsvg8H0V4w",
+    "short_url": "https://youtube.com/shorts/rgsvg8H0V4w"
   },
   {
     "date": "2026-06-30",
